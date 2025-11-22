@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
-import { View, ActivityIndicator, StyleSheet } from 'react-native';
+import { useEffect } from 'react';
+import { View, ActivityIndicator } from 'react-native';
 import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useTheme } from '../contexts/ThemeContext';
 
 export default function Index() {
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(true);
+  const { colors } = useTheme();
 
   useEffect(() => {
     checkOnboardingStatus();
@@ -18,31 +19,22 @@ export default function Index() {
 
       setTimeout(() => {
         if (!hasLaunched) {
-          router.replace('/onboarding');
+          router.replace('/welcome');
         } else if (isLoggedIn === 'true') {
           router.replace('/(tabs)');
         } else {
-          router.replace('/onboarding/login');
+          router.replace('/auth/login');
         }
       }, 1000);
     } catch (error) {
       console.error('Error checking onboarding status:', error);
-      router.replace('/onboarding');
+      router.replace('/welcome');
     }
   };
 
   return (
-    <View style={styles.container}>
-      <ActivityIndicator size="large" color="#2196F3" />
+    <View style={{ flex: 1, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center' }}>
+      <ActivityIndicator size="large" color={colors.primary} />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
