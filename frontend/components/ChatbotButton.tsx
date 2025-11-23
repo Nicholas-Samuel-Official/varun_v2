@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
-import { View, StyleSheet, Platform, TouchableOpacity } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { View, StyleSheet, Platform, TouchableOpacity, Image } from 'react-native';
 import { useTheme } from '../contexts/ThemeContext';
 
 export const ChatbotButton = () => {
@@ -29,12 +28,16 @@ export const ChatbotButton = () => {
     }
   }, []);
 
-  // For mobile, show a custom button
+  // For mobile, show a custom button with mascot
   if (Platform.OS !== 'web') {
     return (
       <View style={styles.container}>
         <TouchableOpacity style={[styles.button, { backgroundColor: colors.primary }]}>
-          <MaterialCommunityIcons name="robot" size={28} color="#FFFFFF" />
+          <Image
+            source={require('../assets/varun_mascot.png')}
+            style={styles.mascotIcon}
+            resizeMode="contain"
+          />
         </TouchableOpacity>
       </View>
     );
