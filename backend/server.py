@@ -415,6 +415,48 @@ async def get_dashboard(user_id: str):
 
 # ========== External Data APIs (Mock) ==========
 
+
+# ========== Weather & Environmental Data ==========
+
+@api_router.get("/weather/current")
+async def get_current_weather(latitude: float, longitude: float):
+    """Get current weather and rainfall data"""
+    try:
+        weather_data = await weather_service.get_weather_data(latitude, longitude)
+        return weather_data
+    except Exception as e:
+        logger.error(f"Error fetching weather data: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@api_router.get("/weather/aqi")
+async def get_air_quality(latitude: float, longitude: float):
+    """Get Air Quality Index data"""
+    try:
+        aqi_data = await weather_service.get_aqi_data(latitude, longitude)
+        return aqi_data
+    except Exception as e:
+        logger.error(f"Error fetching AQI data: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@api_router.get("/weather/combined")
+async def get_combined_weather_data(latitude: float, longitude: float):
+    """Get combined weather, rainfall, and AQI data"""
+    try:
+        weather_data = await weather_service.get_weather_data(latitude, longitude)
+        aqi_data = await weather_service.get_aqi_data(latitude, longitude)
+        
+        return {
+            "weather": weather_data,
+            "aqi": aqi_data,
+            "location": {
+                "latitude": latitude,
+                "longitude": longitude
+            }
+        }
+    except Exception as e:
+        logger.error(f"Error fetching combined weather data: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 @api_router.get("/data/rainfall/{location}")
 async def get_rainfall_data(location: str):
     """Get rainfall data from IMD (Mock)"""
