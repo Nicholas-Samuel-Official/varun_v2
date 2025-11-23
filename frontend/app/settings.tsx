@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Switch, Linking, Alert } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Switch, Linking, Alert, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
@@ -6,12 +6,39 @@ import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useFontSize } from '../contexts/FontSizeContext';
 import * as Location from 'expo-location';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useState, useEffect } from 'react';
 
 export default function Settings() {
   const router = useRouter();
   const { colors, theme, toggleTheme } = useTheme();
   const { language, t } = useLanguage();
   const { fontSize, setFontSize } = useFontSize();
+  const [userInfo, setUserInfo] = useState({
+    name: 'User',
+    email: 'user@example.com',
+    phone: '+91 XXXXXXXXXX'
+  });
+
+  useEffect(() => {
+    loadUserInfo();
+  }, []);
+
+  const loadUserInfo = async () => {
+    try {
+      const userData = await AsyncStorage.getItem('user_data');
+      if (userData) {
+        const parsed = JSON.parse(userData);
+        setUserInfo({
+          name: parsed.name || 'User',
+          email: parsed.email || 'user@example.com',
+          phone: parsed.phone || '+91 XXXXXXXXXX'
+        });
+      }
+    } catch (error) {
+      console.error('Error loading user info:', error);
+    }
+  };
 
   const handleCall = () => {
     Linking.openURL('tel:9363611181');
@@ -26,6 +53,31 @@ export default function Settings() {
     Alert.alert('Location Permission', status === 'granted' ? 'Granted' : 'Denied');
   };
 
+  const handleLogout = () => {
+    Alert.alert(
+      'Logout',
+      'Are you sure you want to logout?',
+      [
+        {
+          text: 'Cancel',
+          style: 'cancel'
+        },
+        {
+          text: 'Logout',
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              await AsyncStorage.clear();
+              router.replace('/auth/login');
+            } catch (error) {
+              console.error('Error logging out:', error);
+            }
+          }
+        }
+      ]
+    );
+  };
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -36,22 +88,79 @@ export default function Settings() {
       alignItems: 'center',
       paddingHorizontal: 20,
       paddingVertical: 16,
-      borderBottomWidth: 1,
-      borderBottomColor: colors.border,
+      backgroundColor: colors.primary,
     },
     backButton: {
       width: 40,
       height: 40,
+      borderRadius: 8,
+      backgroundColor: 'rgba(255, 255, 255, 0.2)',
+      alignItems: 'center',
       justifyContent: 'center',
+      marginRight: 16,
     },
     headerTitle: {
       fontSize: 20,
       fontWeight: '700',
-      color: colors.text,
-      marginLeft: 8,
+      color: '#FFFFFF',
+      flex: 1,
     },
     content: {
       flex: 1,
+    },
+    accountSection: {
+      marginTop: 0,
+      backgroundColor: colors.card,
+      paddingVertical: 24,
+      paddingHorizontal: 20,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.border,
+    },
+    accountHeader: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginBottom: 16,
+    },
+    avatar: {
+      width: 70,
+      height: 70,
+      borderRadius: 35,
+      backgroundColor: colors.primary,
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginRight: 16,
+    },
+    avatarText: {
+      fontSize: 28,
+      fontWeight: '700',
+      color: '#FFFFFF',
+    },
+    accountInfo: {
+      flex: 1,
+    },
+    accountName: {
+      fontSize: 20,
+      fontWeight: '700',
+      color: colors.text,
+      marginBottom: 4,
+    },
+    accountDetail: {
+      fontSize: 14,
+      color: colors.textSecondary,
+      marginBottom: 2,
+    },
+    editProfileButton: {
+      marginTop: 12,
+      backgroundColor: colors.primary,
+      paddingVertical: 10,
+      paddingHorizontal: 20,
+      borderRadius: 8,
+      alignSelf: 'flex-start',
+    },
+    editProfileText: {
+      fontSize: 14,
+      fontWeight: '600',
+      color: '#FFFFFF',
     },
     section: {
       marginTop: 24,
@@ -136,18 +245,61 @@ export default function Settings() {
       color: colors.primary,
       marginLeft: 12,
     },
+    logoutButton: {
+      marginHorizontal: 20,
+      marginTop: 24,
+      marginBottom: 32,
+      backgroundColor: '#FF3B30',
+      paddingVertical: 16,
+      borderRadius: 12,
+      alignItems: 'center',
+      flexDirection: 'row',
+      justifyContent: 'center',
+    },
+    logoutText: {
+      fontSize: 16,
+      fontWeight: '700',
+      color: '#FFFFFF',
+      marginLeft: 8,
+    },
   });
 
+  const getInitials = (name: string) => {
+    return name
+      .split(' ')
+      .map(n => n[0])
+      .join('')
+      .toUpperCase()
+      .slice(0, 2);
+  };
+
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top']}>
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
-          <Ionicons name="arrow-back" size={24} color={colors.text} />
+          <Ionicons name="arrow-back" size={24} color="#FFFFFF" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('settings')}</Text>
       </View>
 
       <ScrollView style={styles.content}>
+        {/* Account Section */}
+        <View style={styles.accountSection}>
+          <View style={styles.accountHeader}>
+            <View style={styles.avatar}>
+              <Text style={styles.avatarText}>{getInitials(userInfo.name)}</Text>
+            </View>
+            <View style={styles.accountInfo}>
+              <Text style={styles.accountName}>{userInfo.name}</Text>
+              <Text style={styles.accountDetail}>{userInfo.email}</Text>
+              <Text style={styles.accountDetail}>{userInfo.phone}</Text>
+            </View>
+          </View>
+          <TouchableOpacity style={styles.editProfileButton} onPress={() => router.push('/edit-profile')}>
+            <Text style={styles.editProfileText}>Edit Profile</Text>
+          </TouchableOpacity>
+        </View>
+
         {/* Appearance */}
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Appearance</Text>
@@ -276,7 +428,13 @@ export default function Settings() {
           </View>
         </View>
 
-        <View style={{ height: 40 }} />
+        {/* Logout Button */}
+        <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
+          <MaterialCommunityIcons name="logout" size={24} color="#FFFFFF" />
+          <Text style={styles.logoutText}>Logout</Text>
+        </TouchableOpacity>
+
+        <View style={{ height: 20 }} />
       </ScrollView>
     </SafeAreaView>
   );
