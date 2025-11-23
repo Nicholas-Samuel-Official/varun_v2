@@ -241,8 +241,15 @@ export default function Dashboard() {
     <SafeAreaView style={styles.container} edges={['top']}>
       <View style={styles.header}>
         <View style={styles.headerLeft}>
-          <Text style={styles.greeting}>Welcome back</Text>
-          <Text style={styles.appName}>VARUN</Text>
+          <Image
+            source={require('../assets/varun_mascot.png')}
+            style={styles.mascot}
+            resizeMode="contain"
+          />
+          <View style={styles.headerTextContainer}>
+            <Text style={styles.greeting}>Welcome back</Text>
+            <Text style={styles.appName}>VARUN</Text>
+          </View>
         </View>
         <View style={styles.headerIcons}>
           <TouchableOpacity style={styles.iconButton}>
