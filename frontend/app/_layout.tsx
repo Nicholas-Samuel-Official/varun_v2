@@ -4,6 +4,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ThemeProvider } from '../contexts/ThemeContext';
 import { LanguageProvider } from '../contexts/LanguageContext';
 import { FontSizeProvider } from '../contexts/FontSizeContext';
+import { MobileChatbot } from '../components/MobileChatbot';
 import { useEffect } from 'react';
 import { Platform } from 'react-native';
 
@@ -50,6 +51,8 @@ export default function RootLayout() {
                 <Stack.Screen name="settings" />
                 <Stack.Screen name="edit-profile" />
               </Stack>
+              {/* Mobile chatbot - only shows on iOS/Android */}
+              <MobileChatbot />
             </FontSizeProvider>
           </LanguageProvider>
         </ThemeProvider>
