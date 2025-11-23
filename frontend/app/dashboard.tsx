@@ -1,13 +1,15 @@
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ImageBackground, RefreshControl, Image } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ImageBackground, RefreshControl, Image, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'expo-router';
 import { BlurView } from 'expo-blur';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useFontSize } from '../contexts/FontSizeContext';
 import { SideMenu } from '../components/SideMenu';
+import * as Location from 'expo-location';
+import Constants from 'expo-constants';
 
 export default function Dashboard() {
   const router = useRouter();
@@ -17,17 +19,92 @@ export default function Dashboard() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [dashboardData, setDashboardData] = useState({
-    rainfall: 24,
-    weather: 'Partly Cloudy',
-    temperature: 28,
-    aqi: 67,
+    rainfall: 0,
+    weather: 'Loading...',
+    temperature: 0,
+    aqi: 0,
+    aqi_category: 'Loading...',
     waterSaved: 1250,
   });
+  const [location, setLocation] = useState<{ latitude: number; longitude: number } | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    requestLocationAndFetchData();
+  }, []);
+
+  const requestLocationAndFetchData = async () => {
+    try {
+      // Request location permission
+      const { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        Alert.alert('Permission Denied', 'Location permission is required to fetch weather data.');
+        setLoading(false);
+        return;
+      }
+
+      // Get current location
+      const currentLocation = await Location.getCurrentPositionAsync({
+        accuracy: Location.Accuracy.Balanced,
+      });
+
+      const { latitude, longitude } = currentLocation.coords;
+      setLocation({ latitude, longitude });
+
+      // Fetch weather data
+      await fetchWeatherData(latitude, longitude);
+    } catch (error) {
+      console.error('Error getting location:', error);
+      setLoading(false);
+    }
+  };
+
+  const fetchWeatherData = async (latitude: number, longitude: number) => {
+    try {
+      const backendUrl = Constants.expoConfig?.extra?.backendUrl || process.env.EXPO_PUBLIC_BACKEND_URL;
+      const response = await fetch(
+        `${backendUrl}/api/weather/combined?latitude=${latitude}&longitude=${longitude}`
+      );
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch weather data');
+      }
+
+      const data = await response.json();
+      
+      setDashboardData({
+        rainfall: data.weather.rainfall_today || 0,
+        weather: data.weather.weather_description || 'Unknown',
+        temperature: data.weather.temperature || 0,
+        aqi: data.aqi.aqi || 0,
+        aqi_category: data.aqi.aqi_category || 'Unknown',
+        waterSaved: 1250,
+      });
+      
+      setLoading(false);
+    } catch (error) {
+      console.error('Error fetching weather data:', error);
+      // Set fallback data
+      setDashboardData({
+        rainfall: 0,
+        weather: 'Data Unavailable',
+        temperature: 28,
+        aqi: 65,
+        aqi_category: 'Moderate',
+        waterSaved: 1250,
+      });
+      setLoading(false);
+    }
+  };
 
   const onRefresh = async () => {
     setRefreshing(true);
-    // Simulate API call
-    setTimeout(() => setRefreshing(false), 1500);
+    if (location) {
+      await fetchWeatherData(location.latitude, location.longitude);
+    } else {
+      await requestLocationAndFetchData();
+    }
+    setRefreshing(false);
   };
 
   const styles = StyleSheet.create({
