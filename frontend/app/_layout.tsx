@@ -16,10 +16,15 @@ export default function RootLayout() {
               <Stack screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="index" />
                 <Stack.Screen name="welcome" />
+                <Stack.Screen name="terms" />
                 <Stack.Screen name="language" />
                 <Stack.Screen name="auth/login" />
                 <Stack.Screen name="auth/signup" />
-                <Stack.Screen name="(tabs)" />
+                <Stack.Screen name="dashboard" />
+                <Stack.Screen name="quick-actions" />
+                <Stack.Screen name="book-appointment" />
+                <Stack.Screen name="iot-sensor" />
+                <Stack.Screen name="about-us" />
                 <Stack.Screen name="settings" />
                 <Stack.Screen name="edit-profile" />
               </Stack>
