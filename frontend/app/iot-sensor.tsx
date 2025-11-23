@@ -102,9 +102,9 @@ export default function IoTSensor() {
       case 'down':
         return 'trending-down';
       case 'stable':
-        return 'minus';
+        return 'remove';
       default:
-        return 'minus';
+        return 'remove';
     }
   };
 
