@@ -71,6 +71,7 @@ class WeatherService:
                     'rainfall_today': round(rainfall_today, 2),
                     'weather_description': weather_description,
                     'weather_code': weather_code,
+                    'wind_speed': round(current.get('wind_speed_10m', 0), 1),
                     'timestamp': datetime.utcnow().isoformat()
                 }
                 
