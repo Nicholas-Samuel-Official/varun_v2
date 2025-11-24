@@ -18,7 +18,7 @@ class WeatherService:
             params = {
                 "latitude": latitude,
                 "longitude": longitude,
-                "current": "temperature_2m,relative_humidity_2m,precipitation,weather_code",
+                "current": "temperature_2m,relative_humidity_2m,precipitation,weather_code,wind_speed_10m",
                 "hourly": "precipitation",
                 "timezone": "auto",
                 "forecast_days": 1
