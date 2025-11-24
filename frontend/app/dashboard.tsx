@@ -91,6 +91,7 @@ export default function Dashboard() {
         aqi: 65,
         aqi_category: 'Moderate',
         humidity: 65,
+        wind_speed: 10,
         waterSaved: 1250,
       });
       setLoading(false);
