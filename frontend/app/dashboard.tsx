@@ -397,6 +397,38 @@ export default function Dashboard() {
             </TouchableOpacity>
           </View>
         </View>
+
+        {/* IoT Sensors Box */}
+        <View style={styles.iotSection}>
+          <TouchableOpacity
+            style={styles.iotCard}
+            onPress={() => router.push('/iot-sensor')}
+            activeOpacity={0.8}
+          >
+            <View style={styles.iotHeader}>
+              <MaterialCommunityIcons name="radar" size={28} color={colors.primary} />
+              <View style={styles.iotTextContainer}>
+                <Text style={styles.iotTitle}>IoT Sensors</Text>
+                <Text style={styles.iotSubtitle}>Real-time monitoring & data</Text>
+              </View>
+              <Ionicons name="chevron-forward" size={24} color={colors.textSecondary} />
+            </View>
+            <View style={styles.iotStats}>
+              <View style={styles.iotStat}>
+                <Text style={styles.iotStatValue}>6</Text>
+                <Text style={styles.iotStatLabel}>Active Sensors</Text>
+              </View>
+              <View style={styles.iotStat}>
+                <Text style={styles.iotStatValue}>Live</Text>
+                <Text style={styles.iotStatLabel}>Status</Text>
+              </View>
+              <View style={styles.iotStat}>
+                <Text style={styles.iotStatValue}>24/7</Text>
+                <Text style={styles.iotStatLabel}>Monitoring</Text>
+              </View>
+            </View>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
 
       <SideMenu visible={menuVisible} onClose={() => setMenuVisible(false)} />
