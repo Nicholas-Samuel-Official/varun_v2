@@ -3,6 +3,7 @@ import { View, ActivityIndicator } from 'react-native';
 import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTheme } from '../contexts/ThemeContext';
+import authService from '../services/authService';
 
 export default function Index() {
   const router = useRouter();
