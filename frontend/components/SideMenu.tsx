@@ -45,6 +45,24 @@ export function SideMenu({ visible, onClose }: SideMenuProps) {
     }
   }, [visible]);
 
+  const handleLogout = async () => {
+    Alert.alert(
+      'Logout',
+      'Are you sure you want to logout?',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Logout',
+          style: 'destructive',
+          onPress: async () => {
+            await authService.logout();
+            router.replace('/auth/login');
+          }
+        }
+      ]
+    );
+  };
+
   const handleMenuPress = (route: string | null, id: string) => {
     onClose();
     if (route) {
@@ -52,6 +70,8 @@ export function SideMenu({ visible, onClose }: SideMenuProps) {
     } else if (id === 'chatbot') {
       // Chatbot will be triggered via global floating button
       console.log('Open chatbot');
+    } else if (id === 'logout') {
+      setTimeout(() => handleLogout(), 300);
     }
   };
 
