@@ -9,7 +9,7 @@ export default function Index() {
   const router = useRouter();
   const { colors } = useTheme();
 
-  const checkOnboardingStatus = async () => {
+  const checkOnboardingStatus = useCallback(async () => {
     try {
       const hasLaunched = await AsyncStorage.getItem('hasLaunched');
       const termsAccepted = await AsyncStorage.getItem('termsAccepted');
@@ -30,11 +30,11 @@ export default function Index() {
       console.error('Error checking onboarding status:', error);
       router.replace('/welcome');
     }
-  };
+  }, [router]);
 
   useEffect(() => {
     checkOnboardingStatus();
-  }, []);
+  }, [checkOnboardingStatus]);
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center' }}>
