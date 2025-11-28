@@ -12,7 +12,7 @@ export default function Login() {
   const router = useRouter();
   const { colors } = useTheme();
   const { t } = useLanguage();
-  const [email, setEmail] = useState('');
+  const [emailOrPhone, setEmailOrPhone] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
