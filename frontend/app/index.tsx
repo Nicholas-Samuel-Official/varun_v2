@@ -17,14 +17,14 @@ export default function Index() {
     try {
       const hasLaunched = await AsyncStorage.getItem('hasLaunched');
       const termsAccepted = await AsyncStorage.getItem('termsAccepted');
-      const isLoggedIn = await AsyncStorage.getItem('isLoggedIn');
+      const isAuthenticated = await authService.isAuthenticated();
 
       setTimeout(() => {
         if (!hasLaunched) {
           router.replace('/welcome');
         } else if (!termsAccepted) {
           router.replace('/terms');
-        } else if (isLoggedIn === 'true') {
+        } else if (isAuthenticated) {
           router.replace('/dashboard');
         } else {
           router.replace('/auth/login');
