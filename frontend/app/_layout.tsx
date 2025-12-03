@@ -43,8 +43,10 @@ export default function RootLayout() {
                 <Stack.Screen name="language" />
                 <Stack.Screen name="auth/login" />
                 <Stack.Screen name="auth/signup" />
+                <Stack.Screen name="auth/forgot-password" />
                 <Stack.Screen name="dashboard" />
                 <Stack.Screen name="quick-actions" />
+                <Stack.Screen name="feasibility-check" />
                 <Stack.Screen name="book-appointment" />
                 <Stack.Screen name="iot-sensor" />
                 <Stack.Screen name="about-us" />
