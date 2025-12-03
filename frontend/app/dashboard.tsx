@@ -428,14 +428,9 @@ export default function Dashboard() {
         <View style={styles.quickActionsSection}>
           <Text style={styles.sectionTitle}>Quick Actions</Text>
           <View style={styles.actionsGrid}>
-            <TouchableOpacity style={styles.actionCard} onPress={() => router.push('/quick-actions')}>
+            <TouchableOpacity style={styles.actionCard} onPress={() => router.push('/feasibility-check')}>
               <MaterialCommunityIcons name="check-decagram" size={32} color={colors.primary} />
               <Text style={styles.actionText}>Feasibility{'\n'}Check</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity style={styles.actionCard} onPress={() => router.push('/quick-actions')}>
-              <MaterialCommunityIcons name="water-percent" size={32} color={colors.primary} />
-              <Text style={styles.actionText}>Rainwater{'\n'}Estimation</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.actionCard} onPress={() => router.push('/book-appointment')}>
