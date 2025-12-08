@@ -609,6 +609,11 @@ export default function FeasibilityCheck() {
               </View>
 
               {Object.entries(structureResult).map(([key, value], index) => {
+                // Skip input field - only show output
+                if (key === 'input') {
+                  return null;
+                }
+
                 const formattedKey = key
                   .split('_')
                   .map(word => word.charAt(0).toUpperCase() + word.slice(1))
