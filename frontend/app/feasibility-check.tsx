@@ -57,6 +57,49 @@ export default function FeasibilityCheck() {
     }
   };
 
+  const calculateFeasibility = (roofArea: number, annualRainfall: number, roofType: string) => {
+    // Runoff coefficient based on roof type
+    const runoffCoefficients: { [key: string]: number } = {
+      'concrete': 0.9,
+      'tile': 0.85,
+      'sheet': 0.8,
+    };
+
+    const coefficient = runoffCoefficients[roofType] || 0.85;
+    
+    // Calculate annual runoff (in liters)
+    // Formula: Runoff = Roof Area (m²) × Annual Rainfall (mm) × Runoff Coefficient × 0.001
+    const annualRunoff = Math.round(roofArea * annualRainfall * coefficient);
+    
+    // Estimate infiltration (approximately 10-20% of runoff)
+    const infiltration = Math.round(annualRunoff * 0.15);
+    
+    // Determine feasibility based on runoff volume
+    let feasibility = 'Low';
+    if (annualRunoff > 100000) {
+      feasibility = 'High';
+    } else if (annualRunoff > 50000) {
+      feasibility = 'Medium';
+    }
+    
+    // Recommend structure based on runoff
+    let recommendedStructure = 'Rooftop Collection';
+    if (annualRunoff > 150000) {
+      recommendedStructure = 'Large Storage Tank + Recharge Pit';
+    } else if (annualRunoff > 75000) {
+      recommendedStructure = 'Medium Tank + Recharge Well';
+    } else {
+      recommendedStructure = 'Small Tank + Percolation Pit';
+    }
+    
+    return {
+      annual_runoff: annualRunoff,
+      feasibility,
+      infiltration,
+      recommended_structure: recommendedStructure,
+    };
+  };
+
   const handleSubmit = async () => {
     // Validate inputs
     if (!formData.roof_area || !formData.annual_rainfall) {
@@ -66,37 +109,14 @@ export default function FeasibilityCheck() {
 
     setLoading(true);
     try {
-      const payload = {
-        latitude: parseFloat(formData.latitude) || 0,
-        longitude: parseFloat(formData.longitude) || 0,
-        roof_area: parseInt(formData.roof_area),
-        open_space: parseInt(formData.open_space) || 0,
-        roof_type: formData.roof_type,
-        annual_rainfall: parseInt(formData.annual_rainfall),
-        max_daily_rainfall: parseInt(formData.max_daily_rainfall) || 0,
-        clay: parseInt(formData.clay) || 0,
-        sand: parseInt(formData.sand) || 0,
-        silt: parseInt(formData.silt) || 0,
-        elevation: parseInt(formData.elevation) || 0,
-        evaporation: parseInt(formData.evaporation) || 0,
-      };
-
-      const response = await fetch('https://rainwater-ml-api-1.onrender.com/predict', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to get prediction');
-      }
-
-      const data = await response.json();
-      setResult(data);
+      // Calculate locally without API
+      const roofArea = parseInt(formData.roof_area);
+      const annualRainfall = parseInt(formData.annual_rainfall);
+      
+      const calculatedResult = calculateFeasibility(roofArea, annualRainfall, formData.roof_type);
+      setResult(calculatedResult);
     } catch (error) {
-      console.error('API Error:', error);
+      console.error('Calculation Error:', error);
       Alert.alert('Error', 'Failed to calculate feasibility. Please try again.');
     } finally {
       setLoading(false);
