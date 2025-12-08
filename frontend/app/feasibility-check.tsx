@@ -4,20 +4,32 @@ import { useState } from 'react';
 import { useRouter } from 'expo-router';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useTheme } from '../contexts/ThemeContext';
+import * as Location from 'expo-location';
 
 interface FeasibilityResult {
   feasibility_score?: number;
   feasibility_status?: string;
   predicted_runoff?: number;
   recommended_capacity?: number;
+  output?: string;
   [key: string]: any;
+}
+
+interface AquiferResult {
+  nearestLocation: string;
+  aquiferDepth: number;
+  distance: number;
+  isFeasible: boolean;
 }
 
 export default function FeasibilityCheck() {
   const router = useRouter();
   const { colors } = useTheme();
   const [loading, setLoading] = useState(false);
+  const [aquiferLoading, setAquiferLoading] = useState(false);
   const [result, setResult] = useState<FeasibilityResult | null>(null);
+  const [aquiferResult, setAquiferResult] = useState<AquiferResult | null>(null);
+  const [showAquiferCheck, setShowAquiferCheck] = useState(false);
   
   const [formData, setFormData] = useState({
     rainfall: '',
