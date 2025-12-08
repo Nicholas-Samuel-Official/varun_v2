@@ -1,0 +1,1094 @@
+S_No,State,District,Block_Talu,Village,Latitude,Longitude,Elevation_,Aquifer_11,Aquifer_12,AquiferCod
+1,Tamil Nadu,Coimbatore,Udumalpetu,Guruvappanaikkanur,10.50833,77.24722,385.0,8.0,8,GNO3
+2,Tamil Nadu,Coimbatore,Pollachi South,Nagur,10.72361,76.98,182.07,7.0,7,CK01
+3,Tamil Nadu,Coimbatore,Pollachi North,Pulliyampatti,10.68056,77.03472,319.0,10.0,10,CK01
+4,Tamil Nadu,Coimbatore,Anamalai,Somanthuraichittur,10.57222,76.99111,283.5,12.0,12,GNO3
+5,Tamil Nadu,Coimbatore,Annur,Periyaputhur,11.22861,77.02583,366.0,18.0,18,GNO3
+6,Tamil Nadu,Coimbatore,Madukarai,Chettipalayam,10.91694,77.03583,413.0,17.0,17,GNO3
+7,Tamil Nadu,Coimbatore,Kinathukadavu,Vadasithur,10.83278,77.08056,333.0,11.0,11,GNO3
+8,Tamil Nadu,Coimbatore,Sulthanpetu,Edayarpalayam,10.92222,77.10806,434.0,12.0,12,GNO3
+9,Tamil Nadu,Coimbatore,Annur,Kanjapalli,11.2325,77.14306,370.0,6.0,6,GNO3
+10,Tamil Nadu,Coimbatore,Coimbatore North,Koundampalayam,11.040142,76.948627,441.0,33.0,33,GNO3
+11,Tamil Nadu,Coimbatore,Sulur,Rayarpalayam,11.17444,77.11861,371.0,33.0,33,GNO3
+12,Tamil Nadu,Coimbatore,Sultanpet,Senjerimalai Yadipalayam,10.82806,77.1975,364.0,11.0,11,GNO3
+13,Tamil Nadu,Coimbatore,Kinnathukadavu,Seripalayam,10.79,77.09056,337.0,10.0,10,GNO3
+14,Tamil Nadu,Coimbatore,Karamadai,Suthanthipuram,11.29306,76.94833,326.0,10.0,10,GNO3
+15,Tamil Nadu,Cuddalore,Nallur,Sheppakkam,11.5612,79.1445,70.0,11.0,11,GN03
+16,Tamil Nadu,Cuddalore,Mangalur,S.Narayur,11.5533,78.9411,116.0,15.0,15,CK01
+17,Tamil Nadu,Cuddalore,Mangalur,Tholudur,11.41484,78.992543,91.0,15.0,15,CK01
+18,Tamil Nadu,Dharmapuri,Nallampalli,Adiyamankottai,12.082,78.122,480.0,20.0,20,GN03
+19,Tamil Nadu,Dharmapuri,Nallampalli,Adiyamankottai EW,12.082,78.122,482.0,19.0,19,GN03
+20,Tamil Nadu,Dharmapuri,Bargur,Aikondam Pz,12.44,78.311,467.0,11.0,11,BG01
+21,Tamil Nadu,Dharmapuri,Morappur,Andipatti,12.14184,78.359323,419.0,14.5,15,CK01
+22,Tamil Nadu,Dharmapuri,Morappur,Annamalaipatty,12.054214,78.423631,409.0,5.0,5,GN03
+23,Tamil Nadu,Dharmapuri,Uthankarai,Badavanur Pz,12.285,78.459,409.0,5.0,5,IN02
+24,Tamil Nadu,Dharmapuri,Palacode,Bandarahalli,12.264723,78.232677,442.0,6.0,6,CK01
+25,Tamil Nadu,Dharmapuri,Palacode,Begarhalli,12.264396,78.140244,480.0,8.0,8,CK01
+26,Tamil Nadu,Dharmapuri,Morappur,Bommahalli Pz,12.3119,78.1711,473.0,13.0,13,CK01
+27,Tamil Nadu,Dharmapuri,Pennagram,Chelliyampatty EW,12.188493,78.11124,464.0,6.0,6,CK01
+28,Tamil Nadu,Dharmapuri,Pennagram,Chelliyampatty,12.188493,78.11124,464.0,6.0,6,CK01
+29,Tamil Nadu,Dharmapuri,Morappur,Chennampatty,12.124544,78.372009,407.0,5.0,5,GN03
+30,Tamil Nadu,Dharmapuri,Morappur,Dokkampatti,12.256,78.3129,415.0,6.0,6,CK01
+31,Tamil Nadu,Dharmapuri,Morappur,Echampadi,12.202,78.35,405.0,5.0,5,GN03
+32,Tamil Nadu,Dharmapuri,Nallampalli,Elagiri,12.043,78.06,483.0,24.0,24,CK01
+33,Tamil Nadu,Dharmapuri,Nallampalli,Elagiri EW,12.0434,78.0681,480.0,19.0,21,CK01
+34,Tamil Nadu,Dharmapuri,Harur,Erumiyampatti,11.97,78.43,389.0,9.0,9,GN03
+35,Tamil Nadu,Dharmapuri,Morappur,Gopinathampatti,12.132,78.316,453.0,2.0,2,CK01
+36,Tamil Nadu,Dharmapuri,Palacode,Gummanur,12.487399,78.007002,631.0,11.0,11,CK01
+37,Tamil Nadu,Dharmapuri,Palacode,Gummanur OW,12.487399,78.007002,631.0,5.0,5,CK01
+38,Tamil Nadu,Dharmapuri,Harur,H. Toddampatti,12.18,78.42,372.0,12.0,12,GN03
+39,Tamil Nadu,Dharmapuri,Morappur,J Palayam,12.190003,78.264492,429.0,5.0,5,CK01
+40,Tamil Nadu,Dharmapuri,Nallampalli,Jarugu,11.9989,78.0261,470.0,11.0,11,GN03
+41,Tamil Nadu,Dharmapuri,Morappur,Kamalnatham,12.03,78.036,445.0,14.0,14,IN01
+42,Tamil Nadu,Dharmapuri,Morappur,M Vetrapatty,12.116145,78.405844,413.0,5.0,5,GN03
+43,Tamil Nadu,Dharmapuri,Karimangalam,Matlampatti,12.395565,78.533956,448.0,24.0,24,CK01
+44,Tamil Nadu,Dharmapuri,Karimangalam,Matlampatti EW,12.395565,78.533956,445.0,23.0,23,CK01
+45,Tamil Nadu,Dharmapuri,Morappur,Morappur,12.109415,78.38546,401.0,5.0,5,GN03
+46,Tamil Nadu,Dharmapuri,Morappur,Mottur,12.284869,78.488512,442.0,5.0,5,GN03
+47,Tamil Nadu,Dharmapuri,Morappur,Nachanampatty,12.076222,78.400762,420.0,5.0,5,GN03
+48,Tamil Nadu,Dharmapuri,Harur,Naripalli,12.041434,78.675711,299.0,6.0,6,GN03
+49,Tamil Nadu,Dharmapuri,Pennagaram,Nulahalli,12.077074,78.174383,480.0,18.0,18,GN03
+50,Tamil Nadu,Dharmapuri,Pennagaram,Nulahalli EW,12.077074,78.174383,485.0,18.0,18,CK01
+51,Tamil Nadu,Dharmapuri,Rayakottai/Kelamangalam,Odayandahalli,12.5302,78.014997,649.0,12.0,12,BG01
+52,Tamil Nadu,Dharmapuri,Morappur,Osahalli,12.104,78.319,450.0,15.0,15,GN03
+53,Tamil Nadu,Dharmapuri,Pappireddipatti,Ottupalam,11.9786,78.1817,419.0,14.0,14,CK01
+54,Tamil Nadu,Dharmapuri,Palacode,Palacode,12.315514,78.06981,518.0,17.0,17,CK01
+55,Tamil Nadu,Dharmapuri,Palacode,Pattabinagar (Panchapalli -EW),12.489713,77.943618,651.0,11.0,11,BG01
+56,Tamil Nadu,Dharmapuri,Palacode,Pattabinagar (Panchapalli -OW),12.489713,77.943618,651.0,11.0,11,BG01
+57,Tamil Nadu,Dharmapuri,Pappireddipatti,Pattukonampatti,11.87,78.38,456.0,24.0,24,CK01
+58,Tamil Nadu,Dharmapuri,Pappireddipatti,S. Tadampatti,11.947186,78.394326,372.0,17.0,17,GN03
+59,Tamil Nadu,Dharmapuri,Mathur,Salappacachanampatti Pz1,12.420996,78.25373,469.0,6.0,6,BG01
+60,Tamil Nadu,Dharmapuri,Mathur,Salappacachanampatti Pz2,12.420996,78.25373,469.0,15.5,16,BG01
+61,Tamil Nadu,Dharmapuri,Morappur,Sandaipatty,12.0805,78.4013,416.0,5.0,5,GN03
+62,Tamil Nadu,Dharmapuri,Karimangalam,Settiarkottai (Kyathnahalli Panchayat),12.309044,78.14852,466.0,5.0,5,BG01
+63,Tamil Nadu,Dharmapuri,Morappur,Sinthalpady,12.073,78.357,421.0,24.0,24,GN03
+64,Tamil Nadu,Dharmapuri,Pennagram,Sirugulur EW,12.0731,78.0321,468.0,20.0,20,GN03
+65,Tamil Nadu,Dharmapuri,Palakkodu,Somanahalli,12.141,78.020833,484.0,19.0,19,CK01
+66,Tamil Nadu,Dharmapuri,Palakkodu,Somanahalli EW,12.141,78.0276,480.0,20.0,20,BG01
+67,Tamil Nadu,Dharmapuri,Palacode,Thirumalavadi,12.319813,77.955447,518.0,20.0,20,CK01
+68,Tamil Nadu,Dharmapuri,Harur,Thoddampatty,12.0333,78.4638,370.0,9.0,9,GN03
+69,Tamil Nadu,Dharmapuri,Morappur,Thurijapally,12.027,78.4,404.0,12.0,12,GN03
+70,Tamil Nadu,Dharmapuri,Palacode,Tirumalavadi EW,12.2954,78.1595,466.0,5.0,5,CK01
+71,Tamil Nadu,Dharmapuri,Pennagaram,Tottaradnahalli Pz,12.5169,78.2189,495.0,28.0,28,BG01
+72,Tamil Nadu,Dharmapuri,Harur,Vallimadurai,11.956431,78.538895,465.0,13.0,13,CK01
+73,Tamil Nadu,Dharmapuri,Pappireddipatti,Varattampatti Pz,12.3996,78.185,493.0,15.0,15,BG01
+74,Tamil Nadu,Dharmapuri,Uthankarai,Velampatty,12.205,78.404,384.0,13.0,13,GN03
+75,Tamil Nadu,Dindigul,Nilakottai,Adilakshmipuram,10.2964,77.8808,271.0,15.0,15,BG01
+76,Tamil Nadu,Dindigul,Guziliamparai,Anaipatti Pz,10.401259,77.911362,199.0,15.0,15,CK01
+77,Tamil Nadu,Dindigul,Sanarpatti,Avilipatti EW,10.2836,78.0978,326.0,29.0,29,BG01
+78,Tamil Nadu,Dindigul,Sanarpatti,Avilipatti OW,10.2836,78.0978,326.0,25.0,25,BG01
+79,Tamil Nadu,Dindigul,Dindigul,Chattarapatti,10.3454,77.816204,232.0,15.0,15,BG01
+80,Tamil Nadu,Dindigul,Dindigul,Chelliyapuram,10.2692,77.8761,291.0,14.0,14,BG01
+81,Tamil Nadu,Dindigul,Attur,Chitterevu Pz,10.2378,77.7708,294.0,34.0,34,CK01
+82,Tamil Nadu,Dindigul,Dindigul,Dindigul Pz,10.391511,77.962639,261.0,20.0,20,BG01
+83,Tamil Nadu,Dindigul,Attur,Gaulpatti,10.0456,77.8758,213.0,15.0,15,CK01
+84,Tamil Nadu,Dindigul,Gujlimparai,Karunkulam Pz,10.0022,77.7956,219.0,11.0,11,GN03
+85,Tamil Nadu,Dindigul,Vadamadurai,Kulathur,10.444487,78.004886,243.0,13.0,13,BG01
+86,Tamil Nadu,Dindigul,Guziliamparai,Kuyyavanaikanpatti Pz,10.3675,77.8383,302.0,29.0,29,CK01
+87,Tamil Nadu,Dindigul,Natham,Manakattur EW,10.4672,78.0297,247.0,19.0,19,BG01
+88,Tamil Nadu,Dindigul,Natham,Manakattur OW,10.4672,78.0297,247.0,22.0,22,BG01
+89,Tamil Nadu,Dindigul,Gujlimparai,Nagayyakottai EW,10.5486,78.0542,248.0,18.0,18,BG01
+90,Tamil Nadu,Dindigul,Gujlimparai,Nagayyakottai OW,10.5486,78.0542,248.0,15.0,15,BG01
+91,Tamil Nadu,Dindigul,Dindigul,Narsingapuram,10.292177,77.805771,303.0,13.0,13,BG01
+92,Tamil Nadu,Dindigul,Nilakottai,Nilakottai EW,10.163545,77.846971,228.0,15.0,15,CK01
+93,Tamil Nadu,Dindigul,Nilakottai,Nilakottai Ow,10.163632,77.847236,228.0,27.0,27,CK01
+94,Tamil Nadu,Dindigul,Reddiyarchatram,Reddiyarchatram,10.4311,77.8664,271.0,16.0,16,CK01
+95,Tamil Nadu,Dindigul,Vadamadurai,S. Pudhupatty EW,10.5472,78.1242,588.0,25.0,25,BG01
+96,Tamil Nadu,Dindigul,Vadamadurai,S. Pudhupatty OW,10.5472,78.1242,588.0,22.0,22,BG01
+97,Tamil Nadu,Dindigul,Attur,Siddayan Kottai Pz,10.2725,77.9467,330.0,18.0,18,BG01
+98,Tamil Nadu,Dindigul,Dindigul,Silvattur Pz,10.35,78.0881,296.0,25.0,25,BG01
+99,Tamil Nadu,Dindigul,Vadamadurai,Siranga Gaundanur,10.5067,78.1472,327.0,25.0,25,GN03
+100,Tamil Nadu,Dindigul,R Chathram,Sriramapuram EW,10.524965,77.990958,308.0,28.0,28,BG01
+101,Tamil Nadu,Dindigul,Vedasandur,Sriramapuram OW,10.524965,77.990958,311.0,20.0,20,BG01
+102,Tamil Nadu,Dindigul,Vattalkundu,Uttappa Naicknur,10.070106,77.791923,248.0,12.0,12,CK01
+103,Tamil Nadu,Dindigul,Vadamadurai,Vadamadurai,10.4428,78.1575,360.0,11.0,11,BG01
+104,Tamil Nadu,Dindigul,Vattalgundu,Vattalgundu Pz,10.1733,77.7447,246.0,35.0,35,GN03
+105,Tamil Nadu,Dindigul,Vadamadurai,Velvarkottai Pz,10.4117,78.0656,270.0,16.0,16,BG01
+106,Tamil Nadu,Dindigul,Vattalgundu,Viruveedu Pz,10.075027,77.781337,223.0,4.5,5,CK01
+107,Tamil Nadu,Kancheepuram,Kattankolathur,Guduvancherry,12.791578,79.946863,36.0,8.0,8,BG01
+108,Tamil Nadu,Karur,Kadavur,D. Sittapatti EW,10.7144,78.1653,208.0,28.0,28,GN03
+109,Tamil Nadu,Karur,Kadavur,D. Sittapatti OW,10.7144,78.1653,208.0,28.0,28,GN03
+110,Tamil Nadu,Karur,Kadavur,Kadavur Pz,10.5936,78.1889,299.0,25.0,25,IN02
+111,Tamil Nadu,Krishnagiri,Uthankarai,Attipadi,12.266,78.5352,344.0,12.1,12,GN03
+112,Tamil Nadu,Krishnagiri,Sulagiri,Chamarasanapalli,12.71,78.03,726.0,11.3,11,BG01
+113,Tamil Nadu,Krishnagiri,Bergur,Chindagampalli EW,12.36,78.2,520.0,10.8,11,BG01
+114,Tamil Nadu,Krishnagiri,Bergur,Chindagampalli OW,12.36,78.2,525.0,10.7,11,BG01
+115,Tamil Nadu,Krishnagiri,Sulagiri,Doripalli,12.72,77.97,759.0,8.3,8,BG01
+116,Tamil Nadu,Krishnagiri,Kelamangalam,Geddahalli,12.42,77.8533,877.0,12.0,12,CK01
+117,Tamil Nadu,Krishnagiri,Shoolagiri,Guliyam,12.59,78.02,541.0,41.0,41,BG01
+118,Tamil Nadu,Krishnagiri,Sulagiri,Guliyam,12.59,78.02,688.0,5.3,5,BG01
+119,Tamil Nadu,Krishnagiri,Veppanapalli,Kuppachiparai,12.62,78.13,533.0,5.3,5,GN03
+120,Tamil Nadu,Krishnagiri,Veppanapalli,Kuppachiparai,12.62,78.13,533.0,12.1,12,GN03
+121,Tamil Nadu,Krishnagiri,Kelamangalam,Maniyambadi,12.45,77.785,846.0,4.9,5,BG01
+122,Tamil Nadu,Krishnagiri,Kelamangalam,Mugulur,12.5444,78.0197,725.0,5.3,5,BG01
+123,Tamil Nadu,Krishnagiri,Kelamangalam,Nagamangalam,12.5647,77.9417,755.0,8.3,8,BG01
+124,Tamil Nadu,Krishnagiri,Sulagiri,Ramandoddi,12.78,78.07,765.0,6.9,7,BG01
+125,Tamil Nadu,Krishnagiri,krishnagiri,Ramapuram,12.56,78.18,510.0,5.3,5,BG01
+126,Tamil Nadu,Krishnagiri,Uthankarai,Reddipatti,11.6808,78.1106,291.0,7.0,7,GN03
+127,Tamil Nadu,Krishnagiri,Bargur,Surankottai,12.54,78.26,517.0,5.3,5,BG01
+128,Tamil Nadu,Krishnagiri,Veppanapalli,Thottakanavi,12.7,78.2,584.0,5.3,5,GN03
+129,Tamil Nadu,Krishnagiri,Veppanapalli,Thottakanavi,12.7,78.2,584.0,5.3,5,GN03
+130,Tamil Nadu,Madurai,Periyur,Highways Dept campus Periyar,9.7444,77.7922,241.0,8.0,8,GN03
+131,Tamil Nadu,Madurai,Madurai East,K Pudur,9.9422,78.1392,187.0,29.0,29,GN03
+132,Tamil Nadu,Madurai,Kallanthiri,Kallantheri,10.0385,78.1996,176.0,6.0,6,GN03
+133,Tamil Nadu,Madurai,Karungalakudi EW,Karugalagudi EW,10.1597,78.3604,163.0,6.0,6,GN03
+134,Tamil Nadu,Madurai,Karungalakudi OW,Karugalagudi OW,10.1597,78.3604,163.0,6.0,6,GN03
+135,Tamil Nadu,Madurai,Keelavalavu,Keelavalavu,10.0714,78.4218,125.0,10.0,10,GN03
+136,Tamil Nadu,Madurai,Thirumangalam,Kilanari,9.9256,78.0636,146.0,25.0,25,GN03
+137,Tamil Nadu,Madurai,Usilampatti,Kolathupatti,10.02,77.8072,225.0,12.0,12,GN03
+138,Tamil Nadu,Madurai,Melur,Kottainatham,9.9889,78.3941,131.0,15.0,15,GN03
+139,Tamil Nadu,Madurai,Chellampatti,Kuppanpatti EW,9.9503,77.8442,181.0,19.0,19,GN03
+140,Tamil Nadu,Madurai,Chellampatti,Kuppanpatti OW,9.9503,77.8442,181.0,13.0,13,GN03
+141,Tamil Nadu,Madurai,Melur,Navinpatti,10.0403,78.3646,158.0,12.0,12,GN03
+142,Tamil Nadu,Madurai,Melur,Sarguvilayapatti,10.0389,78.4217,143.0,12.0,12,GN03
+143,Tamil Nadu,Madurai,Vadipatti,T Andipatti EW,10.0639,77.9808,187.0,10.0,10,GN03
+144,Tamil Nadu,Madurai,Vadipatti,T Andipatti OW,10.0639,77.9808,187.0,15.0,15,GN03
+145,Tamil Nadu,Madurai,Thirumangalam,Thirumangalam,9.8244,77.9869,127.0,13.0,13,GN03
+146,Tamil Nadu,Madurai,Thirumangalam,Thirumangalam Bus depot,9.8269,77.9904,128.0,22.0,22,GN03
+147,Tamil Nadu,Madurai,Usilampatti,Usilampatti EW (Bus Depot),9.9608,77.7931,209.0,15.0,15,GN03
+148,Tamil Nadu,Madurai,Usilampatti,Usilampatti EW,9.9608,77.7931,211.0,14.0,14,GN03
+149,Tamil Nadu,Madurai,Usilampatti,Usilampatti OW,9.960833,77.79583,211.0,12.0,12,GN03
+150,Tamil Nadu,Madurai,Usilampatti,Usilampatti,10.01167,78.47944,107.0,18.0,18,GN03
+151,Tamil Nadu,Madurai,Vadipatti,Shlavandan (Bus Depo),10.0228,77.9636,168.0,13.0,13,GN03
+152,Tamil Nadu,Madurai,Tirumangalam,Ettunali,9.7872,78.033,110.0,19.0,19,GN03
+153,Tamil Nadu,Madurai,T-Kallupatti,Kandaneri EW,9.7098,77.8237,148.0,9.0,9,GN03
+154,Tamil Nadu,Madurai,Thirumangalam,Kappalur EW,9.8517,78.0156,139.0,12.0,12,KH01
+155,Tamil Nadu,Madurai,T-Kallupatti,Kavadi Nayakanpatti EW,9.6666,77.7884,136.0,12.0,12,GN03
+156,Tamil Nadu,Madurai,Kallugudi,Kurayur,9.6918,78.0176,110.0,11.0,11,GN03
+157,Tamil Nadu,Madurai,T. Kallupatti,M.Subalapuram,9.7232,77.8541,145.0,6.5,7,CK01
+158,Tamil Nadu,Madurai,Tirumangalam,Muthukrishnapuram EW,9.8891,77.9289,144.0,8.0,8,GN03
+159,Tamil Nadu,Madurai,Selampatti,Pudupatti Kvilangulam,9.9343,77.9286,156.0,18.3,18,KH01
+160,Tamil Nadu,Madurai,T-Kallupatti,S. Keelapatti EW,9.7029,77.7574,155.0,21.0,21,GN03
+161,Tamil Nadu,Madurai,Kallugudi,Sivarakottai,9.7439,77.9827,115.0,12.0,12,GN03
+162,Tamil Nadu,Madurai,Kallugudi,Thoobalulam Pudur,9.7522,78.0351,115.0,15.0,15,GN03
+163,Tamil Nadu,Madurai,Kallugudi,Vadakampatti EW,9.7121,77.9553,116.0,23.0,23,GN03
+164,Tamil Nadu,Madurai,Kallugudi,Vadakampatti OW,9.7121,77.9553,116.0,24.0,24,GN03
+165,Tamil Nadu,Madurai,T-Kallupatti,Vaiyur EW,9.6832,77.8539,127.0,19.0,19,GN03
+166,Tamil Nadu,Madurai,Thirumangalam,VIKKIRAMANGALAM EW,10.0,77.9292,189.0,24.0,24,KH01
+167,Tamil Nadu,Madurai,Kallikudi,VILLOORU,9.7071,77.914,132.0,18.0,18,GN03
+168,Tamil Nadu,Madurai,Kallikudi,Agathapatti,9.701,77.9605,115.0,8.0,8,GN03
+169,Tamil Nadu,Madurai,Chellampatti,Karumathur,9.934,77.928,155.24,18.0,18,GN03
+170,Tamil Nadu,Madurai,Vadipatti,Solavandan,10.022,77.963,168.0,13.0,13,GN03
+171,Tamil Nadu,Madurai,Thirumangalam,Checkanurani,9.94,77.96,165.0,11.0,11,CK01
+172,Tamil Nadu,Madurai,Thirumangalam,"Govt Arts College, Madurai",9.938,78.138,135.0,6.0,6,CK01
+173,Tamil Nadu,Madurai,T Kallupatti,Kadeneri,9.708,77.81,148.0,9.0,9,GN03
+174,Tamil Nadu,Madurai,Thirumangalam,Madurai Kamaraj University,9.943,78.015,172.0,6.0,6,CK01
+175,Tamil Nadu,Madurai,Kottampatti,Manapatcheri,10.214,78.345,186.0,25.0,25,GN03
+176,Tamil Nadu,Madurai,Melur,Melur Bus depot,10.03,78.335,152.0,18.0,18,GN03
+177,Tamil Nadu,Madurai,Thiruparankundram,Nilayur,9.946,78.148,131.0,15.0,15,GN03
+178,Tamil Nadu,Madurai,T Kallupatti,Puliyampattisalai,9.7116,77.917,126.0,18.0,18,GN03
+179,Tamil Nadu,Madurai,Kallikudi,T Pudur,9.7522,77.917,115.246,15.0,15,GN03
+180,Tamil Nadu,Madurai,T Kallupatti,T Kallupatti,9.726,77.85,146.0,25.0,25,GN03
+181,Tamil Nadu,Madurai,Usillampatti,Kavulpatti,10.045,77.87,223.0,5.0,5,GN03
+182,Tamil Nadu,Namakkal,Thiruchengodu,Andivalasu EW,11.2833,77.8739,164.0,5.5,6,GN03
+183,Tamil Nadu,Namakkal,Thiruchengodu,Andivalasu OW,11.28,77.87,163.0,6.0,6,GN03
+184,Tamil Nadu,Namakkal,Kabilarmalai,Kabilarmalai,11.1444,77.9481,208.0,11.2,11,GN03
+185,Tamil Nadu,Namakkal,Thiruchengodu,Manpachipalli,11.2344,77.885,153.0,8.5,9,IN02
+186,Tamil Nadu,Namakkal,Paramathi,Pillur,11.197764,78.020776,143.0,7.5,8,CK01
+187,Tamil Nadu,Namakkal,Thiruchengodu,Vattur,11.4119,77.96,233.0,18.0,18,GN03
+188,Tamil Nadu,Namakkal,Paramathi,Veeranampalayam OW,11.14,77.99,154.0,6.0,6,GN03
+189,Tamil Nadu,Namakkal,Paramathi,Veeranampalayam EW,11.1325,77.9892,145.0,3.35,3,GN03
+190,Tamil Nadu,Perambalur,Alathur,Chetikulam,11.1342,78.7706,135.0,13.0,13,GN03
+191,Tamil Nadu,Perambalur,Alathur,Karai EW,11.1331,78.8719,121.0,10.8,11,GN03
+192,Tamil Nadu,Perambalur,Alathur,Nakkasalem,11.1631,78.7192,145.0,18.0,18,GN03
+193,Tamil Nadu,Perambalur,Veppanthatai,Neikuppai,11.3597,78.8708,118.0,12.0,12,GN03
+194,Tamil Nadu,Perambalur,Perambalur,Perambalur EW,11.2372,78.865,132.0,13.0,13,GN03
+195,Tamil Nadu,Perambalur,Perambalur,Siruvachur EW,11.1914,78.8633,129.0,21.0,21,GN03
+196,Tamil Nadu,Perambalur,Veppanthattai,Valikandapuram,11.3194,78.9208,113.0,6.3,6,GN03
+197,Tamil Nadu,Perambalur,Veppanthatai,Vengalam EW,11.3739,78.7842,145.0,7.8,8,GN03
+198,Tamil Nadu,Perambalur,Perambalur,Arumandal,11.2644,78.9355,115.0,5.5,6,GN03
+199,Tamil Nadu,Sivaganga,Sivaganga,Alagchipatti,9.9594,78.4399,119.0,29.0,29,GN03
+200,Tamil Nadu,Sivaganga,Sivaganga,Alkamanagari,10.0064,78.4658,112.0,29.0,29,GN03
+201,Tamil Nadu,Sivaganga,Sivaganga,Chokkaligapurm,9.9934,78.5328,101.0,29.8,30,GN03
+202,Tamil Nadu,Sivaganga,Sivaganga,Kalaradinipatti,9.9766,78.4584,116.0,23.55,24,GN03
+203,Tamil Nadu,Sivaganga,Madagupatti,Keelpoongudi,9.9617,78.4844,103.0,23.4,23,GN03
+204,Tamil Nadu,Sivaganga,Sivaganga,KKV Solapuram,9.898023,78.500896,105.0,48.0,48,GN03
+205,Tamil Nadu,Sivaganga,Sivaganga,Malampatti,9.9542,78.417,127.0,27.0,27,GN03
+206,Tamil Nadu,Sivaganga,Manamadurai,Manamadurai Travellers Bangalow EW,9.698705,78.436804,77.0,21.0,21,GN03
+207,Tamil Nadu,Sivaganga,Kalaiarkovil,Sembanur,10.000953,78.627905,83.0,23.5,24,GN03
+208,Tamil Nadu,Sivaganga,Sivaganga,Semuliyam Pattinam,9.9411,78.4901,107.0,19.0,19,GN03
+209,Tamil Nadu,Sivaganga,Sivagangai,Sivagangai Travellers Bungalow OW,9.8575,78.4858,104.0,41.4,41,GN03
+210,Tamil Nadu,Sivaganga,Sivaganga,Thirumalai,9.9913,78.4704,106.0,14.05,14,GN03
+211,Tamil Nadu,Sivaganga,Tirupattur,Thiruputhur OW,10.1096,78.591,99.0,41.6,42,GN03
+212,Tamil Nadu,Sivaganga,Tirupattur,Thiruputhur EW,10.1096,78.5911,100.0,11.4,11,GN03
+213,Tamil Nadu,Sivaganga,Sivaganga,Veerapatti,9.9778,78.4752,106.0,23.7,24,GN03
+214,Tamil Nadu,Sivaganga,Karaikudi,Allagappa Arts College,10.082974,78.782415,96.0,10.0,10,ST04
+215,Tamil Nadu,Sivaganga,Karaikudi,Allagappa Arts College,10.082974,78.782415,100.0,12.0,12,ST04
+216,Tamil Nadu,Sivaganga,Singampunari,Eriyur EW,10.0471,78.514267,107.0,11.4,11,GN03
+217,Tamil Nadu,Sivaganga,Singampunari,Eriyur OW,10.0471,78.514267,107.0,5.4,5,GN03
+218,Tamil Nadu,Sivaganga,Singampunari,Kalapur EW,10.170164,78.455009,98.0,17.4,17,GN03
+219,Tamil Nadu,Sivaganga,Tirupathur,Kuringi Nagar,10.1031,78.5786,106.0,23.45,24,GN03
+220,Tamil Nadu,Sivaganga,Tirupathur,Malampatti,9.941808,78.406343,131.0,6.3,0,CK01
+221,Tamil Nadu,Sivaganga,Singampunari,MallakottaiEW,10.054729,78.46466,132.0,16.7,17,GN03
+222,Tamil Nadu,Sivaganga,Tirupathur,Nedumaram,10.1428,78.6321,101.0,18.0,18,CK01
+223,Tamil Nadu,Sivaganga,Okkur,Okkur,9.95129,78.5228,96.0,30.0,30,CK01
+224,Tamil Nadu,Sivaganga,Okkur,Perumalpatti,9.9431,78.4676,104.0,36.0,36,GN03
+225,Tamil Nadu,Sivaganga,Tirupathur,Pulankuruchi,10.101836,78.554842,159.0,5.4,5,GN03
+226,Tamil Nadu,Sivaganga,Singampunari,S. V. MANGALAM EW,10.1752,78.473,144.0,29.4,29,GN03
+227,Tamil Nadu,Sivaganga,Singampunari,Singampunari,10.1894,78.4031,172.0,17.4,17,GN03
+228,Tamil Nadu,Sivaganga,Tirupathur,SEVUR,10.257035,78.591066,145.0,24.0,24,GN03
+229,Tamil Nadu,Sivaganga,Madagupatti,THACHANPUTHUPATTI,9.9892,78.5665,95.0,36.9,37,GN03
+230,Tamil Nadu,Sivaganga,Tirupathur,VADDAKU ILAYATHANKUDI,10.2008,78.6574,130.0,30.0,30,GN03
+231,Tamil Nadu,Sivaganga,Tirupathur,VAIYAKALATHUR,10.1843,78.5987,125.0,22.0,22,CK01
+232,Tamil Nadu,Sivaganga,Tirupathur,VANJINIPATTI,10.1719,78.5459,123.0,24.0,24,GN03
+233,Tamil Nadu,Theni,Cumbam,CUMBAM,9.748204,77.290734,406.0,33.6,34,CK01
+234,Tamil Nadu,Theni,Theni,GOVT. ITI CAMPUS BODI,9.944886,77.434444,347.0,23.5,24,CK01
+235,Tamil Nadu,Theni,Andipatti,JAKKAMPATTI EW,9.8244,77.9869,131.0,16.5,17,CK01
+236,Tamil Nadu,Theni,Andipatti,JAKKAMPATTI OW,9.8244,77.9869,131.0,16.8,17,CK01
+237,Tamil Nadu,Theni,Andipatti,K. Villaku EW,10.0039,77.5529,299.0,22.1,22,CK01
+238,Tamil Nadu,Theni,Andipatti,K. Villaku OW,10.0039,77.5529,299.0,6.0,6,CK01
+239,Tamil Nadu,Theni,Chinnamanur,MAKEYANKOTTAI,9.8509,77.3546,376.0,11.5,12,CK01
+240,Tamil Nadu,Theni,Chinnamanur,Muthyanchettipatti (KOMBAI),9.9163,77.284,416.0,30.0,30,CK01
+241,Tamil Nadu,Theni,Andipatti,RENGA SAMUDRAM,10.0218,77.5797,283.0,17.0,17,CK01
+242,Tamil Nadu,Theni,Chinnamanur,RMC CHINNAMANUR,9.8372,77.3938,386.0,31.4,31,GN03
+243,Tamil Nadu,Theni,Andipatti,TEKKAMPATTI,9.951074,77.533657,448.0,17.0,17,GN03
+244,Tamil Nadu,Theni,Theni,THENI EW (RMC),10.0337,77.4834,318.0,12.0,12,GN03
+245,Tamil Nadu,Theni,Theni,THENI OW (RMC GOWDON),10.0337,77.4834,318.0,17.5,18,GN03
+246,Tamil Nadu,Theni,Uthamapalayam,UTHAMAPALAYAM,9.817444,77.327019,387.0,18.0,18,GN03
+247,Tamil Nadu,Theni,Chinnamanur,KAMATCHIPURAM TNEB EW,9.8663,77.456,349.0,18.0,18,GN03
+248,Tamil Nadu,Theni,Chinnamanur,KAMATCHIPURAM TNEB OW,9.8663,77.456,349.0,18.0,18,GN03
+249,Tamil Nadu,Thoothukudi,Ottapidaram,Eppodumvenran (GHSS) EW,9.0202,78.0469,35.0,17.5,18,CK01
+250,Tamil Nadu,Thoothukudi,Kathyar,KALANKARIYANPATTI EW,9.1358,77.7392,112.0,21.0,21,GN03
+251,Tamil Nadu,Thoothukudi,Kayathar,KAMANAYAKKANPATTI,9.07663,77.93606,65.0,6.0,6,CK01
+252,Tamil Nadu,Thoothukudi,Kayathar,KARISALKULAM EW,9.0063,77.7877,75.0,16.2,16,CK01
+253,Tamil Nadu,Thoothukudi,Ottapldaram,KURUKKUSALAI,8.9319,78.086,27.0,23.0,23,CK01
+254,Tamil Nadu,Thoothukudi,Kovilpatti,MELAERAL,9.107582,78.006526,59.0,12.0,12,CK01
+255,Tamil Nadu,Thoothukudi,Ottapidaram,OTTANATHAM EW,8.9068,78.0195,69.0,14.0,14,CK01
+256,Tamil Nadu,Thoothukudi,Thievaseyal puram,SEKKARAKUDI,8.79192,77.9522,34.0,6.0,6,CK01
+257,Tamil Nadu,Thoothukudi,Ottapldaram,SILLANGULAM,8.961257,77.94262,74.0,7.0,7,GN03
+258,Tamil Nadu,Thoothukudi,Vilathikulam,SIVAGNANAPURAM (G. HS. S) OW,9.05447,78.08671,43.0,6.0,6,CK01
+259,Tamil Nadu,Thoothukudi,Vilathikulam,SIVAGNANAPURAM EW,9.05467,78.08661,40.0,6.0,6,CK01
+260,Tamil Nadu,Tiruchirappalli,Manachanallur,S. AYYAMPALAYAM,10.9417,78.725,82.5,12.3,12,GN03
+261,Tamil Nadu,Tiruchirappalli,Musiri,Amoor,10.9183,78.5333,83.0,22.4,22,GN03
+262,Tamil Nadu,Tiruchirappalli,Musiri,Amoor OW,10.9183,78.5333,83.0,20.4,20,GN03
+263,Tamil Nadu,Tiruchirappalli,Manikandam,Ariyavoor,10.7542,78.5833,94.0,20.0,20,GN03
+264,Tamil Nadu,Tiruchirappalli,Manachanallur,Chiinakattukulam,10.9513,78.65,100.0,11.9,12,GN03
+265,Tamil Nadu,Tiruchirappalli,Thuraiyur,Echampatty,11.0786,78.5792,154.0,5.3,5,GN03
+266,Tamil Nadu,Tiruchirappalli,Uppliyapuram,Eragudi,11.201991,78.500297,154.0,5.3,5,GN03
+267,Tamil Nadu,Tiruchirappalli,Uppliyapuram,Eragudi OW,11.201944,78.500435,154.0,5.3,5,GN03
+268,Tamil Nadu,Tiruchirappalli,Trichy,K.Sathanur,10.7558,78.6822,88.0,5.3,5,GN03
+269,Tamil Nadu,Tiruchirappalli,Thuraiyur,Kaliyampatty,11.0886,78.5792,111.0,5.3,5,GN03
+270,Tamil Nadu,Tiruchirappalli,manachanallur,Kaluvaipatty,10.9581,78.6619,101.0,20.3,20,GN03
+271,Tamil Nadu,Tiruchirappalli,Thottiyam,Kattuputhur Thottiyam EW,10.9921,78.22,111.0,11.3,11,GN03
+272,Tamil Nadu,Tiruchirappalli,Thottiyam,Kattuputhur Thottiyam OW,10.9921,78.2201,113.0,10.6,11,GN03
+273,Tamil Nadu,Tiruchirappalli,Trichy,Khajamalai CTO Complex,10.7753,78.6961,90.0,5.3,5,GN03
+274,Tamil Nadu,Tiruchirappalli,Trichy,Kottapattu,10.7753,78.7025,87.0,22.7,23,GN03
+275,Tamil Nadu,Tiruchirappalli,Srirangam,Kullumani,10.840019,78.593467,83.0,20.3,20,GN03
+276,Tamil Nadu,Tiruchirappalli,Manachanallur,Manalipallam,10.953558,78.713845,86.0,18.1,18,GN03
+277,Tamil Nadu,Tiruchirappalli,Musiri,Musiri,10.9597,78.4397,62.0,17.3,17,GN03
+278,Tamil Nadu,Tiruchirappalli,Thuraiyur,Nallavenipatty,11.085,78.6111,117.0,5.3,5,CK01
+279,Tamil Nadu,Tiruchirappalli,Musiri,Pulivalam,11.024621,78.621569,117.0,17.3,17,GN03
+280,Tamil Nadu,Tiruchirappalli,Manikandam,Sedarapatty Manikandam Trichy,10.6792,78.5833,112.0,11.3,11,GN03
+281,Tamil Nadu,Tiruchirappalli,sriranga,Srirangam,10.86512,78.677008,127.0,29.0,29,BG01
+282,Tamil Nadu,Tiruchirappalli,Thottiyam,Thottiyam,11.002051,78.323826,90.0,11.3,11,GN03
+283,Tamil Nadu,Tiruchirappalli,Thottiyam,Thottiyam OW,11.002051,78.323826,90.0,10.4,10,GN03
+284,Tamil Nadu,Tiruchirappalli,Thuraiyur,Thuraiyur,11.149731,78.609413,145.0,14.95,15,CK01
+285,Tamil Nadu,Tiruchirappalli,manachanallur,Tirupattur,11.047082,78.7485,101.0,5.3,5,GN03
+286,Tamil Nadu,Tiruchirappalli,manachanallur,Tiruvasi,10.8881,78.8578,56.0,18.0,18,GN03
+287,Tamil Nadu,Tiruchirappalli,Manachanallur,Tiruvasi OW,10.8881,78.8578,56.0,17.0,17,GN03
+288,Tamil Nadu,Tiruchirappalli,Trichy,Trichy,10.8128,78.6767,83.0,5.3,5,GN03
+289,Tamil Nadu,Tiruchirappalli,Trichy,Trichy old collectorate,10.8014,78.6772,85.0,5.3,5,GN03
+290,Tamil Nadu,Tiruchirappalli,Trichy,Trichy OW,10.8128,78.6767,83.0,5.3,5,GN03
+291,Tamil Nadu,Tiruchirappalli,Uppliyapuram,Uppliyapuram,11.248521,78.496954,129.0,18.3,18,GN03
+292,Tamil Nadu,Tiruchirappalli,Uppliyapuram,Uppliyapuram OW,11.248521,78.496954,129.0,21.1,21,GN03
+293,Tamil Nadu,Tiruchirappalli,Lalgudi,Uttatur,11.0761,78.8578,98.0,7.8,8,GN03
+294,Tamil Nadu,Tiruchirappalli,Manachanallur,Valmalpalayam,10.9225,78.6208,223.0,5.3,5,GN03
+295,Tamil Nadu,Tiruvallur,Gummudipoondi,M.N.Kandigai,13.27,79.67,186.0,15.0,15,GN03
+296,Tamil Nadu,Tiruvallur,ummudipoondi,M.N.Kandigai,13.27,79.67,186.0,13.0,13,GN03
+297,Tamil Nadu,Tiruvallur,Gummudipoondi,SETHALAPAKKAM,13.4551,79.9779,198.0,10.0,10,GN03
+298,Tamil Nadu,Tiruvannamalai,Vellore,Abdullapuram,12.9136,79.0889,223.0,8.5,9,CK01
+299,Tamil Nadu,Tiruvannamalai,Polur,Alliyalmangalam,12.4306,79.2083,186.0,23.0,23,GN03
+300,Tamil Nadu,Tiruvannamalai,Thiruvannamalai,Anaipiranthan,12.2361,79.0417,186.0,7.0,7,CK01
+301,Tamil Nadu,Tiruvannamalai,Thiruvannamalai,Attiyendal-II,12.2347,79.025,198.0,16.5,17,CK01
+302,Tamil Nadu,Tiruvannamalai,Thiruvannamalai,Attiyendal-II-OW-1,12.2333,79.025,178.0,10.0,10,CK01
+303,Tamil Nadu,Tiruvannamalai,Thiruvannamalai,Attiyendal-II-OW-2,12.2336,79.0253,180.0,19.6,20,CK01
+304,Tamil Nadu,Tiruvannamalai,Polur,Ayampadi,12.6361,79.2333,157.0,17.0,17,GN03
+305,Tamil Nadu,Tiruvannamalai,Thurunchapuram,Chengunam,12.2319,79.2042,274.0,16.0,16,GN03
+306,Tamil Nadu,Tiruvannamalai,Thurunchapuram,Chittadurai,12.3278,79.1528,179.0,9.3,9,BG01
+307,Tamil Nadu,Tiruvannamalai,Thellar,Desur,12.4436,79.4822,114.0,12.0,12,GN02
+308,Tamil Nadu,Tiruvannamalai,Polur,Devakapuram-EW,12.3931,79.0611,186.0,16.0,16,CK01
+309,Tamil Nadu,Tiruvannamalai,Polur,Devakapuram-OW,12.3931,79.0611,186.0,16.8,17,CK01
+310,Tamil Nadu,Tiruvannamalai,Polur,Devanampattu-EW,12.38,79.0553,198.0,5.4,5,CK01
+311,Tamil Nadu,Tiruvannamalai,Thiruvannamalai,Durgiammanendal,12.0792,79.0792,134.0,9.3,9,CK01
+312,Tamil Nadu,Tiruvannamalai,Thiruvannamalai,Durgiammanendal-OW,12.0792,79.0792,165.0,9.3,9,CK01
+313,Tamil Nadu,Tiruvannamalai,Pernamanllur,Eendal,12.4361,79.4181,126.0,26.6,27,CK01
+314,Tamil Nadu,Tiruvannamalai,Pernamanllur,Erumbur,12.5597,79.5597,103.0,8.2,8,CK01
+315,Tamil Nadu,Tiruvannamalai,Polur,Ettivadi,12.5236,79.0917,164.0,12.3,12,GN03
+316,Tamil Nadu,Tiruvannamalai,Polur,Ettivadi-OW,12.5239,79.0919,164.0,5.8,6,GN03
+317,Tamil Nadu,Tiruvannamalai,Chettuputtu,Gudalur (Madailagam),12.5808,79.2475,146.0,15.8,16,CK01
+318,Tamil Nadu,Tiruvannamalai,Kilpennathur,Kadambai,12.2292,79.1917,142.0,13.8,14,GN03
+319,Tamil Nadu,Tiruvannamalai,Polur,Kalampur,12.6194,79.2167,162.0,20.3,20,GN03
+320,Tamil Nadu,Tiruvannamalai,Kalaspakkam,Kalaspakkam,12.5058,79.1056,174.0,18.8,19,CK01
+321,Tamil Nadu,Tiruvannamalai,Thurunchapuram,Kalasthampadi,12.2903,79.1236,174.0,6.3,6,CK01
+322,Tamil Nadu,Tiruvannamalai,Thurunchapuram,Kamalaputhur,12.3,79.1361,183.0,6.3,6,CK01
+323,Tamil Nadu,Tiruvannamalai,Polur,Kanji-EW,12.3783,78.9672,268.0,11.3,11,CK01
+324,Tamil Nadu,Tiruvannamalai,Polur,Kannkurkhai-EW,12.44,79.421,216.0,9.8,18,CK01
+325,Tamil Nadu,Tiruvannamalai,Thurinjapuram,Kariyendal,12.3689,79.0903,189.0,12.2,12,CK01
+326,Tamil Nadu,Tiruvannamalai,Polur,Kelivur,12.5953,79.1528,175.0,11.3,11,CK01
+327,Tamil Nadu,Tiruvannamalai,Kilpennathur,Kikkalur,12.3069,79.2675,134.0,10.4,10,GN03
+328,Tamil Nadu,Tiruvannamalai,Thiruvannamalai,Kiliyapattu,12.2639,79.0972,159.0,19.0,19,BG01
+329,Tamil Nadu,Tiruvannamalai,Thiruvannamalai,Kiliyapattu-OW,12.2639,79.0972,159.0,17.5,18,BG01
+330,Tamil Nadu,Tiruvannamalai,Kilpennathur,Kilpennathur-EW,12.2347,79.2042,152.0,23.7,24,GN03
+331,Tamil Nadu,Tiruvannamalai,Kilpennathur,Kilpennathur-OW,12.235,79.2044,152.0,25.7,26,GN03
+332,Tamil Nadu,Tiruvannamalai,Thurunchapuram,Kodykuppam,12.3292,79.1597,184.0,14.0,14,BG01
+333,Tamil Nadu,Tiruvannamalai,Durinsapuram,Kovur-EW,12.3944,79.1681,179.0,26.3,26,CK01
+334,Tamil Nadu,Tiruvannamalai,Durinsapuram,Kovur-OW,12.3944,79.1681,177.0,26.3,26,CK01
+335,Tamil Nadu,Tiruvannamalai,Thiruvannamalai,Kumarakudi,12.2278,79.1361,144.0,13.5,14,GN03
+336,Tamil Nadu,Tiruvannamalai,Polur,Kunnathur,12.5083,79.1083,182.0,17.3,17,CK01
+337,Tamil Nadu,Tiruvannamalai,Polur,Kuppam,12.7236,79.1256,198.0,15.8,16,CK01
+338,Tamil Nadu,Tiruvannamalai,Kalaspakkam,Ladavaram,12.425,79.1467,176.0,19.1,19,CK01
+339,Tamil Nadu,Tiruvannamalai,Pernamanllur,Mahadevi mangalam,12.5419,79.4056,136.0,26.3,26,CK01
+340,Tamil Nadu,Tiruvannamalai,Thiruvannamalai,Malappampadi,12.2542,79.1708,156.0,14.4,14,CK01
+341,Tamil Nadu,Tiruvannamalai,Thurinjapuram,Mallavadi,12.3317,79.0767,180.0,20.0,20,CK01
+342,Tamil Nadu,Tiruvannamalai,Thurinjapuram,Mangalam pudur,12.3167,79.1511,163.0,18.0,18,CK01
+343,Tamil Nadu,Tiruvannamalai,Chettuputtu,Maruthuvanbadi,12.4986,79.3172,141.0,18.3,18,CK01
+344,Tamil Nadu,Tiruvannamalai,Polur,Melnachipatti-EW,12.2889,78.97,243.0,11.3,11,CK01
+345,Tamil Nadu,Tiruvannamalai,Chengam,Melvanakkambadi PZ,12.2433,78.7573,293.0,15.8,16,GN03
+346,Tamil Nadu,Tiruvannamalai,Thurunchapuram,Meppathurai,12.3411,79.1778,184.0,20.0,20,CK01
+347,Tamil Nadu,Tiruvannamalai,ChetPet,Modaiyur,12.5025,79.1922,161.0,9.6,10,CK01
+348,Tamil Nadu,Tiruvannamalai,Chettupet,Modaiyur,12.5033,79.245,160.0,10.7,11,GN03
+349,Tamil Nadu,Tiruvannamalai,ChetPet,Modaiyur(OW-1),12.5028,79.1925,162.0,9.3,9,CK01
+350,Tamil Nadu,Tiruvannamalai,ChetPet,Modaiyurt(OW-2),12.5031,79.1928,162.0,9.5,10,CK01
+351,Tamil Nadu,Tiruvannamalai,Polur,Mukkurumbi,12.6278,79.2208,159.0,12.6,13,GN03
+352,Tamil Nadu,Tiruvannamalai,Polur,Nadu mangalam -EW,12.4069,79.0917,187.0,9.1,9,CK01
+353,Tamil Nadu,Tiruvannamalai,Kalaspakkam,Netchnativemalai,12.4442,79.06,225.0,16.1,16,CK01
+354,Tamil Nadu,Tiruvannamalai,Thurunchapuram,Northampoondy,12.325,79.2089,177.0,14.0,14,CK01
+355,Tamil Nadu,Tiruvannamalai,Kilpennathur,Odiyanendal,12.2625,79.1694,159.0,11.3,11,GN03
+356,Tamil Nadu,Tiruvannamalai,Chettuputtu,Padagam,12.4194,79.2039,183.0,9.45,10,CK01
+357,Tamil Nadu,Tiruvannamalai,Polur,Padiyampatti,12.4828,79.8592,180.0,26.3,26,CK01
+358,Tamil Nadu,Tiruvannamalai,Thurunchapuram,Periya Kilambady,12.3694,79.1083,184.0,11.4,11,CK01
+359,Tamil Nadu,Tiruvannamalai,Kalaspakkam,Periyagaram-EW,12.5389,79.1103,176.0,9.8,10,CK01
+360,Tamil Nadu,Tiruvannamalai,Kalaspakkam,Periyagaram-OW,12.5389,79.1103,180.0,15.2,15,CK01
+361,Tamil Nadu,Tiruvannamalai,Polur,Polur,12.5192,79.1317,166.0,11.3,11,CK01
+362,Tamil Nadu,Tiruvannamalai,Polur,Porkunnam-EW,12.3867,79.1153,182.0,12.0,12,CK01
+363,Tamil Nadu,Tiruvannamalai,Polur,Pudupalayam,12.4736,79.1256,162.0,13.8,14,CK01
+364,Tamil Nadu,Tiruvannamalai,ChetPet,Pulivendal,12.5028,79.1431,148.0,7.3,7,CK01
+365,Tamil Nadu,Tiruvannamalai,Anakkavoor,Purasai,12.5808,79.5806,96.0,12.5,13,CK01
+366,Tamil Nadu,Tiruvannamalai,Thiruvannamalai,Sattram,12.2694,79.1694,180.0,19.5,20,GN03
+367,Tamil Nadu,Tiruvannamalai,Polur,Sedarambattu,12.7083,79.2194,187.0,9.8,10,GN03
+368,Tamil Nadu,Tiruvannamalai,Thiruvannamalai,Seriyendal,12.2508,79.0822,165.0,18.8,19,CK01
+369,Tamil Nadu,Tiruvannamalai,Thiruvannamalai,Seriyendal(OW-1),12.2511,79.0825,170.0,21.8,22,CK01
+370,Tamil Nadu,Tiruvannamalai,Thiruvannamalai,Seriyendal(OW-2),12.2514,79.0828,171.0,21.8,22,CK01
+371,Tamil Nadu,Tiruvannamalai,Kalaspakkam,Siruvallur,12.4858,78.9881,207.0,19.0,19,CK01
+372,Tamil Nadu,Tiruvannamalai,Thellar,Thellar,12.4081,79.5483,96.0,12.0,12,CK01
+373,Tamil Nadu,Tiruvannamalai,Thiruvannamalai,Thiruvannmalai hospital,12.2361,79.0792,173.0,17.4,20,CK01
+374,Tamil Nadu,Tiruvannamalai,Polur,Tindivanam (Attimur ),12.5756,79.0994,190.0,9.3,9,GN03
+375,Tamil Nadu,Tiruvannamalai,Tvmali,Vadaandapattu-EW,12.2589,79.0828,174.0,18.2,18,BG01
+376,Tamil Nadu,Tiruvannamalai,Tvmali,Vadaandapattu-OW,12.2589,79.0828,174.0,17.3,17,BG01
+377,Tamil Nadu,Tiruvannamalai,Polur,Valiyur,12.7236,79.1256,201.0,7.45,8,CK01
+378,Tamil Nadu,Tiruvannamalai,Vandavasi,Vandavasi,12.5067,79.6014,77.0,12.0,12,CK01
+379,Tamil Nadu,Tiruvannamalai,Polur,Vennmani,12.5125,79.1408,401.0,22.4,22,CK01
+380,Tamil Nadu,Vellore,Tirupattur,Achimangaam EW,12.5256,78.5388,401.0,11.5,12,CK01
+381,Tamil Nadu,Vellore,Madanur,Agaram,12.83,78.88,316.0,12.5,13,CK01
+382,Tamil Nadu,Vellore,Alangayam,Alangayam,12.62,78.75,495.0,12.5,13,GN03
+383,Tamil Nadu,Vellore,Tirupattur,Andiappanur,12.5367,78.7008,437.0,12.3,12,GN03
+384,Tamil Nadu,Vellore,Tirupattur,Aneri EW,12.4653,78.5821,374.0,11.5,12,GN03
+385,Tamil Nadu,Vellore,Kaveripakkam,Banavaram,13.01,79.49,122.0,18.0,18,GN03
+386,Tamil Nadu,Vellore,Kaveripakkam,Banavaram,13.01,79.49,122.0,18.0,18,GN03
+387,Tamil Nadu,Vellore,Kaveripakkam,Gudalur,13.086983,79.503762,90.0,14.0,14,GN03
+388,Tamil Nadu,Vellore,Tirupattur,Jadiyanur EW,12.525409,78.621973,421.0,11.5,12,GN03
+389,Tamil Nadu,Vellore,Kaniyambadi,Kaniyambadi,12.799702,79.187312,260.0,6.0,6,CK01
+390,Tamil Nadu,Vellore,Kaniyambadi,Kaniyambadi,12.799702,79.187312,260.0,11.5,12,CK01
+391,Tamil Nadu,Vellore,Kandhili,Koratti,12.4231,78.5547,362.0,13.2,13,GN03
+392,Tamil Nadu,Vellore,Kandhili,Kurumberi,12.3854,78.6104,384.0,9.8,10,GN03
+393,Tamil Nadu,Vellore,Pernambattu,Melpadi,13.0611,79.28,223.0,6.0,6,GN03
+394,Tamil Nadu,Vellore,Tirupattur,Peddavepampattu EW,12.639171,78.632357,396.0,5.45,6,GN03
+395,Tamil Nadu,Vellore,Katpadi,Tiruvalam,12.986014,79.252936,204.0,6.0,6,GR01
+396,Tamil Nadu,Vellore,Shholinghur,Velam,12.99,79.3714,175.0,18.0,18,GN03
+397,Tamil Nadu,Vellore,Shholinghur,Velam,12.99,79.3714,175.0,18.0,18,GN03
+398,Tamil Nadu,Vellore,Walajah,Walajah,12.923396,79.356752,166.0,18.6,19,GN03
+399,Tamil Nadu,Vellore,Walajah,Walajah,12.923396,79.356752,166.0,24.0,24,GN03
+400,Tamil Nadu,Villupuram,Mugaiyur,Alampadi EW,11.9912,79.2878,96.0,19.0,19,GN03
+401,Tamil Nadu,Villupuram,Melmalaiyanur,Aathipattu,11.818694,79.392685,121.0,5.8,6,GN03
+402,Tamil Nadu,Villupuram,Vellore,Abdullapuram,12.9153,79.1231,210.0,8.5,9,CK01
+403,Tamil Nadu,Villupuram,Vallam,Agalur,12.3202,79.48,86.0,12.4,12,GN03
+404,Tamil Nadu,Villupuram,Mugaiyur,Alampadi EW,11.9911,79.2875,113.0,18.3,18,GN03
+405,Tamil Nadu,Villupuram,Ginjee,Alampoondi -Reddipalayam,12.256446,79.311739,113.0,9.5,10,GN03
+406,Tamil Nadu,Villupuram,Thiruvennainallur,Ammur EW,11.8406,79.3131,68.0,10.6,11,GN03
+407,Tamil Nadu,Villupuram,Thiruvennainallur,Ammur OW,11.8408,79.3131,68.0,17.1,17,GN03
+408,Tamil Nadu,Villupuram,Ginjee,Anaiyeri,12.141355,79.384474,93.0,6.1,6,GN03
+409,Tamil Nadu,Villupuram,Melmalaiyanur,Arakammpoondi- Kuduvampoondi,12.3947,79.3658,130.0,14.8,15,GN03
+410,Tamil Nadu,Villupuram,Kandachipuram,Arkandanallur EW,11.9819,79.2258,79.0,12.0,12,GN03
+411,Tamil Nadu,Villupuram,Kandachipuram,Arkandanallur OW,11.9819,79.2258,132.0,8.0,8,GN03
+412,Tamil Nadu,Villupuram,Vallam,Arugavoor,12.2982,79.5095,79.0,11.3,11,GN03
+413,Tamil Nadu,Villupuram,Melmalaiyanur,Avalurpettai- Sevarampoondi,12.4103,79.3943,132.0,5.3,5,GN03
+414,Tamil Nadu,Villupuram,Olakkur,Avanipur,12.2752,79.8149,24.0,5.4,5,CK01
+415,Tamil Nadu,Villupuram,Vallam,Chellapiratty,12.29509,79.406862,94.0,5.3,5,GN03
+416,Tamil Nadu,Villupuram,Mugaiyur,Chennagunam EW,11.9733,79.3492,104.0,8.0,8,GN03
+417,Tamil Nadu,Villupuram,Vallam,Chinnaagaram EW,12.3529,79.4515,104.0,6.3,6,GN03
+418,Tamil Nadu,Villupuram,Vallam,Chinnaagaram OW,12.3529,79.4515,104.0,6.3,6,GN03
+419,Tamil Nadu,Villupuram,Mailam,Chinnanerkunam,12.149557,79.580677,116.0,8.3,8,GN03
+420,Tamil Nadu,Villupuram,Tirukovilur,Cholavandipuram,11.8817,79.1269,124.0,53.55,54,GN03
+421,Tamil Nadu,Villupuram,Ginjee,Devadanapettai,12.1906,79.323773,124.0,5.3,5,GN03
+422,Tamil Nadu,Villupuram,Marakkanam,Endiyur,12.219076,79.698728,85.0,12.5,13,GN03
+423,Tamil Nadu,Villupuram,Melmalaiyanur,Gengapuram,12.3652,79.4005,116.0,5.3,5,GN03
+424,Tamil Nadu,Villupuram,Gingee,Gingee,12.249757,79.388972,41.0,22.7,23,GN03
+425,Tamil Nadu,Villupuram,Rishivandiyam/ Tirukovilur,Kadavanur,11.9461,78.9497,94.0,16.9,17,CK01
+426,Tamil Nadu,Villupuram,Mailam,Kalakolathur,12.1352,79.6494,33.0,12.7,13,CK01
+427,Tamil Nadu,Villupuram,Olakkur,Karpuir,12.246,79.762,41.0,2.3,2,CK01
+428,Tamil Nadu,Villupuram,Ginjee,Kavarai,12.206544,79.410304,94.0,8.3,8,GN03
+429,Tamil Nadu,Villupuram,Marakkanam,Kiliyanur,12.1059,79.744,18.0,16.0,16,CK01
+430,Tamil Nadu,Villupuram,Vallam,Kilpappampadi,12.197323,79.473784,76.0,14.3,14,GN03
+431,Tamil Nadu,Villupuram,Ginjee,Kothandaramar temple,12.2529,79.4813,68.0,8.3,8,GN03
+432,Tamil Nadu,Villupuram,Mailam,Kotteripattu,12.158097,79.603405,50.0,17.3,17,CK01
+433,Tamil Nadu,Villupuram,Ginjee,Krishnapuram EW,12.1358,79.3428,126.0,8.5,9,GN03
+434,Tamil Nadu,Villupuram,Ginjee,Krishnapuram OW,12.1358,79.3428,126.0,6.7,7,GN03
+435,Tamil Nadu,Villupuram,Melmalaiyanur,Kundalampattu,12.3617,79.2634,142.0,14.0,14,CK01
+436,Tamil Nadu,Villupuram,Vallam,Kurinjipai,12.226133,79.457275,80.0,4.3,4,GN03
+437,Tamil Nadu,Villupuram,Tirukovilur,Manalurpet EW,12.016244,79.090531,122.0,12.0,12,GN03
+438,Tamil Nadu,Villupuram,Melmalaiyanur,Manandal-Mottur,12.304091,79.284391,122.0,5.3,5,GN03
+439,Tamil Nadu,Villupuram,Ginjee,Meledayalam,12.2333,79.4325,86.0,9.0,9,GN03
+440,Tamil Nadu,Villupuram,Melmalaiyanur,Melvailamur,12.336022,79.325646,157.0,17.0,17,CK01
+441,Tamil Nadu,Villupuram,Ginjee,Moolanellimalai,12.1583,79.3597,120.0,15.8,16,GN03
+442,Tamil Nadu,Villupuram,Mailam,Naduvananthal EW,12.29,79.574,85.0,9.3,9,GN03
+443,Tamil Nadu,Villupuram,Mailam,Naduvananthal OW,12.29,79.574,85.0,11.3,11,GN03
+444,Tamil Nadu,Villupuram,Ginjee,Nallampillaipetral,12.181561,79.246164,140.0,14.2,14,GN03
+445,Tamil Nadu,Villupuram,Olakkur,Nolambur,12.211,79.592,52.0,7.3,7,CK01
+446,Tamil Nadu,Villupuram,Ginjee,Oddampattu,12.1514,79.4322,77.0,10.0,10,GN03
+447,Tamil Nadu,Villupuram,Marakkanam,Omandur,12.1601,79.6994,27.0,14.3,14,CK01
+448,Tamil Nadu,Villupuram,Olakkur,Ongur,12.3232,79.780851,30.0,8.8,9,CK01
+449,Tamil Nadu,Villupuram,Thiyagadurgam,Pallakcheri EW,11.7817,79.0364,70.0,10.7,11,CK01
+450,Tamil Nadu,Villupuram,Mailam,Pampoondi,12.28,79.603,70.0,12.3,12,GN03
+451,Tamil Nadu,Villupuram,Mailam,Peramandur,12.2116,79.5929,54.0,5.8,6,CK01
+452,Tamil Nadu,Villupuram,Mailam,Perani,12.117,79.552,45.0,16.0,16,GN03
+453,Tamil Nadu,Villupuram,Mailam,Perapantangal,12.2353,79.5766,63.0,11.3,11,GN03
+454,Tamil Nadu,Villupuram,Melmalaiyanur,Peravalur,12.169065,79.746565,150.0,5.3,5,CK01
+455,Tamil Nadu,Villupuram,Mailam,Periyathatchur,12.107,79.534,51.0,14.3,14,GN03
+456,Tamil Nadu,Villupuram,Tirukovilur,Ponniyendal EW,11.905226,79.084387,154.0,7.5,8,GN03
+457,Tamil Nadu,Villupuram,Tirukovilur,Ponniyendal OW,11.905083,79.085529,114.0,7.5,8,GN03
+458,Tamil Nadu,Villupuram,Melmalaiyanur,Rajapalayam- Sangalikuppam,12.376994,79.321116,130.0,13.5,14,GN03
+459,Tamil Nadu,Villupuram,Melmalaiyanur,Sanjeevarayanpettai,12.44,79.3344,154.0,21.0,21,CK01
+460,Tamil Nadu,Villupuram,Olakkur,Saram,12.282862,79.710581,85.0,11.3,11,GN03
+461,Tamil Nadu,Villupuram,Melmalaiyanur,Sathampadi,12.3775,79.3591,128.0,8.3,8,GN03
+462,Tamil Nadu,Villupuram,Melmalyanur,Sevalapurai,12.296483,79.343035,97.0,13.7,14,GN03
+463,Tamil Nadu,Villupuram,Ginjee,Thadagam,12.159095,79.247433,153.0,8.2,8,GN03
+464,Tamil Nadu,Villupuram,Vallam,Thaiyur,12.2099,79.4719,77.0,5.3,5,GN03
+465,Tamil Nadu,Villupuram,Mailam,Thenalappkam,12.099,79.616,44.0,11.3,11,BG01
+466,Tamil Nadu,Villupuram,Olakkur,Thennampoondi,12.233807,79.791064,31.0,9.8,10,CK01
+467,Tamil Nadu,Villupuram,Mailam,Thondur (Chendur),12.1256,79.5871,46.0,5.3,5,CK01
+468,Tamil Nadu,Villupuram,Vallam,Thondur,12.356,79.4769,94.0,10.4,10,GN03
+469,Tamil Nadu,Villupuram,Olakkur,Tindivanam EW,12.224,79.647,44.0,11.3,11,CK01
+470,Tamil Nadu,Villupuram,Olakkur,Tindivanam OW,12.224,79.647,44.0,14.3,14,CK01
+471,Tamil Nadu,Villupuram,Tirukovilur,Tirukovilur EW,11.9661,79.1992,97.0,28.7,29,GN03
+472,Tamil Nadu,Villupuram,Tirukovilur,Tirukovilur OW,11.9661,79.1992,97.0,9.7,10,GN03
+473,Tamil Nadu,Villupuram,Villupuram,V.Palayam OW,11.9292,79.4608,50.0,31.0,31,GN 03
+474,Tamil Nadu,Villupuram,Villupuram,"V.Palayam, EW",11.9292,79.4608,50.0,36.0,36,GN03
+475,Tamil Nadu,Villupuram,Mugaiyur,Veerapondy,12.052727,79.211488,114.0,7.2,7,GN03
+476,Tamil Nadu,Villupuram,Tirukovilur,Vengoor Colony EW,11.900774,79.185176,90.0,15.5,16,GN03
+477,Tamil Nadu,Villupuram,Tirukovilur,Vengoor Colony OW,11.900771,79.183032,90.0,16.75,17,GN03
+478,Tamil Nadu,Virudhunagar,Rajapalayam,Kalamanayakanpatti,9.35,77.66667,98.0,26.0,26,GN03
+479,Tamil Nadu,Virudhunagar,Virudhunagar,Kannisseypathur,9.462146,77.8995,74.0,13.0,13,GN03
+480,Tamil Nadu,Virudhunagar,Srivilliputhur,Krishnan Koil,9.565278,77.688889,142.0,26.0,26,GN03
+481,Tamil Nadu,Virudhunagar,Srivilliputhur,Madarvailagam,9.5,77.629167,137.0,17.0,17,GN03
+482,Tamil Nadu,Virudhunagar,Sivakasi,Maraneri,9.421235,77.745991,110.0,25.0,25,GN03
+483,Tamil Nadu,Virudhunagar,Virudhunagar,Padiyan Nagar,9.608333,77.816667,111.26,19.0,19,GN03
+484,Tamil Nadu,Virudhunagar,Rajapalayam,Rajapalayam,9.459102,77.557659,177.0,12.0,12,GN03
+485,Tamil Nadu,Virudhunagar,Virudhunagar,Kottur Service Centre,9.444,77.987,89.0,15.0,15,GN03
+486,Tamil Nadu,Virudhunagar,Virudhunagar,Mannarkottai EW,9.4409,77.9638,72.0,12.0,27,GN03
+487,Tamil Nadu,Virudhunagar,Virudhunagar,Mannarkottai OW,9.441,77.9637,72.0,12.0,28,GN03
+488,Tamil Nadu,Virudhunagar,Sattur,Melputhur,9.314,77.855,80.0,15.0,15,GN03
+489,Tamil Nadu,Virudhunagar,Sattur,OM Metupati,9.3314,77.9,67.0,21.0,21,GN03
+490,Tamil Nadu,Virudhunagar,Kariapatti,Panikurippu,9.5948,78.1771,77.0,12.0,12,GN03
+491,Tamil Nadu,Virudhunagar,Kariapatti,S.Kallupatti,9.6978,78.09,94.0,22.0,22,GN03
+492,Tamil Nadu,Virudhunagar,Sattur,"Sathur
+EDUCATIONAL AE OFFICE",9.360147,77.917141,71.0,15.0,15,GN03
+493,Tamil Nadu,Virudhunagar,Kariapatti,Solaigoundanpatti,9.6006,78.004,105.0,9.0,9,GN03
+494,Tamil Nadu,Virudhunagar,Viruthunagar,Sulakarai ITI,9.541,77.947,98.0,12.0,12,GN03
+495,Tamil Nadu,Virudhunagar,Kariayapatti,Thoppur Kallencheri,9.6485,78.1181,85.0,18.0,18,GN03
+496,Tamil Nadu,Virudunagar,Sivakasi,Anaiyur (Samathuvapuram),9.4606,77.765,119.0,12.0,12,GN03
+497,Tamil Nadu,Virudunagar,Aruppukkotai,Aruppukottai EW (ghss),9.5011,78.0961,95.0,15.0,15,GN03
+498,Tamil Nadu,Virudunagar,Aruppukkotai,Aruppukttai EW(ITI),9.5414,78.1078,96.0,15.0,15,GN03
+499,Tamil Nadu,Virudunagar,Aruppukkotai,Chettikuruchi EW,9.4544,78.0992,93.0,18.0,18,GN03
+500,Tamil Nadu,Virudunagar,Virudhunagar,Ellam Reddypatti (e-Seva ),9.515,77.9262,89.0,12.0,12,GN03
+501,Tamil Nadu,Virudunagar,Sivakasi,Erichanatham,9.6248,77.8126,122.0,12.0,12,GN03
+502,Tamil Nadu,Virudunagar,Sivakasi,Kaliyar Kuruchi,9.5496,77.7828,105.0,18.9,19,GN03
+503,Tamil Nadu,Virudunagar,Sattur,Kovil Pulikuthi,9.3758,77.9253,64.0,15.0,15,GN03
+504,Tamil Nadu,Virudunagar,Srivilliputhur,"Krishnan Koil,",9.5544,77.6756,158.0,10.6,11,GN03
+505,Tamil Nadu,Virudunagar,Sattur,Nalli,9.3545,77.9247,63.0,12.0,12,GN03
+506,Tamil Nadu,Virudunagar,Aruppukkotai,Palavanatham EW,9.5478,78.0178,97.0,34.0,34,GN03
+507,Tamil Nadu,Virudunagar,Sivakasi,Pudukottai,9.5947,77.8041,114.0,9.0,9,GN03
+508,Tamil Nadu,Virudunagar,Sivakasi,Rengapalayam (Seva centre),9.5656,77.7426,120.0,12.0,12,GN03
+509,Tamil Nadu,Virudunagar,Virudhunagar,Sankaralingapuram,9.5133,77.8884,92.0,6.0,6,GN03
+510,Tamil Nadu,Virudunagar,Sivakasi,Sukkiravarapatti,9.5177,77.798,98.0,16.8,17,GN03
+511,Tamil Nadu,Virudunagar,Watrap,Thambipatti Kalam,9.5121,77.6341,153.0,18.0,18,GN03
+512,Tamil Nadu,Virudunagar,Sattur,Thottilavanptti EW,9.2097,77.8936,79.0,18.0,18,GN03
+513,Tamil Nadu,Virudunagar,Virudhunagar,Vadamalaikuruchi EW,9.4628,77.915,83.0,13.6,14,GN03
+514,Tamil Nadu,Virudunagar,Sivakasi,Vadamalapuram OW,9.5035,77.8311,93.0,12.0,12,GN03
+515,Tamil Nadu,Virudunagar,Sivakasi,Venduraypuram,9.4611,77.7146,131.0,21.0,21,GN03
+516,Tamil Nadu,Virudunagar,Virudhunagar,Virudhunagar (Bus depot),9.541,77.947,98.0,12.4,12,GN03
+517,Tamil Nadu,Ariyalur,Thirumanur,Palinganatham EW,10.9594,78.9713,63.0,34.8,35,GN03
+518,Tamil Nadu,Ariyalur,Thirumanur,Palinganatham OW,10.9594,78.9713,63.0,41.05,41,GN03
+519,Tamil Nadu,Ariyalur,Thirumanur,Venganur,10.9693,79.0236,52.0,29.0,29,ST04
+520,Tamil Nadu,Cuddalore,Nallur,Shepakkam,11.5612,79.1445,69.0,10.7,11,GN03
+521,Tamil Nadu,DHARMAPURI,Harur,Sittilingi,11.900473,78.622823,401.0,16.7,17,GN03
+522,Tamil Nadu,DINDIGUL,Reddiyar Chatiram,Dharmathupatti (Kasavanampatti),10.3424,77.8507,305.0,14.0,14,CK01
+523,Tamil Nadu,DINDIGUL,Kujiliampara,Rangapalayam,10.7541,77.9402,181.0,4.6,5,GN03
+524,Tamil Nadu,Erode,Ammapet,Attavanaipudur,11.593668,77.669392,217.0,11.0,11,GN03
+525,Tamil Nadu,Erode,Perundurai,Pethampalayam,11.346981,77.571403,215.0,16.8,17,GN03
+526,Tamil Nadu,Erode,Andhiyur,Burgur,11.8093,77.5445,993.0,23.2,23,GN03
+527,Tamil Nadu,Erode,Thalavadi,Thalavadi,11.780344,77.016984,793.0,10.65,11,GN03
+528,Tamil Nadu,Kancheepuram,Uttiramerur,Chinnalambadi,12.6811,79.8441,60.0,11.0,11,CK01
+529,Tamil Nadu,Kancheepuram,Chengalpattu,Gudalur,12.805287,80.066964,51.0,11.0,11,CK01
+530,Tamil Nadu,Kancheepuram,Karuguzhi,Kinar,12.5255,79.9356,38.0,16.8,17,ST04
+531,Tamil Nadu,Kancheepuram,Sriperumbudur,Kunnathur,13.0027,80.0992,22.0,22.65,23,CK01
+532,Tamil Nadu,Kancheepuram,Katankolathur,Manimangalam EW,12.911231,80.053458,47.0,12.24,12,CK01
+533,Tamil Nadu,Kancheepuram,Katankolathur,Manimangalam OW,12.911231,80.053458,47.0,10.19,10,CK01
+534,Tamil Nadu,Kancheepuram,Sriperumbudur,Orathur (Neelamangalam),12.8569,80.0365,35.0,22.3,22,SH04
+535,Tamil Nadu,Kancheepuram,Uttiramperur,Pazhaveri,12.74201,79.873265,56.0,16.8,17,CK01
+536,Tamil Nadu,Kancheepuram,Kancheepuram,Podavur(Melpodavur),12.922279,79.752239,86.0,41.19,41,SH05
+537,Tamil Nadu,Kancheepuram,Sriperumbadur,Santhavelur,12.9264,79.8697,79.0,53.4,53,SH05
+538,Tamil Nadu,Kancheepuram,Tirukundram,Tirumani,12.6658,79.993,56.0,10.7,11,GN03
+539,Tamil Nadu,Kancheepuram,Uttiramerur,Uttiramerur,12.6333,79.7607,59.0,12.59,13,CK01
+540,Tamil Nadu,Kancheepuram,Sriperumbudur,VADEKKAL EW (PALNALLUR),12.910881,79.919468,64.0,30.0,30,SH05
+541,Tamil Nadu,Kancheepuram,Sriperumbudur,VADEKKAL OW (PALNALLUR),12.910881,79.919468,64.0,29.0,29,SH05
+542,Tamil Nadu,Kancheepuram,Chengalpattu,VALLAM,12.69849,80.003619,41.0,4.62,5,CK01
+543,Tamil Nadu,Kancheepuram,Sriperumbudur,VANDALUR EW,12.8792,80.0886,50.0,23.9,24,CK01
+544,Tamil Nadu,Kancheepuram,Sriperumbudur,VANDALUR OW,12.8792,80.0886,50.0,22.9,23,GN03
+545,Tamil Nadu,Karur,Karur,KAKAVADI EW,10.8868,78.0395,157.0,8.0,8,CK01
+546,Tamil Nadu,Karur,Karur,KAKAVADI OW,10.8868,78.0396,157.0,8.0,8,CK01
+547,Tamil Nadu,Karur,Aravakuruchi,THERAPPADI EW,10.8106,77.9642,166.0,10.7,11,GN03
+548,Tamil Nadu,Karur,Aravakuruchi,THERAPPADI OW,10.8106,77.9642,166.0,12.7,13,GN03
+549,Tamil Nadu,Krishnagiri,Denkanikottai,BIKKANAPALLY,12.4402,77.7802,839.0,11.0,11,GN03
+550,Tamil Nadu,Krishnagiri,Veppanapalli,BILLANAKUPPAM EW,12.6027,78.1853,537.0,17.0,17,GN03
+551,Tamil Nadu,Krishnagiri,Veppanapalli,BILLANAKUPPAM OW,12.6025,78.1856,537.0,17.0,17,GN03
+552,Tamil Nadu,Krishnagiri,Hosur,ENUSONAI,12.6138,78.0176,711.0,17.0,17,GN03
+553,Tamil Nadu,Krishnagiri,Hosur,ENUSONAI,12.6137,78.0175,711.0,17.0,17,GN03
+554,Tamil Nadu,Krishnagiri,Kaveripatinam,KATHIRIPURAM,12.4063,78.1892,483.0,27.0,27,GN03
+555,Tamil Nadu,Krishnagiri,Mathur,KUNDEPALLI,12.2526,79.5311,417.0,19.0,19,GN03
+556,Tamil Nadu,Krishnagiri,Krishnagiri,M.C. PALLI,12.604,78.2495,521.0,24.75,25,BG01
+557,Tamil Nadu,Krishnagiri,Thally,MANCHUKONDAPALLI,12.2492,77.5353,597.0,10.7,11,GN03
+558,Tamil Nadu,Krishnagiri,Kaveripattinam,NATTANMAI KOTTAI,12.4721,78.2154,480.0,15.0,15,BG01
+559,Tamil Nadu,Krishnagiri,Pochampalli,PANNANDUR EW,12.3013,78.2795,429.0,16.8,17,BG01
+560,Tamil Nadu,Krishnagiri,Pochampalli,PANNANDUR OW,12.3014,78.2786,429.0,10.7,11,BG01
+561,Tamil Nadu,Krishnagiri,Denkanikottai,THALLI,12.5824,77.6578,910.0,16.8,17,BG01
+562,Tamil Nadu,Namakkal,Senthamangalam,A.METTUPATTY,11.1097,78.2322,132.0,7.0,7,SC01
+563,Tamil Nadu,Namakkal,Paramathi Velur,ARTHANARIPALAYAM,11.1901,78.0006,480.0,4.6,5,GN03
+564,Tamil Nadu,Namakkal,Paramathi,KARICHIPALAYAM,11.2978,77.9848,189.0,15.0,15,GN03
+565,Tamil Nadu,Namakkal,Nammakal,KEEZHPARALI,11.1165,78.1861,184.0,11.0,11,GN03
+566,Tamil Nadu,Namakkal,Mohanur,KUTAMPARAI (PALAPATTI),11.0984,78.0647,127.0,10.65,11,GN03
+567,Tamil Nadu,Namakkal,Kollimalai,SELUR EW (VALAVANTHINADU),11.2891,78.3393,1138.0,22.9,23,CK01
+568,Tamil Nadu,Namakkal,Kollimalai,SELUR OW (VALAVANTHINADU),11.289,78.3395,1138.0,22.85,23,CK01
+569,Tamil Nadu,Nilgiris,Gudalur,MASINIGUDI EW (VAZHAI THOTTAM),11.5318,76.6967,920.0,16.75,17,CK01
+570,Tamil Nadu,Nilgiris,Gudalur,MASINIGUDI OW (VAZHAI THOTTAM),11.5318,76.6967,920.0,16.8,17,CK01
+571,Tamil Nadu,Salem,Thalaivasal,EAST RAJAPALAYAM,11.4311,78.8066,338.0,11.0,11,CK01
+572,Tamil Nadu,Salem,Omalur,KARUPPUR (PERIYAR UNIVERSITY),11.717039,78.096797,297.0,25.0,25,GN03
+573,Tamil Nadu,Salem,Attur,MALLIAKARAI,11.5719,78.4951,279.0,26.5,27,GN03
+574,Tamil Nadu,Salem,Pethanaickanpalayam,PANAIMADAL,11.7185,78.4755,344.0,14.1,14,GN03
+575,Tamil Nadu,Salem,Gangavalli,THAMMAMPATTY,11.446736,78.475092,304.0,11.4,11,GN03
+576,Tamil Nadu,Salem,Mettur,VEERAKKALPUTTUR,11.821069,77.857771,286.0,11.75,12,GN03
+577,Tamil Nadu,Thiruvallur,Ponneri,CHINNAMBEDU EW,13.3163,80.146,18.0,47.0,47,SH05
+578,Tamil Nadu,Thiruvallur,Ponneri,CHINNAMBEDU OW,13.3166,80.146,18.0,47.0,47,SH05
+579,Tamil Nadu,Thiruvallur,Uthukottai,GOONIPALAYAM EW,13.279,79.8509,70.0,41.0,41,SH05
+580,Tamil Nadu,Thiruvallur,Uthukottai,GOONIPALAYAM OW,13.2792,79.8507,70.0,41.0,41,SH05
+581,Tamil Nadu,Thiruvallur,Gumidipoondi,KOLLANUR,13.3723,80.014,79.0,41.0,41,SH05
+582,Tamil Nadu,Thiruvallur,Ponneri,NEDAMBARAM EW,13.22,79.7304,69.0,22.55,23,CK01
+583,Tamil Nadu,Thiruvallur,Ponneri,NEDAMBARAM OW,13.2199,79.7304,69.0,23.63,24,CK01
+584,Tamil Nadu,Thiruvallur,Gummudipoondi,PADIRIVEDU EW,13.444449,80.009922,27.0,41.5,42,GN03
+585,Tamil Nadu,Thiruvallur,Gummudipoondi,PADIRIVEDU OW,13.444449,80.009922,27.0,41.22,41,GN03
+586,Tamil Nadu,Thiruvallur,Tiruthani,PLACEPALAYAM EW,13.277443,79.768715,134.0,37.2,37,ST04
+587,Tamil Nadu,Thiruvallur,Tiruthani,PLACEPALAYAM OW,13.277443,79.768715,134.0,40.53,41,ST04
+588,Tamil Nadu,Thiruvallur,Tiruthani,POONIMANGADU,13.2652,79.64,83.0,13.2,13,GN03
+589,Tamil Nadu,Tiruvannamalai,Arani,AKKUR EW,12.6845,79.6293,87.0,9.0,9,CK01
+590,Tamil Nadu,Tiruvannamalai,Arani,AKKUR OW,12.6846,79.6292,87.0,10.0,10,CK01
+591,Tamil Nadu,Tiruvannamalai,Arani,ARIYAPADI EW,12.7127,79.2231,171.0,17.0,17,GN03
+592,Tamil Nadu,Tiruvannamalai,Arani,ARIYAPADI OW,12.7126,79.2229,171.0,17.0,17,GN03
+593,Tamil Nadu,Tiruvannamalai,Chetpet,EDYANKULATHUR,12.4613,79.3285,158.0,11.0,11,CK01
+594,Tamil Nadu,Tiruvannamalai,Polur,KALVASAL,12.6135,79.1577,179.0,17.8,18,GN03
+595,Tamil Nadu,Tiruvannamalai,Arani,KATTUKANALLUR EW,12.7532,79.1346,211.0,17.0,17,CK01
+596,Tamil Nadu,Tiruvannamalai,Kalasapakkam,KILPALUR,12.3921,78.9436,215.0,17.0,17,GN03
+597,Tamil Nadu,Tiruvannamalai,Vanthavasi,KODUNGALUR (KIL),12.5061,79.7072,57.0,11.0,11,GN03
+598,Tamil Nadu,Tiruvannamalai,Vanthavasi,MAMANDUR,12.7417,79.6756,92.0,12.27,12,CK01
+599,Tamil Nadu,Tiruvannamalai,Sathyavijayanagaram,MATTATHARI,12.7093,79.3371,134.0,28.9,29,GN03
+600,Tamil Nadu,Tiruvannamalai,Cheyyar,MELMATTA VINNAMANGALAM,12.7795,79.4345,120.0,29.35,29,GN02
+601,Tamil Nadu,Tiruvannamalai,Cheyyar,PURISAI EW,12.581,79.5801,93.0,10.96,11,GN03
+602,Tamil Nadu,Tiruvannamalai,Cheyyar,PURISAI OW,12.5809,79.5799,93.0,15.82,16,GN03
+603,Tamil Nadu,Tiruvannamalai,Arani,THATCHUR,12.5928,79.2707,131.0,16.85,17,CK01
+604,Tamil Nadu,Tiruvannamalai,Polur,THIRUSUR (PADIYAMPATTU),12.481,79.0909,196.0,10.68,11,CK01
+605,Tamil Nadu,Tiruvannamalai,Chengam,UNNAMALAIPALAYAM,12.3296,78.8634,209.0,29.08,29,CK01
+606,Tamil Nadu,Tiruvannamalai,Cheyyar,VILARIPATTU,12.614,79.5318,101.0,16.8,17,CK01
+607,Tamil Nadu,Vellore,Arakonam,AYIPPEDU,13.1061,79.4913,137.0,18.0,18,GN03
+608,Tamil Nadu,Vellore,Pernambut,CHARAKKAL (MASIGAM),12.880533,79.320961,374.0,29.0,29,GN03
+609,Tamil Nadu,Vellore,Arcot,IRUNGUR,12.683814,79.445895,112.0,10.0,10,GN03
+610,Tamil Nadu,Vellore,Nemili,KATTUBAKKAM,13.0198,79.5239,115.0,11.0,11,GN03
+611,Tamil Nadu,Vellore,Wallajah,KILKUPPAM,12.871549,79.279291,195.0,24.0,24,GN03
+612,Tamil Nadu,Vellore,Arakkonam,KOOTHAMBAKKAM,13.008283,79.5055,123.0,10.7,11,GN03
+613,Tamil Nadu,Vellore,Natrampalli,KOTHUR,12.6099,78.4324,551.0,10.68,11,GN03
+614,Tamil Nadu,Vellore,Wallajah,LALAPETTAI,12.9899,79.3028,215.0,16.7,17,GN03
+615,Tamil Nadu,Vellore,Arakkonam,MUDUR,13.1346,79.6686,76.0,4.62,5,GN03
+616,Tamil Nadu,Vellore,Shoolingar,PONNAI,13.1314,79.2535,239.0,17.04,17,CK01
+617,Tamil Nadu,Vellore,Tirupathur,SEVVATHUR,12.4027,78.5245,383.0,22.9,23,GN03
+618,Tamil Nadu,Vellore,Arakkonam,SEYYUR,13.0604,79.7004,83.0,22.39,22,GN03
+619,Tamil Nadu,Vellore,Nemili,THURAIYUR,12.9498,79.5656,108.0,10.7,11,GN03
+620,Tamil Nadu,Viluppuram,Sankarapuram,CHITHAL,11.837115,79.030372,142.0,29.0,29,GN03
+621,Tamil Nadu,Viluppuram,Chinnasalem,KANDIKKAL (VELLIMALAI),11.797905,78.712671,689.0,12.0,12,CK01
+622,Tamil Nadu,Viluppuram,Thindivanam,KONAKKAMPATTU,12.2526,79.5311,77.0,8.05,8,CK01
+623,Tamil Nadu,Viluppuram,Sultanpet,MAMBALAPATTU,11.9574,79.3764,69.0,10.65,11,CK01
+624,Tamil Nadu,Viluppuram,Poolachi South,SERAPATTU,11.9747,78.7731,644.0,10.73,11,GN03
+625,Tamil Nadu,Coimbatore,Sultanpet,Bogampatti EW,10.9006,77.1224,420.0,17.5,18,GN03
+626,Tamil Nadu,Coimbatore,Sultanpet,J. Krishnapuram EW,10.6728,77.2401,340.0,17.0,17,GN03
+627,Tamil Nadu,Coimbatore,Poolachi South,Kanjampatti EW,10.6263,77.078,353.0,18.0,18,GN03
+628,Tamil Nadu,Dharmapuri,Morappur (Pappireddipatti),Adhikarapatti (Palayampalli) OW,11.934,78.3909,414.0,6.0,6,GN03
+629,Tamil Nadu,Dharmapuri,Morappur (Pappireddipatti),Athikarapatti (Gedakkarahally) OW,11.934,78.3909,415.0,5.0,5,CK01
+630,Tamil Nadu,Dharmapuri,Pappireddipatti,Boothanatham (Keserkuli R.F) OW,12.291301,77.91746,499.0,20.0,20,GN03
+631,Tamil Nadu,Dharmapuri,Pennagaram,Chinnavathalapuram EW,12.0659,77.8152,391.0,11.0,11,GN03
+632,Tamil Nadu,Dharmapuri,Nallampalli,Dokkubodanahalli OW,12.015109,78.066578,476.0,17.0,17,GN03
+633,Tamil Nadu,Dharmapuri,Dharmapuri,Elakkiampatti (A. Jettihalli) EW,12.092188,78.128016,474.0,27.0,27,GN03
+634,Tamil Nadu,Dharmapuri,Palacodu,Kottur (Bevuhalli) EW,12.3067,77.9908,537.0,7.0,7,CK01
+635,Tamil Nadu,Dharmapuri,Morappur (Pappireddipatti),Maniyampadi (Keserkuli R.F. Extension) OW,12.1247,78.2847,481.0,7.0,7,GN03
+636,Tamil Nadu,Dharmapuri,Pappireddipatti,Menasi (Kavaramalai Extensionr.F) OW,11.9739,78.3697,414.0,6.0,6,GN03
+637,Tamil Nadu,Dharmapuri,Pennagaram,Mudugampatty OW,12.0531,77.8963,400.0,11.0,11,GN03
+638,Tamil Nadu,Dharmapuri,Dharmapuri,Mukkalanaickanpatti OW,12.0861,78.1875,416.0,20.0,20,GN03
+639,Tamil Nadu,Dharmapuri,Nallampalli,Nagarkoodal EW,12.078,78.0518,361.0,11.0,11,GN03
+640,Tamil Nadu,Dharmapuri,Dharmapuri,Oddupatti OW,12.30241,78.498361,445.0,17.0,17,GN03
+641,Tamil Nadu,Dharmapuri,Pappireddipatti,Pappampaddi OW,11.94909,78.428323,435.0,7.0,7,GN03
+642,Tamil Nadu,Dharmapuri,Pennagaram,Pattakarankottai (Jarimankurichy) OW,11.942732,77.806831,322.0,22.0,5,GN03
+643,Tamil Nadu,Dharmapuri,Pennagaram,Pudupatti OW,12.0491,77.9523,450.0,11.0,11,GN03
+644,Tamil Nadu,Dharmapuri,Nallampalli,Thadangam (Baisuhalli) OW,12.1075,78.1221,466.0,5.0,5,GN03
+645,Tamil Nadu,Dharmapuri,Palacodu,Thirumalvadi OW,12.318537,77.974121,563.0,9.0,9,CK01
+646,Tamil Nadu,Dharmapuri,Dharmapuri,Veppamarathur (B. Mallapuram) EW,11.9747,78.147,409.0,13.0,13,GN03
+647,Tamil Nadu,Dindigul,Athoor,Aiyampalayam EW,10.2245,77.7466,280.0,9.0,9,GN03
+648,Tamil Nadu,Dindigul,Palani,Boduvarpatti EW,10.5126,77.6271,311.0,13.5,0,GN03
+649,Tamil Nadu,Dindigul,Reddiarchatram,Chettiyapatti (Kamachipuram) EW,10.430353,77.829414,303.0,11.0,11,GN03
+650,Tamil Nadu,Dindigul,Athoor,Citharevu (Manalur) EW,10.306669,77.727422,290.0,24.0,24,GN03
+651,Tamil Nadu,Dindigul,Oddanchatram,Ellapatti EW,10.6516,77.8047,22.0,5.0,5,GN03
+652,Tamil Nadu,Dindigul,Reddiarchatram,Gurunathanaickenur EW,10.490083,77.899053,244.0,11.0,11,GN03
+653,Tamil Nadu,Dindigul,Thoppampatti,Kallimandayam EW,10.5981,77.6806,31.0,9.0,9,GN03
+654,Tamil Nadu,Dindigul,Batlagundu,Kottur OW,10.2127,77.8642,267.0,5.0,5,GN03
+655,Tamil Nadu,Dindigul,Nilakottai,Mattapparai EW,10.0958,77.9075,46.0,11.0,11,GN03
+656,Tamil Nadu,Dindigul,Nilakottai,Mavathampatti (Oruthattu) EW,10.183389,77.908787,242.0,11.0,11,GN03
+657,Tamil Nadu,Dindigul,Thoppampatti,Mettupatti OW,10.6001,77.5794,296.0,5.0,5,GN03
+658,Tamil Nadu,Dindigul,Batlagundu,Muthulapuram EW,10.1906,77.7867,244.0,11.0,11,GN03
+659,Tamil Nadu,Dindigul,Batlagundu,Nadakottai EW,10.083,77.82,288.0,5.0,5,GN03
+660,Tamil Nadu,Dindigul,Vedasandur,Nallamanarkottai EW,10.47509,78.027402,249.0,19.0,19,GN03
+661,Tamil Nadu,Dindigul,Nilakottai,Pallapatti EW,10.1351,77.9159,207.0,16.0,16,GN03
+662,Tamil Nadu,Dindigul,Nilakottai,Pallapatti OW,10.135,77.9159,207.0,16.0,16,GN03
+663,Tamil Nadu,Dindigul,Thoppampatti,Paruthiyur OW,10.6673,77.6033,259.0,7.0,7,GN03
+664,Tamil Nadu,Dindigul,Reddiarchatram,Puduettamanayakkanpatti (Kadalvani) OW,10.447934,77.791628,259.0,7.0,7,GN03
+665,Tamil Nadu,Dindigul,Oddanchatram,Puliyurnatham EW,10.5596,77.8028,245.0,6.0,6,GN03
+666,Tamil Nadu,Dindigul,Oddanchatram,Puliyurnatham OW,10.5596,77.8028,244.0,8.0,8,GN03
+667,Tamil Nadu,Dindigul,Thoppampatti,Pushpathur (Manoor) EW,10.5404,77.3698,295.0,5.0,5,GN03
+668,Tamil Nadu,Dindigul,Guziliamparai,R. Kombai EW,10.6194,78.1393,346.0,23.0,23,GN03
+669,Tamil Nadu,Dindigul,Guziliamparai,R. Pudukottai OW,10.6131,78.0507,233.0,3.0,3,GN03
+670,Tamil Nadu,Dindigul,Guziliamparai,R. Vellodu OW,10.7506,78.0214,192.0,9.0,9,GN03
+671,Tamil Nadu,Dindigul,Shanarpatti,Siluvathur OW,10.3436,78.0858,296.0,14.0,14,GN03
+672,Tamil Nadu,Dindigul,Oddanchatram,Sindalapatti OW,10.552023,77.745707,275.0,11.0,11,GN03
+673,Tamil Nadu,Dindigul,Vadamadurai,Vadamadurai OW,10.4423,78.1032,292.0,19.0,19,GN03
+674,Tamil Nadu,Erode,Modakkuruchi,Injampalli EW,11.2045,77.8199,165.0,6.0,6,GN03
+675,Tamil Nadu,Erode,Modakkuruchi,Nanjai Oothukuli EW,11.2636,77.7721,173.0,5.0,5,GN03
+676,Tamil Nadu,Kanchipuram,Kanchipuram,Baluchettychatram (Muttavakkam) EW,12.899359,79.640284,104.0,41.0,41,CK01
+677,Tamil Nadu,Kanchipuram,Walajabad,Baluchettychatram (Muttavakkam) OW,12.899359,79.640284,104.0,41.0,41,CK01
+678,Tamil Nadu,Kanchipuram,Kanchipuram,Dhamal EW,12.8845,79.5972,109.0,47.0,47,GN03
+679,Tamil Nadu,Kanchipuram,Walajabad,Putheri EW,12.841008,79.68458,92.0,42.0,42,GN03
+680,Tamil Nadu,Kanchipuram,Uthiramerur,Thirupulivanam EW,12.6694,79.7602,72.0,5.0,5,GN03
+681,Tamil Nadu,Karur,Aravakurichi,Ammankovilpalayam (Modakkur West) EW,10.7654,77.8347,192.0,5.0,5,GN03
+682,Tamil Nadu,Karur,K.Paramathi,Arasanpalayam (Kuppam) EW,11.0074,77.9511,161.0,5.0,5,GN03
+683,Tamil Nadu,Karur,Thanthoni,Chinnakulathupatti (Paganatham) OW,10.8408,78.0533,178.0,5.0,5,GN03
+684,Tamil Nadu,Karur,Thanthoni,Chinnakulathupatti EW,10.8408,78.0532,178.0,6.0,6,GN03
+685,Tamil Nadu,Karur,Kadavur,Kadavur colony (D. Edayapatti East) EW,10.5876,78.1944,300.0,18.0,18,GN03
+686,Tamil Nadu,Karur,Kadavur,Kadavur colony (D. Edayapatti East) OW,10.5875,78.1944,288.0,23.0,23,GN03
+687,Tamil Nadu,Karur,K.Paramathi,Karvazhi EW,11.0153,77.7927,206.0,5.5,6,GN03
+688,Tamil Nadu,Karur,Karur,Manmangalam (Erichinnaganampatti) OW,11.0291,78.0674,145.0,5.0,5,GN03
+689,Tamil Nadu,Karur,Aravakurichi,Palanigoundanvalasu (Senthamangalam East) OW,10.655,77.8697,222.0,5.0,5,GN03
+690,Tamil Nadu,Karur,Karur,Peria Varapalayam (Punjai Pugalur) OW,11.0558,78.016413,130.0,15.0,15,GN03
+691,Tamil Nadu,Karur,Aravakurichi,Pethachinagar (Euruarpatti) OW,10.7043,77.9578,174.0,5.0,5,GN03
+692,Tamil Nadu,Karur,Aravakurichi,Pethachinagar (Eurumarpatti) EW,10.7043,77.9576,174.0,5.0,5,GN03
+693,Tamil Nadu,Karur,Kadavur,Veeranampatti (Melappaguthi) OW,10.729,78.2103,182.0,11.0,11,GN03
+694,Tamil Nadu,Krishnagiri,Bargur,Batlapalli OW,12.4648,78.3971,446.0,5.0,5,GN03
+695,Tamil Nadu,Krishnagiri,Kelamangalam,Erichinnaganampatti EW,12.4731,78.0291,517.0,5.0,5,CK01
+696,Tamil Nadu,Krishnagiri,Veppanapalli,Gurubarapalli (Billanakuppam) OW,12.5974,78.1331,517.0,16.0,16,CK01
+697,Tamil Nadu,Krishnagiri,Krishnagiri,Ittikkal agaram (Agaram A/B) EW,12.5287,78.1255,517.0,5.0,5,GN03
+698,Tamil Nadu,Krishnagiri,Mathur,Kalarpathi OW,12.0364,78.3891,397.0,5.0,5,GN03
+699,Tamil Nadu,Krishnagiri,Mathur,Kattupatti OW,12.2443,78.4151,399.0,5.34,5,BG01
+700,Tamil Nadu,Krishnagiri,Bargur,Mallapadi EW,12.5344,78.3753,583.0,13.0,13,GN03
+701,Tamil Nadu,Krishnagiri,Bargur,Mallapadi OW,12.5344,78.3752,487.0,20.0,20,GN03
+702,Tamil Nadu,Krishnagiri,Uthangarai,Mallupatti EW,12.244,78.6098,327.0,5.0,5,GN03
+703,Tamil Nadu,Krishnagiri,Bargur,Mittapalli (Balinayanapalli) EW,12.5295,78.3105,476.0,12.0,12,GN03
+704,Tamil Nadu,Krishnagiri,Mathur,Pasandi OW,12.314,78.4839,388.0,5.0,5,GN03
+705,Tamil Nadu,Krishnagiri,Krishnagiri,Peddathanapalli EW,12.5674,78.377,521.0,5.0,5,GN03
+706,Tamil Nadu,Krishnagiri,Uthangarai,Pudur Punganai OW,12.1864,78.4842,355.0,5.0,5,GN03
+707,Tamil Nadu,Krishnagiri,Kelamangalam,Santhanapalli (Hanuanthapuram) OW,12.4565,77.8307,909.0,17.0,17,GN03
+708,Tamil Nadu,Krishnagiri,Shoolagiri,Udhanapalli (Muthanthalli) E W,12.6103,77.9394,740.0,16.0,16,GN03
+709,Tamil Nadu,Krishnagiri,Shoolagiri,Udhanapalli (Muthanthalli) OW,12.6103,77.9395,740.0,15.0,15,GN03
+710,Tamil Nadu,Krishnagiri,Kelamangalam,Unichetty (P.H) Gullatty EW,12.4453,77.8506,879.0,11.0,11,GN03
+711,Tamil Nadu,Krishnagiri,Kelamangalam,Unichetty (P.H) Gullatty OW,12.437,77.8505,879.0,11.0,11,GN03
+712,Tamil Nadu,Krishnagiri,Veppanapalli,Veppanapalli (Konganepalli) EW,12.6998,78.1923,563.0,24.0,24,GN03
+713,Tamil Nadu,Krishnagiri,Veppanapalli,Veppanapalli (Konganepalli) OW,12.6998,78.1925,583.0,22.0,22,CK01
+714,Tamil Nadu,Madurai,Sedapatti,Chinnakattalai EW,9.8472,77.7999,169.0,11.0,11,GN03
+715,Tamil Nadu,Madurai,Usilampatti,Doddappanaickanur EW,9.9769,77.7333,263.0,17.0,17,GN03
+716,Tamil Nadu,Madurai,Usilampatti,Nallathevanpatti EW,9.9366,77.7835,216.0,11.0,11,GN03
+717,Tamil Nadu,Madurai,Usilampatti,Nallathevanpatti OW,9.9366,77.7837,217.0,12.0,12,GN03
+718,Tamil Nadu,Madurai,Sedapatti,Perungamanallur EW,9.8653,77.8168,167.0,11.0,11,GN03
+719,Tamil Nadu,Madurai,Alanganallur,Vellaiyampatti EW,10.09,78.1487,238.0,35.0,35,GN03
+720,Tamil Nadu,Namakkal,Sendamangalam,Sendamangalam EW,11.283486,78.23818,188.0,5.0,5,GN03
+721,Tamil Nadu,Namakkal,Namakkal,District Collectorate Namakkal (Thummankurichi) EW,11.2479,78.1284,204.0,31.0,31,GN03
+722,Tamil Nadu,Namakkal,Paramathy,Karukkampalayam EW,11.2857,77.9801,171.0,5.0,5,GN03
+723,Tamil Nadu,Namakkal,Erumaipatty,Kavakkrampatti EW,11.1159,78.2894,162.0,6.0,6,GN03
+724,Tamil Nadu,Namakkal,Elachipalayam,Lattivadi EW,11.300134,78.01399,171.0,17.0,17,GN03
+725,Tamil Nadu,Namakkal,Puduchathiram,Minnampalli EW,11.3163,78.1865,229.0,19.0,19,GN03
+726,Tamil Nadu,Namakkal,Puduchathiram,Minnampalli OW,11.3165,78.1865,226.0,23.7,24,GN03
+727,Tamil Nadu,Namakkal,Vennandur,Palanthinnipatti EW,11.4954,78.1137,241.0,17.0,17,GN03
+728,Tamil Nadu,Namakkal,Mohanur,Tholur EW,11.1408,78.1305,153.0,18.0,18,CK01
+729,Tamil Nadu,Namakkal,Mallasamudram,Vandinatham EW,11.4156,78.0082,200.0,11.0,11,GN03
+730,Tamil Nadu,Namakkal,Paramathy,Villipalayam EW,11.194656,78.042513,152.0,5.0,5,GN03
+731,Tamil Nadu,Perambalur,Veppanthattai,Mettupalayam (South) EW,11.350704,78.901828,94.0,3.0,3,CK01
+732,Tamil Nadu,Perambalur,Veppanthattai,Pasumbalur (South) EW,11.4326,78.8832,114.0,11.0,11,GN03
+733,Tamil Nadu,Perambalur,Perambalur,Velur A/B EW,11.1878,78.7887,165.0,11.0,11,GN03
+734,Tamil Nadu,Pudukkottai,Ponnamaravathi,Alavayal OW,10.3234,78.538711,158.0,23.0,23,GN03
+735,Tamil Nadu,Pudukkottai,Annavasal,Ammachatiram OW,10.543772,78.784075,111.0,25.0,25,GN03
+736,Tamil Nadu,Pudukkottai,Annavasal,Kanchirampatti OW,10.4737,78.6128,142.0,12.0,12,GN03
+737,Tamil Nadu,Pudukkottai,Viralimalai,Kodumbalur OW,10.5427,78.5125,150.0,5.0,5,GN03
+738,Tamil Nadu,Pudukkottai,Kunnandarkoil,Lekkanapatti OW,10.577903,78.71841,121.0,12.0,12,GN03
+739,Tamil Nadu,Pudukkottai,Kunnandarkoil,Mangathevanpatti OW,10.572,78.8326,100.0,24.0,24,GN03
+740,Tamil Nadu,Pudukkottai,Kunandarkoil,Melapatti OW,10.6776,78.874,64.0,11.0,11,GN03
+741,Tamil Nadu,Pudukkottai,Thirumayam,Melur OW,10.236974,78.718139,100.0,12.0,12,GN03
+742,Tamil Nadu,Pudukkottai,Ponnamaravathi,Mylore OW,10.2885,78.5244,160.0,11.0,11,GN03
+743,Tamil Nadu,Pudukkottai,Pudukottai,Nathampannai 9A OW,10.413797,78.788918,115.0,11.0,11,GN03
+744,Tamil Nadu,Pudukkottai,Ponnamaravathi,Oliyamangalam OW,10.4185,78.5297,153.0,27.0,27,GN03
+745,Tamil Nadu,Pudukkottai,Annavasal,Panampatti OW,10.447365,78.757127,110.0,14.0,14,GN03
+746,Tamil Nadu,Pudukkottai,Viralimalai,Perambur OW,10.6168,78.6451,167.0,17.0,17,GN03
+747,Tamil Nadu,Pudukkottai,Pudukottai,Rajakulathur OW,10.497,78.8459,96.0,11.0,11,GN03
+748,Tamil Nadu,Pudukkottai,Ponnamaravathi,Sadayampatti OW,10.3897,78.551,145.0,11.0,11,GN03
+749,Tamil Nadu,Pudukkottai,Annavasal,Sundarapatti OW,10.366019,78.70597,109.0,15.0,15,GN03
+750,Tamil Nadu,Pudukkottai,Ponnamaravathi,Thirukkalambur OW,10.2084,78.4913,136.0,5.0,5,GN03
+751,Tamil Nadu,Pudukkottai,Annavasal,Vadhiripatti (Vellanjar) OW,10.509877,78.679854,130.0,12.0,12,GN03
+752,Tamil Nadu,Pudukkottai,Annavasal,Vayalogam OW,10.410168,78.684524,112.0,17.0,17,GN03
+753,Tamil Nadu,Pudukkottai,Ponnamaravathi,Vegupatti OW,10.2757,78.5621,141.0,17.0,17,GN03
+754,Tamil Nadu,Salem,Attur,Attur EW,11.6007,78.5893,224.0,11.0,11,CK01
+755,Tamil Nadu,Salem,Thalaivasal,Sarathi (A Vayalur) EW,11.5724,78.7878,224.0,5.0,5,GN03
+756,Tamil Nadu,Salem,Thalaivasal,Sathapadi (Panavasal) EW,11.535318,78.680095,151.0,5.0,5,GN03
+757,Tamil Nadu,Theni,Andipatti,Andipatti EW,9.9999,77.6259,294.0,11.0,11,GN03
+758,Tamil Nadu,Theni,Uthamapalayam,Chinnamanur OW,9.851271,77.384975,370.0,19.0,19,GN03
+759,Tamil Nadu,Theni,Chinnamanur,Erasakkanaickanur EW,9.789868,77.39484,418.0,23.0,23,GN03
+760,Tamil Nadu,Theni,Cumbam,Gudalur OW,9.6764,77.2503,461.0,26.0,26,GN03
+761,Tamil Nadu,Theni,Myladumparai,Kandamanur (Gandamanur) EW,9.9191,77.5159,317.0,2.0,2,GN03
+762,Tamil Nadu,Theni,Theni,Kottur OW,9.907,77.4055,343.0,22.0,22,GN03
+763,Tamil Nadu,Theni,Andipatti,Kovilpatti EW,10.0272,77.5778,48.0,5.0,5,GN03
+764,Tamil Nadu,Theni,Mayiladumparai,Kumanan Thozu OW,9.7603,77.4753,396.0,17.0,17,GN03
+765,Tamil Nadu,Theni,Mayiladumparai,Manthisunai OW,9.7952,77.5582,402.0,23.0,23,GN03
+766,Tamil Nadu,Theni,Andipatti,Okkaraipatti EW,9.9616,77.5694,317.0,27.0,27,GN03
+767,Tamil Nadu,Theni,Periyakulam,Periyakulam OW,10.1228,77.5367,285.0,17.0,17,GN03
+768,Tamil Nadu,Theni,Andipatti,Shanmugasundarapuram EW,10.002719,77.590426,289.0,11.0,11,GN03
+769,Tamil Nadu,Theni,Periyakulam,Silverpatti OW,10.119998,77.620323,273.0,11.0,11,GN03
+770,Tamil Nadu,Theni,Uthamapalayam,Thevaram EW,9.8967,77.277,422.0,56.0,56,GN03
+771,Tamil Nadu,Theni,Uthamapalayam,Thevaram OW,9.8968,77.2769,424.0,56.0,56,GN03
+772,Tamil Nadu,Thiruvallur,Villivakkam,Ambattur OW,13.1186,80.1547,28.0,48.0,48,GN03
+773,Tamil Nadu,Thiruvallur,R.K.Pet,Balapuram OW,13.1531,79.3828,177.0,15.0,15,GN03
+774,Tamil Nadu,Thiruvallur,Ellapuram,Enambakkam EW,13.28401,79.991425,38.0,50.0,50,GN03
+775,Tamil Nadu,Thiruvallur,Ellapuram,Enambakkam OW,13.28401,79.991425,38.0,50.0,50,GN03
+776,Tamil Nadu,Thiruvallur,Kadambathur,Kottaiyur EW,12.995703,79.865405,156.0,41.0,41,GN03
+777,Tamil Nadu,Thiruvallur,Kadambathur,Kottaiyur OW,12.995703,79.865405,156.0,34.0,34,GN03
+778,Tamil Nadu,Thiruvallur,Tiruthani,Krishnasamudram OW,13.219691,79.52675,163.0,9.0,9,GN03
+779,Tamil Nadu,Thiruvallur,Pallipattu,Pallipattu (Nediyam) EW,13.33,79.4947,146.0,9.0,9,GN03
+780,Tamil Nadu,Thiruvallur,Ellapuram,Panapakkam OW,13.2924,80.0556,25.0,45.0,45,GN03
+781,Tamil Nadu,Thiruvallur,Poonamallee,Tiruninravur OW,13.1192,80.161,36.0,43.0,43,GN03
+782,Tamil Nadu,Thiruvallur,Sholavaram,Valapakkam EW,13.307827,80.063214,25.0,43.0,43,GN03
+783,Tamil Nadu,Thiruvallur,R.K.Pet,Vediyankadu OW,13.1095,79.318,214.0,5.0,5,GN03
+784,Tamil Nadu,Thiruvallur,Pallipattu,Veliagaram OW,13.3276,79.4229,170.0,12.0,12,GN03
+785,Tamil Nadu,Thiruvannamalai,Kilpenathur,Andampallam (Isukalikatteri) OW,12.0991,79.1695,126.0,17.0,17,GN03
+786,Tamil Nadu,Thiruvannamalai,Thurinjapuram,Kamalaputhur OW,12.382267,79.154938,414.0,7.0,7,GN03
+787,Tamil Nadu,Thiruvannamalai,Chengam,Kannakurkkai EW,12.2586,78.9511,434.0,9.0,9,GN03
+788,Tamil Nadu,Thiruvannamalai,Thiruvannamalai,Kattampundi EW,12.1267,79.0855,145.0,10.0,10,GN03
+789,Tamil Nadu,Thiruvannamalai,Thiruvannamalai,Kattampundi OW,12.1267,79.0855,145.0,11.0,11,GN03
+790,Tamil Nadu,Thiruvannamalai,Vandavasi,Kilkodungalur EW,12.5003,79.7028,62.0,9.0,9,GN03
+791,Tamil Nadu,Thiruvannamalai,Kilpenathur,Kilpennathur OW,12.25,79.2225,147.0,11.0,11,GN03
+792,Tamil Nadu,Thiruvannamalai,Kilpenathur,Kolathur (Konalur) EW,12.1765,79.1975,145.0,11.0,11,GN03
+793,Tamil Nadu,Thiruvannamalai,Chengam,Kuppanatham EW,12.3986,78.7714,362.0,7.0,7,GN03
+794,Tamil Nadu,Thiruvannamalai,Thandarampet,Mothakkal EW,12.0854,78.7414,265.0,11.0,11,GN03
+795,Tamil Nadu,Thiruvannamalai,Thandarampet,Narayanakuppam (Kolamanjanoor) EW,12.0969,78.8714,182.0,7.0,7,GN03
+796,Tamil Nadu,Thiruvannamalai,Cheyyar,Nedumpirai OW,12.7078,79.5611,109.0,11.0,11,GN03
+797,Tamil Nadu,Thiruvannamalai,Vandavasi,Salavedu OW,12.4858,79.7303,265.0,9.0,9,GN03
+798,Tamil Nadu,Thiruvannamalai,Kalasapakkam,Vilavarni (Aridharimangalam) EW,12.445999,79.034523,200.0,11.0,11,GN03
+799,Tamil Nadu,Thoothukudi,Ottapidaram,Kailaspuram (Kilakottai) OW,8.8598,77.8254,49.0,8.0,8,GN03
+800,Tamil Nadu,Thoothukudi,Pudukottai,M.Pudur (A.Thiyakurichi) EW,8.709,78.0038,40.0,17.0,17,GN03
+801,Tamil Nadu,Thoothukudi,Sattankulam,Meignanapuram EW,8.4658,78.0022,19.0,37.0,37,GN03
+802,Tamil Nadu,Thoothukudi,Ottapidaram,Parivilikottai (Malaipatti) EW,8.918,77.8711,82.0,9.0,9,GN03
+803,Tamil Nadu,Thoothukudi,Pudukottai,Pudukottai (Panchalamkurichi A/C) EW,8.7411,78.0458,30.0,17.0,17,GN03
+804,Tamil Nadu,Thoothukudi,Pudukottai,Thimmarajapuram EW,8.7583,77.9919,32.0,17.0,17,GN03
+805,Tamil Nadu,Tiruchirapalli,Manikandam,Alundur OW,10.6856,78.6145,102.0,11.65,12,GN03
+806,Tamil Nadu,Tiruchirapalli,Manapparai,Chinnaiyathampatti (Periapatti) EW,10.641657,78.321158,191.0,23.0,23,GN03
+807,Tamil Nadu,Tiruchirapalli,Vaiyampatty,Karutha Kodangipatti (Karuppur) EW,10.477,78.3183,286.0,13.0,13,GN03
+808,Tamil Nadu,Tiruchirapalli,Manapparai,Karvadi EW,10.489,78.4284,207.0,13.0,13,GN03
+809,Tamil Nadu,Tiruchirapalli,Manapparai,Karvadi OW,10.489,78.4284,265.0,13.0,13,GN03
+810,Tamil Nadu,Tiruchirapalli,Vaiyampatty,Kurumbapatti (K. Periapatti) EW,10.669887,78.474605,191.0,13.0,13,GN03
+811,Tamil Nadu,Tiruchirapalli,Marungapuri,Marungapuri A/C OW,10.436,78.4108,228.0,13.0,13,GN03
+812,Tamil Nadu,Tiruchirapalli,Manikandam,Melanagamangalam OW,10.710997,78.619866,92.0,11.0,11,GN03
+813,Tamil Nadu,Tiruchirapalli,Musiri,Musiri OW,10.9597,78.4397,93.0,6.0,6,GN03
+814,Tamil Nadu,Tiruchirapalli,Vaiyampatty,Nallampillai OW,10.650051,78.375272,172.0,5.0,5,GN03
+815,Tamil Nadu,Tiruchirapalli,Thathaiyangarpet,Paithambarai OW,11.077046,78.456582,117.0,10.0,10,GN03
+816,Tamil Nadu,Tiruchirapalli,Marungapuri,Pallakurichi EW,10.4126,78.5019,164.0,11.0,11,GN03
+817,Tamil Nadu,Tiruchirapalli,Marungapuri,Pallakurichi OW,10.4126,78.5019,164.0,11.0,11,GN03
+818,Tamil Nadu,Tiruchirapalli,Manachanallur,Sanamangalam OW,11.0609,78.7928,118.0,23.0,23,GN03
+819,Tamil Nadu,Tiruchirapalli,Manapparai,Sathapadiputhur (Pannapatti. E) OW,10.564597,78.374915,181.0,24.0,24,GN02
+820,Tamil Nadu,Tiruchirapalli,Thuraiyur,Siruganatham OW,11.187742,78.57397,149.0,17.0,17,GN03
+821,Tamil Nadu,Tiruchirapalli,Uppiliyapuram,Talugai (Mammalai R.F.) A/C OW,11.245036,78.705107,260.0,5.0,5,GN03
+822,Tamil Nadu,Tiruchirapalli,Thottiyam,Thottiyam OW,10.993671,78.324021,103.0,16.0,16,GN03
+823,Tamil Nadu,Tiruchirapalli,Uppiliyapuram,Vairichettipalayam OW,11.2773,78.4906,185.0,25.0,25,GN03
+824,Tamil Nadu,Tiruchirapalli,Thuraiyur,Valaiyeduppu (Vadakkuveli) OW,11.0975,78.4793,127.0,20.0,20,GN03
+825,Tamil Nadu,Tiruchirapalli,Tiruverambur,Valavanthankottai OW,10.7597,78.8338,74.0,22.0,22,GN03
+826,Tamil Nadu,Tirunelveli,Keezhapavur,Achchankuttam OW,8.974946,77.482402,48.0,17.0,17,GN03
+827,Tamil Nadu,Tirunelveli,Ambasamudram,Ambasamudram OW,8.713072,77.45691,68.0,5.0,5,GN03
+828,Tamil Nadu,Tirunelveli,Shengottai,Ayikudy OW,9.015391,77.347058,156.0,21.0,21,GN03
+829,Tamil Nadu,Tirunelveli,Nangunneri,Ins Kattabomman OW,8.4013,77.7502,38.0,9.0,9,GN03
+830,Tamil Nadu,Tirunelveli,Ambasamudram,Iyan Singampatty (Vairavikulam) OW,8.687566,77.448001,78.0,8.0,8,GN03
+831,Tamil Nadu,Tirunelveli,Sankarankovil,Karivalamvandanallur EW,9.2664,77.5386,135.0,22.0,22,GN03
+832,Tamil Nadu,Tirunelveli,Valliyur,Karunkannan Kudiyurippu OW,8.4081,77.6564,74.0,11.0,11,GN03
+833,Tamil Nadu,Tirunelveli,Kuruvikulam,Kuruvikulam (Appaneri) OW,9.1757,77.6683,144.0,15.0,15,GN03
+834,Tamil Nadu,Tirunelveli,Kuruvikulam,Maipparai EW,9.2403,77.7252,120.0,21.0,21,GN03
+835,Tamil Nadu,Tirunelveli,Nangunneri,Mayaneri (Karuppukatti) OW,8.5713,77.7013,74.0,19.0,19,GN03
+836,Tamil Nadu,Tirunelveli,Alangulam,Melamarudappapuram EW,9.0161,77.5447,139.0,17.0,17,GN03
+837,Tamil Nadu,Tirunelveli,Melneelithanallur,Moovarirundali EW,9.0161,77.5344,103.0,17.0,17,GN03
+838,Tamil Nadu,Tirunelveli,Radhapuram,Muthumottamozhi OW,8.3086,77.8603,53.0,22.0,22,GN03
+839,Tamil Nadu,Tirunelveli,Mannur,Nadukallur OW,8.7105,77.5912,34.0,30.0,30,GN03
+840,Tamil Nadu,Tirunelveli,Valliyur,Nakkaneri OW,8.2173,77.67,35.0,3.0,3,GN03
+841,Tamil Nadu,Tirunelveli,Manur,Pallikottai OW,8.8609,77.712,73.0,11.0,11,GN03
+842,Tamil Nadu,Tirunelveli,Pappakudi,Pappakudi OW,8.7452,77.5106,57.0,11.0,11,GN03
+843,Tamil Nadu,Tirunelveli,Keezhapavur,Pedanderpatty OW,8.8916,77.408,135.0,17.0,17,GN03
+844,Tamil Nadu,Tirunelveli,Kuruvikulam,Perungottur (Karvazhi) OW,9.2003,77.5858,134.0,5.0,5,GN03
+845,Tamil Nadu,Tirunelveli,Vasudevanallur,Puliyankudi OW,9.1817,77.4389,32.0,15.0,15,GN03
+846,Tamil Nadu,Tirunelveli,Manur,Rajapathi OW,8.8517,77.7696,45.0,12.0,12,GN03
+847,Tamil Nadu,Tirunelveli,Nanguneri,Ramakrishnapuram OW,8.4849,77.7964,56.0,5.0,5,GN03
+848,Tamil Nadu,Tirunelveli,Vasudevanallur,Sivagiri OW,9.34,77.4383,167.0,14.0,14,GN03
+849,Tamil Nadu,Tirunelveli,Alankulam,Sivalarkulam OW,8.8693,77.5294,116.0,17.0,17,GN03
+850,Tamil Nadu,Tirunelveli,Shengottai,Surandai OW,8.9828,77.4108,34.0,11.0,11,GN03
+851,Tamil Nadu,Tirunelveli,Tenkasi,Tenkasi OW,8.9633,77.3115,166.0,11.0,11,GN03
+852,Tamil Nadu,Tirunelveli,Palayankottai,Thalavaipuram OW,8.7356,77.8052,38.0,11.0,11,GN03
+853,Tamil Nadu,Tirunelveli,Valliyur,Therkuvalliyur OW,8.3331,77.624,80.0,11.0,11,GN03
+854,Tamil Nadu,Tirunelveli,Palayamkottai,Thidiyur OW,8.6214,77.6514,58.0,11.0,11,GN03
+855,Tamil Nadu,Tirunelveli,Melneelithanallur,Thirumalapuram (Kurukkalpatti) EW,9.0692,77.5986,138.0,11.0,11,GN03
+856,Tamil Nadu,Tirunelveli,Valliyoor,Udayattur A/B OW,8.2325,77.7206,53.0,11.0,11,GN03
+857,Tamil Nadu,Tirunelveli,Melaneelithanallur,Vannikonendhal OW,9.2002,77.6234,110.0,26.0,26,GN03
+858,Tamil Nadu,Tirunelveli,Cheranmahadevi,Veeravanallur OW,8.6906,77.5152,68.0,5.0,5,GN03
+859,Tamil Nadu,Tirunelveli,Valliyoor,Veppilankulam (Perungudi A/B) OW,8.2933,77.62,51.0,11.0,11,GN03
+860,Tamil Nadu,Tirunelveli,Ambasamudram,Vickramasingapuram OW,8.7109,77.3975,86.0,11.0,11,GN03
+861,Tamil Nadu,Tirunelveli,Sankarankovil,Virasikhamani OW,9.0919,77.4447,174.0,17.0,17,GN03
+862,Tamil Nadu,Tiruppur,Pongalur,Alagumalai (North Avanashipalayam) OW,11.0111,77.4385,352.0,11.0,11,GN03
+863,Tamil Nadu,Tiruppur,Udumalaipettai,Jilobanaickenpalayam EW,10.528422,77.130496,373.0,5.5,6,GN03
+864,Tamil Nadu,Tiruppur,Pongalur,Kaluveripalayam (Vavipalayam) EW,10.879,77.3088,361.0,11.0,11,GN03
+865,Tamil Nadu,Tiruppur,Kundadam,Kullagoundanputhur (Sirukinar) EW,10.8256,77.5618,253.0,11.0,11,GN03
+866,Tamil Nadu,Tiruppur,Kundadam,Marudur EW,10.765,77.3753,286.0,5.0,5,GN03
+867,Tamil Nadu,Tiruppur,Dharapuram,Munduvelampatti EW,10.7117,77.3278,337.0,17.0,17,GN03
+868,Tamil Nadu,Tiruppur,Kundadam,Muthalipalayam (uthiyur) EW,10.8875,77.5513,256.0,5.0,5,GN03
+869,Tamil Nadu,Tiruppur,Gudimangalam,S.Vallakundapuram (Kondampatti) EW,10.7134,77.2455,331.0,12.0,12,GN03
+870,Tamil Nadu,Vellore,Wallajah,Chenna Samudram EW,12.9033,79.398,148.0,5.0,5,GN03
+871,Tamil Nadu,Vellore,Katpadi,Jaffrapet EW,12.962584,79.129846,213.0,19.0,19,GN03
+872,Tamil Nadu,Vellore,Katpadi,Jaffrapet OW,12.962584,79.129846,213.0,19.0,19,GN03
+873,Tamil Nadu,Vellore,Kandhili,Kandhili EW,12.489043,78.44461,170.0,17.0,17,GN03
+874,Tamil Nadu,Vellore,Pernampet,Karapattu EW,12.787742,78.613807,92.0,5.0,5,GN03
+875,Tamil Nadu,Vellore,Nemili,Kariyakudal EW,12.99,79.618,97.0,16.0,16,GN03
+876,Tamil Nadu,Vellore,Nemili,Kariyakudal OW,12.9899,79.618,97.0,18.0,18,GN03
+877,Tamil Nadu,Vellore,Pernampattu,Karkur EW,12.8747,78.7598,344.0,6.0,6,GN03
+878,Tamil Nadu,Vellore,Pernampattu,Karkur OW,12.8747,78.7598,109.0,5.0,5,GN03
+879,Tamil Nadu,Vellore,Natrampalli,Malla Gunda EW,12.632531,78.524233,461.0,13.0,13,GN03
+880,Tamil Nadu,Vellore,Thirupathur,Mottur A/C (Aathumedu) EW,12.4313,78.6167,379.0,11.0,11,GN03
+881,Tamil Nadu,Vellore,Arakonam,Parithiputhur EW,13.0581,79.6268,101.0,12.0,12,GN03
+882,Tamil Nadu,Vellore,Kanniyambadi,Pennathur EW,12.845018,79.13501,369.0,5.0,5,GN03
+883,Tamil Nadu,Vellore,Tirupathur,Periavakkam EW,12.1019,79.1097,146.0,13.0,13,GN03
+884,Tamil Nadu,Vellore,Thirupathur,Thathavalli A/C EW,12.5053,78.6189,192.0,6.0,6,GN03
+885,Tamil Nadu,Vellore,Vellore,Ussur EW,12.858569,79.096631,251.0,5.0,5,GN03
+886,Tamil Nadu,Villupuram,Ulundurpet,Ajees Nagar (ED Alkkal) EW,11.6766,79.2734,280.0,5.0,5,GN03
+887,Tamil Nadu,Villupuram,Chinna Selam LockB,Anumanthal EW,11.5833,78.9536,192.0,8.0,8,GN03
+888,Tamil Nadu,Villupuram,Thiyagadurgam,Asakalathur EW,11.6048,79.0584,86.0,5.0,5,GN03
+889,Tamil Nadu,Villupuram,Chinna Selam,Chinnaselam EW,11.6246,78.867,139.0,5.0,5,GN03
+890,Tamil Nadu,Villupuram,Melmalayanur,Kadapanandhal (Naranamangalam) EW,12.3404,79.2136,160.0,5.0,5,CK01
+891,Tamil Nadu,Villupuram,Vikkiravandi,Kanjanur (Muttatur) EW,12.059465,79.438318,65.0,11.0,11,GN03
+892,Tamil Nadu,Villupuram,Gingee,Karai EW,12.1525,79.4103,84.0,5.0,5,GN03
+893,Tamil Nadu,Villupuram,Marakkanam,Karnavur (Jakkampatti) EW,12.2058,79.6356,88.0,6.0,6,GN03
+894,Tamil Nadu,Villupuram,Olakkur,Kilpasar EW,12.2679,79.7714,36.0,6.0,6,GN03
+895,Tamil Nadu,Villupuram,Thirukovilur,Kodiyur EW,11.878902,79.186423,77.0,25.0,25,GN03
+896,Tamil Nadu,Villupuram,Melmalayanur,Marakkonam EW,12.190274,79.952201,153.0,13.0,13,GN03
+897,Tamil Nadu,Villupuram,Mailam,Melperadikuppam EW,12.2167,79.5833,73.0,5.0,5,GN03
+898,Tamil Nadu,Villupuram,Chinna Selam,Mungilpadi (Mazhavarayanur) EW,11.6327,78.8505,142.0,6.0,6,GN03
+899,Tamil Nadu,Villupuram,Ulundurpettaii,Semmanangur EW,12.2253,79.7333,62.0,5.0,5,GN03
+900,Tamil Nadu,Villupuram,Kallakurichi,Sempadakurichi,11.76149,78.900099,162.0,17.0,17,GN03
+901,Tamil Nadu,Villupuram,Marakkanam,Siruvadi EW,12.2068,79.8514,25.0,11.0,11,GN03
+902,Tamil Nadu,Villupuram,Vanur,Thenagaram (Terkunam) EW,12.1162,79.7212,26.0,10.0,10,GN03
+903,Tamil Nadu,Villupuram,Chinna Selam,Utangiyanallur EW,11.614703,78.962366,104.0,6.0,6,GN03
+904,Tamil Nadu,Villupuram,Olakkur,Vadasiruvalur (Nagavaram) EW,11.887434,78.930279,81.0,7.0,7,GN03
+905,Tamil Nadu,Villupuram,Vikkiravandi,Vikkiravandi EW,12.0514,79.5447,46.0,15.0,15,GN03
+906,Tamil Nadu,Villupuram,Thiyagadurgam,Virugavur EW,11.683912,79.06028,100.0,11.0,11,GN03
+907,Tamil Nadu,Virudhunagar,Vembakottai,Alangulam OW,9.3645,77.6772,104.0,3.0,3,GN03
+908,Tamil Nadu,Virudhunagar,Rajapalayam,Ammaiyappapuram (Ilandirakondan) EW,9.4401,77.537,160.0,11.0,11,GN03
+909,Tamil Nadu,Virudhunagar,Rajapalayam,Ammaiyappapuram (Ilandirakondan) OW,9.4401,77.537,160.0,12.0,12,GN03
+910,Tamil Nadu,Virudhunagar,Sivakasi,Anaiyur OW,9.4464,77.7668,109.0,5.0,5,GN03
+911,Tamil Nadu,Virudhunagar,Watrap,Ayankarisalkulam OW,9.6458,77.756,133.0,23.0,23,GN03
+912,Tamil Nadu,Virudhunagar,Rajapalayam,Chatrapatti OW,9.3886,77.5147,150.0,5.0,5,GN03
+913,Tamil Nadu,Virudhunagar,Kariapatti,Johilpatti OW,9.6016,78.1051,86.0,35.0,35,GN03
+914,Tamil Nadu,Virudhunagar,Vembakottai,Kakkivadanpatti EW,9.4039,77.7217,113.0,11.0,11,GN03
+915,Tamil Nadu,Virudhunagar,Rajapalayam,Kamaraj Nagar (Terku Devadanam) EW,9.4003,77.475,298.0,11.0,11,GN03
+916,Tamil Nadu,Virudhunagar,Kariyapatti,Kanjannaichenpatti OW,9.7183,78.1131,166.0,17.0,17,GN03
+917,Tamil Nadu,Virudhunagar,Rajapalayam,Kilrajakularaman EW,9.3794,77.6314,127.0,11.0,11,GN03
+918,Tamil Nadu,Virudhunagar,Vatharaippu,Kottaiyur OW,9.6486,77.6979,148.0,5.0,5,GN03
+919,Tamil Nadu,Virudhunagar,Aruppukottai,Mallankinar EW,9.598,78.0553,102.0,6.0,6,CK01
+920,Tamil Nadu,Virudhunagar,Sivakasi,Mamsapuram (Valaikkulam A/B) EW,9.505,77.6019,153.0,17.0,17,GN03
+921,Tamil Nadu,Virudhunagar,Sivakasi,Mangalam EW,9.5694,77.7569,110.0,14.0,14,GN03
+922,Tamil Nadu,Virudhunagar,Kariyapatti,Mudukkankulam OW,9.6622,78.2061,85.0,36.0,36,GN03
+923,Tamil Nadu,Virudhunagar,Virudhunagar,Mutalapuram OW,9.5256,77.8895,100.0,5.0,5,GN03
+924,Tamil Nadu,Virudhunagar,Sivakasi,Naranapuram EW,9.4519,77.8328,102.0,11.0,11,GN03
+925,Tamil Nadu,Virudhunagar,Watrap,Nathampatti OW,9.6042,77.7486,127.0,23.0,23,GN03
+926,Tamil Nadu,Virudhunagar,Rajapalayam,Nathikudi (Achchandavirthan) EW,9.4256,77.6839,117.0,11.0,11,GN03
+927,Tamil Nadu,Virudhunagar,Srivilliputhur,Pannankulam OW,9.5354,77.7135,124.0,5.0,5,GN03
+928,Tamil Nadu,Virudhunagar,Virudhunagar,Pattampudur (Kottainattam) EW,9.4914,77.9338,98.0,21.0,21,GN03
+929,Tamil Nadu,Virudhunagar,Virudhunagar,Pattampudur (Kottainattam) OW,9.4914,77.9338,98.0,20.0,20,GN03
+930,Tamil Nadu,Virudhunagar,Sivakasi,Poovanathapuram (Injar A/D) OW,9.5014,77.7578,111.0,17.0,17,GN03
+931,Tamil Nadu,Virudhunagar,Virudhunagar,Sengunrapuram OW,9.6238,77.8725,111.0,5.0,5,GN03
+932,Tamil Nadu,Virudhunagar,Rajapalayam,Sholapuram EW,9.3644,77.5614,131.0,6.0,6,GN03
+933,Tamil Nadu,Virudhunagar,Srivilliputhur,Srivilliputhur OW,9.4993,77.6269,154.0,17.0,17,GN03
+934,Tamil Nadu,Virudhunagar,Vembakottai,Subramaniampuram (Salvarpatti) EW,9.3722,77.8352,99.0,3.0,3,GN03
+935,Tamil Nadu,Virudhunagar,Vembakottai,Thayilupatti EW,9.3756,77.7975,112.0,9.0,9,GN03
+936,Tamil Nadu,Virudhunagar,Vembakottai,Thulukkankurichi OW,9.3042,77.7552,90.0,11.0,11,GN03
+937,Tamil Nadu,Virudhunagar,Veerarpatti,Veerarpatti (Appayyanayakkanpatti) EW,9.4519,77.8328,111.0,4.0,4,GN03
+938,Tamil Nadu,Virudhunagar,Vembakottai,Vijayakarisalkulam (Karisalpatti) EW,9.345,77.7958,90.0,11.0,11,GN03
+939,Tamil Nadu,Kancheepuram,Sriperumpudhur,Pappanchathiram,12.9666,79.9466,27.0,36.0,36,AL01
+940,Tamil Nadu,Kancheepuram,Sriperumpudur,Mevalurkuppam,13.0375,80.0125,30.0,36.0,36,AL01
+941,Tamil Nadu,Tiruvarur,Thiruvarur,Thiruvarur EW,10.7694,79.6033,11.0,32.0,32,AL01
+942,Tamil Nadu,Tiruvarur,Thiruvarur,Thiruvarur OW I,10.7694,79.6033,11.0,30.0,30,AL01
+943,Tamil Nadu,Tiruvarur,Thiruvarur,Thiruvarur OW II,10.7694,79.6033,11.0,45.0,45,AL01
+944,Tamil Nadu,Cuddalore,Panruti,Abaddaranapuram (PZ8)-3018,11.566944,79.556944,42.0,50.0,50,AL01
+945,Tamil Nadu,Cuddalore,Kurunjipadi,Alapakkam (EW)-3012,11.600278,79.729167,5.0,85.0,85,AL01
+946,Tamil Nadu,Cuddalore,Kurunjipadi,Ammeri - Thoppulikuppam,11.556361,79.457778,60.0,40.0,40,AL01
+947,Tamil Nadu,Cuddalore,Kurunjipadi,Arasadikuppam,11.66,79.57,71.0,61.0,61,AL01
+948,Tamil Nadu,Cuddalore,Kurunjipadi,Ayeekuppam,11.614722,79.661389,18.0,58.0,58,AL01
+949,Tamil Nadu,Cuddalore,Annagramam / Cuddalore,Badrakottai,11.69,79.62,60.0,60.0,60,AL01
+950,Tamil Nadu,Cuddalore,Annagramam / Cuddalore,Budamur (EW)-3027,11.500833,79.333333,50.0,26.0,26,AL01
+951,Tamil Nadu,Cuddalore,Annagramam / Cuddalore,Chavadi (EW)-3005,11.734444,79.75,4.0,80.0,80,AL01
+952,Tamil Nadu,Cuddalore,Kurunjipadi,Chidhambaram Annamalainagar,11.391944,79.707222,9.0,80.0,80,AL01
+953,Tamil Nadu,Cuddalore,Kammapuram,Gangaikondan (EW),11.533333,79.483333,35.0,50.0,50,AL01
+954,Tamil Nadu,Cuddalore,Kammapuram,Indira Nagar,11.769722,79.750833,70.0,49.0,49,AL01
+955,Tamil Nadu,Cuddalore,Panruti,Iruppu (PZ35),11.616944,79.425,94.0,63.0,63,AL01
+956,Tamil Nadu,Cuddalore,Panruti,Kadambuliyur (EW)-3007,11.7,79.55,79.0,44.0,44,AL01
+957,Tamil Nadu,Cuddalore,Kurunjipadi,Kannithamizh nadu,11.59,79.6,32.0,60.0,60,AL01
+958,Tamil Nadu,Cuddalore,Kurunjipadi,Karukai,11.73,79.48,60.0,60.0,60,AL01
+959,Tamil Nadu,Cuddalore,Kurunjipadi,Karunkuzhi,11.52,79.54,20.0,53.0,53,AL01
+960,Tamil Nadu,Cuddalore,Kurunjipadi,Kattiyankuppam-EW,11.503611,79.6325,37.0,62.0,62,AL01
+961,Tamil Nadu,Cuddalore,Panruti,Kattusagai (PZ6)-3009,11.65,79.65,20.0,58.0,58,AL01
+962,Tamil Nadu,Cuddalore,Panruti,Kilkangayankuppam,11.666389,79.481389,88.0,55.0,55,AL01
+963,Tamil Nadu,Cuddalore,Kurinjipadi,Kodandaramapuram,11.522778,79.653333,20.0,58.0,58,AL01
+964,Tamil Nadu,Cuddalore,Cuddalore,Kudikadu (PZ41)-3008,11.683606,79.760462,4.0,80.0,80,AL01
+965,Tamil Nadu,Cuddalore,Panruti,Kudiyiruppu (SH),11.684444,79.476389,71.0,45.0,45,AL01
+966,Tamil Nadu,Cuddalore,Kurunjipadi,Kurinjipaddi (PZ33)-3020,11.570164,79.587651,23.0,53.0,53,AL01
+967,Tamil Nadu,Cuddalore,Kurinjipadi,Madhanagopalapuram,11.643712,79.60586,40.0,50.0,50,AL01
+968,Tamil Nadu,Cuddalore,Cuddalore,Manjakuppam (EW),11.763056,79.790278,5.0,100.0,100,AL01
+969,Tamil Nadu,Cuddalore,Kurinjipadi,Marungur-EW,11.651111,79.537778,82.0,55.0,55,AL01
+970,Tamil Nadu,Cuddalore,Kurinjipadi,Mettukuppam(EW)-3030,11.516667,79.525,29.0,40.0,40,AL01
+971,Tamil Nadu,Cuddalore,Kurinjipadi,Mettupalayam (PZ1)-3021,11.5675,79.715278,7.0,85.0,85,AL01
+972,Tamil Nadu,Cuddalore,Kammapuram,Nadiyapattu,11.664861,79.404139,82.0,35.0,35,AL01
+973,Tamil Nadu,Cuddalore,Annagramam,Naduveerapatu (EW)-3002,11.733611,79.625,27.0,35.0,35,AL01
+974,Tamil Nadu,Cuddalore,kurinjipadi,Pacharpalayam EW-I,11.592222,79.591944,34.0,50.0,50,AL01
+975,Tamil Nadu,Cuddalore,Panruti,Panruti (PZ39)-3001,11.757456,79.566061,40.0,50.0,50,AL01
+976,Tamil Nadu,Cuddalore,Parangipatti,Part-Novo(EW)-3043,11.476389,79.772222,1.0,85.0,85,AL01
+977,Tamil Nadu,Cuddalore,Cuddalore,Pathirikuppam,11.74955,79.733911,7.0,95.0,95,AL01
+978,Tamil Nadu,Cuddalore,Parangipatti,Periyapattu (DW),11.556944,79.727222,6.0,97.0,97,AL01
+979,Tamil Nadu,Cuddalore,Parangipatti,Puduchatram (PZ31)-3022,11.516667,79.722222,4.0,97.0,97,AL01
+980,Tamil Nadu,Cuddalore,Kumaratchi,Pudukrishnapuram (EW)I,11.341667,79.491667,16.0,50.0,50,AL01
+981,Tamil Nadu,Cuddalore,Vridhachalam,Puukuriyapet (EW)-3028,11.516944,79.352778,60.0,35.0,35,AL01
+982,Tamil Nadu,Cuddalore,Parangipatti,PUNJAMAGATTUVALKKAI (EW),11.452284,79.731602,18.0,50.0,50,AL01
+983,Tamil Nadu,Cuddalore,Kurinjipadi,Puvanikuppam,11.58,79.69,7.0,85.0,85,AL01
+984,Tamil Nadu,Cuddalore,Kurinjipadi,RAJANKUPPAM (PZ9)3019,11.541392,79.576169,20.0,53.0,53,AL01
+985,Tamil Nadu,Cuddalore,Melbhuvanagiri,Ramapuram-EW,11.416111,79.572222,30.0,58.0,58,AL01
+986,Tamil Nadu,Cuddalore,Kurinjipadi,REDDYARPALAYAM,11.532222,79.596667,10.0,60.0,60,AL01
+987,Tamil Nadu,Cuddalore,Kurinjipadi,Sakthi Nagar Extension,11.619722,79.558889,70.0,49.0,49,AL01
+988,Tamil Nadu,Cuddalore,Cuddalore,SANGOLIKUPPAM (PZ III),11.651111,79.745833,6.0,100.0,100,AL01
+989,Tamil Nadu,Cuddalore,Annagramam,Sathipattu,11.747689,79.579347,40.0,43.0,43,AL01
+990,Tamil Nadu,Cuddalore,Annagramam,Semakottai OW,11.775278,79.506944,25.0,50.0,50,AL01
+991,Tamil Nadu,Cuddalore,Kurinjipadi,SENGALPALAYAM EW-I,11.537222,79.53,40.0,55.0,55,AL01
+992,Tamil Nadu,Cuddalore,Melbhuvanagiri,SHATIATOPE (PZ43),11.466667,79.55,15.0,60.0,60,AL01
+993,Tamil Nadu,Cuddalore,Cuddalore,SILAMPINATHANPATTI,11.692778,79.61,60.0,63.0,63,AL01
+994,Tamil Nadu,Cuddalore,Kattumanarkoil,SRIMUSHNAM (EW)-3033,11.4,79.406111,26.0,27.0,27,AL01
+995,Tamil Nadu,Cuddalore,Kurinjipadi,SRINIVASAPURAM,11.617778,79.719444,4.0,85.0,85,AL01
+996,Tamil Nadu,Cuddalore,Kurinjipadi,THAYALUKUNAMPATINAM,11.584745,79.619192,20.0,60.0,60,AL01
+997,Tamil Nadu,Cuddalore,Cuddalore,THAZHANGUDA (EW),11.741667,79.783333,8.0,70.0,70,AL01
+998,Tamil Nadu,Cuddalore,Kurinjipadi,Theerthanagiri,11.56,79.67,8.0,85.0,85,AL01
+999,Tamil Nadu,Cuddalore,Kurinjipadi,THIRUCHOVAPURAM (EW),11.608931,79.750222,3.0,105.0,105,AL01
+1000,Tamil Nadu,Cuddalore,Kammapuram,Thozhur,11.613,79.7566,23.0,45.0,45,AL01
+1001,Tamil Nadu,Cuddalore,Kurinjipadi,Vadakuthu,11.607086,79.545981,49.0,50.0,50,AL01
+1002,Tamil Nadu,Cuddalore,Kurinjipadi,Vadalur-OW-II,11.56,79.555,53.0,45.0,45,AL01
+1003,Tamil Nadu,Cuddalore,Melbhuvanagiri,VALAIYAMADEVI (EW)-3031,11.466667,79.5,13.0,45.0,45,AL01
+1004,Tamil Nadu,Cuddalore,Kurinjipadi,VANATHIRAYAPURAM EWI,11.588437,79.529956,50.0,36.0,36,AL01
+1005,Tamil Nadu,Cuddalore,Kurinjipadi,VEGAKOLLAI EWI,11.661944,79.571944,53.0,40.0,40,AL01
+1006,Tamil Nadu,Cuddalore,Kurinjipadi,VENKATAMPETTAI (EW),11.616667,79.598333,33.0,50.0,50,AL01
+1007,Tamil Nadu,Cuddalore,Kammapuram,VIRUDHACHALAM (PZ37)-3029,11.516667,79.483333,42.0,24.0,24,AL01
+1008,Tamil Nadu,Cuddalore,Kurinjipadi,Vadakuthu,11.607086,79.545981,49.0,50.0,50,AL01
+1009,Tamil Nadu,Cuddalore,Kurinjipadi,Vadalur-OW-II,11.56,79.555,53.0,45.0,45,AL01
+1010,Tamil Nadu,Cuddalore,Melbhuvanagiri,VALAIYAMADEVI (EW)-3031,11.466667,79.5,13.0,45.0,45,AL01
+1011,Tamil Nadu,Cuddalore,Kurinjipadi,VANATHIRAYAPURAM EWI,11.588437,79.529956,50.0,36.0,36,AL01
+1012,Tamil Nadu,Cuddalore,Kurinjipadi,VEGAKOLLAI EWI,11.661944,79.571944,53.0,40.0,40,AL01
+1013,Tamil Nadu,Cuddalore,Kurinjipadi,VENKATAMPETTAI (EW),11.616667,79.598333,33.0,50.0,50,AL01
+1014,Tamil Nadu,Cuddalore,Nallur,VEPPUR (EW)-3026,11.531861,79.141169,72.0,6.0,6,AL01
+1015,Tamil Nadu,Cuddalore,Kammapuram,VIRUDHACHALAM (PZ37)-3029,11.516667,79.483333,42.0,24.0,24,AL01
+1016,Tamil Nadu,Thanjavur,Papanasam,Ayyampettai EW,10.897294,79.203192,43.0,70.0,70,AL01
+1017,Tamil Nadu,Thanjavur,Thiruvidaimaruthur,Thukkachi EW,10.924,79.4845,18.0,15.0,15,AL01
+1018,Tamil Nadu,Thiruvarur,Thiruthuraipoondi,Thandalai Cherry EW,10.5332,79.6665,1.0,67.0,67,AL01
+1019,Tamil Nadu,Thiruvallur,Chennai,Madhavaram (Chennai-3) EW,13.3004,80.2289,10.0,36.0,36,AL01
+1020,Tamil Nadu,Thiruvallur,Minjur,Siruvakkam (Anuppambattu) EW,13.3004,80.2289,9.0,35.0,35,AL01
+1021,Tamil Nadu,Thiruvallur,Ellapuram,Thirukandalam EW,13.2451,80.0939,34.0,27.0,27,AL01
+1022,Tamil Nadu,Thiruvallur,Kadambathur,Valasai Vettikadu (Illupur) EW,13.042143,79.929204,71.0,63.0,63,AL01
+1023,Tamil Nadu,Thiruvallur,Kadambathur,Valasai Vettikadu (Illupur) OW,13.042143,79.929204,71.0,20.0,20,AL01
+1024,Tamil Nadu,Ariyalur,T. palur,Udayarpalayam (Venmankondan. E) EW,11.1773,79.2902,85.0,18.0,18,AL01
+1025,Tamil Nadu,Ariyalur,Tirumannur,Periya Karukai,11.66,79.44,81.0,38.0,38,AL01
+1026,Tamil Nadu,Ariyalur,Tirumannur,Periya Karukai,11.66,79.44,83.0,45.0,45,AL01
+1027,Tamil Nadu,Nagapattinam,Nagapattinam,Arulmolidevan EW,11.127349,79.623168,17.0,66.0,66,AL01
+1028,Tamil Nadu,Nagapattinam,Nagapattinam,Arulmolidevan OW,10.9056,79.79,17.0,66.0,66,AL01
+1029,Tamil Nadu,Nagapattinam,Thirumarugal,Seshamulai,10.898244,79.755797,19.0,42.0,42,AL01
+1030,Tamil Nadu,Ramanathapuram,PARAMAKUDI,PAMBOOR EW,9.4615,78.5883,53.0,66.0,66,AL01
+1031,Tamil Nadu,Ramanathapuram,PARAMAKUDI,PARAMAKUDI ITI CAMPUS EW,9.5344,78.6021,40.0,67.0,67,AL01
+1032,Tamil Nadu,Ramanathapuram,PARAMAKUDI,PARAMAKUDI ITI CAMPUS OW,9.5344,78.6021,40.0,68.0,68,AL01
+1033,Tamil Nadu,Villupuram,Vanur,Morattandi EW,11.9919,79.7878,47.0,73.0,73,AL01
+1034,Tamil Nadu,Villupuram,Vanur,Morattandi OW-I,11.9919,79.7878,47.0,81.0,81,AL01
+1035,Tamil Nadu,Villupuram,Vanur,Morattandi OW-II,11.9919,79.7878,47.0,75.0,75,AL01
+1036,Tamil Nadu,Villupuram,Vanur,Morattandi OW-III,11.9919,79.7878,47.0,73.0,73,AL01
+1037,Tamil Nadu,Villupuram,Koliyanur/Villupuram,Valavanur EW,11.91706,79.574308,36.0,67.0,67,AL01
+1038,Tamil Nadu,Villupuram,Koliyanur/Villupuram,Valavanur OW,11.91706,79.574308,35.0,67.0,67,AL01
+1039,Tamil Nadu,Nagapattinam,Nagapattinam,Agara Orathur EW,10.7359,79.7933,3.0,3.0,3,AL01
+1040,Tamil Nadu,Nagapattinam,Thirumarugal,Agarakondagai (Komal-West) EW,10.8657,79.8118,5.0,24.0,24,AL01
+1041,Tamil Nadu,Nagapattinam,Thirumarugal,Agarakondagai (Komal-West) OW,10.8657,79.8118,5.0,23.0,23,AL01
+1042,Tamil Nadu,Nagapattinam,Kilvelur,Akaram EW,10.6604,79.7524,6.0,96.0,96,AL01
+1043,Tamil Nadu,Nagapattinam,Kilvelur,Kohor (Eripurakarai A/b) EW,10.796874,79.767567,4.0,24.0,24,AL01
+1044,Tamil Nadu,Nagapattinam,Thirumarugal,Kothamangalam EW,10.8839,79.8073,8.0,21.0,21,AL01
+1045,Tamil Nadu,Nagapattinam,Manjakollai,Kumaran Vadkku Vedhi EW,10.7585,79.8186,63.0,63.0,63,AL01
+1046,Tamil Nadu,Nagapattinam,Talaigyaru,Manakkudi EW,10.581482,79.73847,3.0,141.0,141,AL01
+1047,Tamil Nadu,Nagapattinam,Mayiladuthurai,Mayiladuthurai (Sethur) EW,11.0971,79.6561,16.0,105.0,105,AL01
+1048,Tamil Nadu,Nagapattinam,Myladuthurai,Myladuthurai OW,11.0976,79.6566,6.0,125.0,125,AL01
+1049,Tamil Nadu,Nagapattinam,Kilvelur,Pasukidai Valli EW,10.6654,79.727,6.0,130.0,130,AL01
+1050,Tamil Nadu,Nagapattinam,Nagapattinam,Provachery EW,10.7591,79.8091,5.0,112.0,112,AL01
+1051,Tamil Nadu,Nagapattinam,Nagapattinam,Sangamangalam (Manjamalli A/b) EW,10.7728,79.8025,3.0,50.0,50,AL01
+1052,Tamil Nadu,Nagapattinam,Nagapattinam,Sangamangalam (Manjamalli A/b) OW,10.7728,79.8025,3.0,57.0,57,AL01
+1053,Tamil Nadu,Nagapattinam,Kilvelur,Sattiyakudi EW,10.679099,79.722296,3.0,133.0,133,AL01
+1054,Tamil Nadu,Nagapattinam,Nagapattinam,Sikkal EW,10.756915,79.793362,7.0,80.0,80,AL01
+1055,Tamil Nadu,Nagapattinam,Kollidam,Theti (Puliyanthurai) EW,10.801277,79.829731,3.0,120.0,120,AL01
+1056,Tamil Nadu,Nagapattinam,Kollidam,Theti (Puliyanthurai) OW,10.80098,79.831694,3.0,96.0,96,AL01
+1057,Tamil Nadu,Nagapattinam,Nagapattinam,Vadavoor EW,10.7156,79.8174,3.0,72.0,72,AL01
+1058,Tamil Nadu,Nagapattinam,Nagapattinam,Vadavoor OW,10.7153,79.8172,2.0,63.0,63,AL01
+1059,Tamil Nadu,Nagapattinam,Tirumarugal,Valamangalam OW,10.873186,79.809543,7.0,84.0,84,AL01
+1060,Tamil Nadu,Nagapattinam,Tirumarugal,Valmanagalam EW,10.872972,79.808472,7.0,74.0,74,AL01
+1061,Tamil Nadu,Nagapattinam,Kilvelur,Vengitangal EW,10.8229,79.7711,6.0,110.0,110,AL01
+1062,Tamil Nadu,Pudukkottai,Aranthangi,Devarpatti OW,10.2324,79.0031,56.0,27.0,27,AL01
+1063,Tamil Nadu,Pudukkottai,Thiruvarangulam,Kalalangudi EW,10.3606,78.9917,77.0,55.0,55,AL01
+1064,Tamil Nadu,Thiruvallur,Chennai,Madhavaram (Chennai-3) EW,13.3004,80.2289,10.0,36.0,36,AL01
+1065,Tamil Nadu,Thiruvallur,Minjur,Siruvakkam (Anuppambattu) EW,13.29783,80.221819,9.0,35.0,35,AL01
+1066,Tamil Nadu,Thiruvallur,Ellapuram,Thirukandalam EW,13.2451,80.0939,34.0,27.0,27,AL01
+1067,Tamil Nadu,Thiruvallur,Avadi,Alamathi (Chennai-01) EW,13.1926,80.1181,39.0,99.0,99,AL01
+1068,Tamil Nadu,Thiruvallur,Avadi,Alamathi (Chennai-01) OW,13.1926,80.1181,36.0,100.0,100,AL01
+1069,Tamil Nadu,Thiruvallur,Poonamallee,Avadi OW,13.1306,80.108595,34.0,99.0,99,AL01
+1070,Tamil Nadu,Thiruvallur,Poonamallee,Avadi EW,13.1306,80.108595,34.0,54.0,54,AL01
+1071,Tamil Nadu,Thiruvallur,Minjur,Kammavarpalayam (Nalur) EW,13.2444,80.0975,11.0,57.0,57,AL01
+1072,Tamil Nadu,Thiruvallur,Kadambathur,Valasai Vettikadu (Illupur) EW,13.042143,79.929204,71.0,63.0,63,AL01
+1073,Tamil Nadu,Thiruvallur,Kadambathur,Valasai Vettikadu (Illupur) OW,13.042143,79.929204,71.0,20.0,20,AL01
+1074,Tamil Nadu,Sivagangai,Devakottai,Devakottai EW,9.962251,78.8146,53.0,30.0,30,AL01
+1075,Tamil Nadu,Sivagangai,Devakottai,Devakottai OW,9.962846,78.812815,53.0,30.0,30,AL01
+1076,Tamil Nadu,Sivagangai,Sivagangai,Gowripatti EW,9.900121,78.546496,91.0,35.0,35,AL01
+1077,Tamil Nadu,Sivagangai,Sivagangai,Gowripatti OW,9.900478,78.548162,91.0,38.0,38,AL01
+1078,Tamil Nadu,Thanjavur,Papanasam,Ayyampettai EW,10.897294,79.203192,43.0,70.0,70,AL01
+1079,Tamil Nadu,Thanjavur,Thiruvidaimaruthur,Thukkachi EW,10.924,79.4845,18.0,21.0,21,AL01
+1080,Tamil Nadu,Thiruvarur,Nannilam,Kilkudi EW,10.869786,79.606906,13.0,127.0,127,AL01
+1081,Tamil Nadu,Thiruvarur,Nannilam,Kilkudi OW,10.87395,79.606192,13.0,128.0,128,AL01
+1082,Tamil Nadu,Thiruvarur,Valangaiman,Pulavarnatham EW,10.816,79.4022,23.0,87.0,87,AL01
+1083,Tamil Nadu,Thiruvarur,Valangaiman,Pulavarnatham OW,10.8136,79.4044,23.0,87.0,87,AL01
+1084,Tamil Nadu,Thiruvarur,Thiruthuraipoondi,Thandalai Cherry EW,10.5332,79.6665,1.0,67.0,67,AL01
+1085,Tamil Nadu,Pudukkottai,Thiruvarangulam,Kooliangadu EW,11.7834,79.6891,16.0,45.0,45,AL01
+1086,Tamil Nadu,Pudukkottai,Thiruvarangulam,Kothamangalam EW,10.3108,79.0596,56.0,90.0,90,AL01
+1087,Tamil Nadu,Pudukkottai,Aranthangi,Devarpatti EW,10.2324,79.0031,56.0,33.0,33,AL01
+1088,Tamil Nadu,Pudukkottai,Thiruvarangulam,Pappanviduthy EW,10.395929,79.023352,84.0,55.0,55,AL01
+1089,Tamil Nadu,Pudukkottai,Aranthangi,Thirunaloor North EW,10.0679,79.023,6.0,63.0,63,AL01
+1090,Tamil Nadu,Pudukkottai,Aranthangi,Thirunaloor North OW,10.0679,79.023,6.0,42.0,42,AL01
+1091,Tamil Nadu,Villupuram,Kandamangalam,Kandamangalam EW,11.924436,79.58686,76.0,96.0,96,AL01
+1092,Tamil Nadu,Villupuram,Kandamangalam,Kandamangalam OW,11.924436,79.58686,68.0,96.0,96,AL01
