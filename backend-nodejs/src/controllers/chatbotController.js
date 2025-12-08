@@ -2,9 +2,10 @@ const OpenAI = require('openai');
 const logger = require('../utils/logger');
 
 // Initialize OpenAI client with Emergent LLM key
+// Note: Emergent key requires special proxy URL
 const openai = new OpenAI({
   apiKey: process.env.EMERGENT_LLM_KEY || 'sk-emergent-e38419c1261D13b510',
-  baseURL: process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1',
+  baseURL: process.env.OPENAI_BASE_URL || 'https://api.emergent.sh/v1',
 });
 
 const SYSTEM_PROMPT = `You are Varun AI Assistant, a helpful expert in rainwater harvesting and water conservation. You help users with:
