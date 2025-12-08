@@ -7,11 +7,12 @@ import { useTheme } from '../contexts/ThemeContext';
 import * as Location from 'expo-location';
 
 interface FeasibilityResult {
-  feasibility_score?: number;
-  feasibility_status?: string;
-  predicted_runoff?: number;
-  recommended_capacity?: number;
-  output?: string;
+  feasibility_prediction?: string;
+  input?: {
+    rainfall: number;
+    roof_area: number;
+    open_space: number;
+  };
   [key: string]: any;
 }
 
