@@ -447,8 +447,8 @@ export default function FeasibilityCheck() {
               </View>
 
               {Object.entries(result).map(([key, value], index) => {
-                if (key === 'feasibility_status') {
-                  return null; // We'll show this separately
+                if (key === 'feasibility_status' || key === 'output') {
+                  return null; // We'll show these separately
                 }
                 
                 const formattedKey = key
@@ -480,6 +480,66 @@ export default function FeasibilityCheck() {
                   </Text>
                 </View>
               )}
+
+              {showAquiferCheck && !aquiferResult && (
+                <TouchableOpacity
+                  style={[styles.submitButton, { marginTop: 20, marginHorizontal: 0 }]}
+                  onPress={handleAquiferCheck}
+                  disabled={aquiferLoading}
+                >
+                  {aquiferLoading ? (
+                    <ActivityIndicator size="small" color="#FFFFFF" />
+                  ) : (
+                    <Text style={styles.submitButtonText}>Continue Aquifer Validating</Text>
+                  )}
+                </TouchableOpacity>
+              )}
+            </View>
+          )}
+
+          {aquiferResult && (
+            <View style={styles.resultContainer}>
+              <View style={styles.resultHeader}>
+                <View style={[
+                  styles.resultIcon,
+                  { backgroundColor: aquiferResult.isFeasible ? '#28a74520' : '#dc354520' }
+                ]}>
+                  <MaterialCommunityIcons 
+                    name={aquiferResult.isFeasible ? 'check-circle' : 'close-circle'} 
+                    size={32} 
+                    color={aquiferResult.isFeasible ? '#28a745' : '#dc3545'} 
+                  />
+                </View>
+                <Text style={styles.resultTitle}>Aquifer Validation Results</Text>
+              </View>
+
+              <View style={styles.resultItem}>
+                <Text style={styles.resultLabel}>Nearest Location</Text>
+                <Text style={styles.resultValue}>{aquiferResult.nearestLocation}</Text>
+              </View>
+
+              <View style={styles.resultItem}>
+                <Text style={styles.resultLabel}>Distance</Text>
+                <Text style={styles.resultValue}>{aquiferResult.distance.toFixed(2)} km</Text>
+              </View>
+
+              <View style={styles.resultItem}>
+                <Text style={styles.resultLabel}>Aquifer Depth</Text>
+                <Text style={styles.resultValue}>{aquiferResult.aquiferDepth} m</Text>
+              </View>
+
+              <View 
+                style={[
+                  styles.statusBadge, 
+                  { backgroundColor: aquiferResult.isFeasible ? '#28a745' : '#dc3545' }
+                ]}
+              >
+                <Text style={styles.statusText}>
+                  {aquiferResult.isFeasible 
+                    ? 'Feasible: Aquifer depth < 3m' 
+                    : 'Not Feasible: Aquifer depth ≥ 3m'}
+                </Text>
+              </View>
             </View>
           )}
 
