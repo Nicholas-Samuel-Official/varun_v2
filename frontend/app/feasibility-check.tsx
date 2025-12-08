@@ -106,225 +106,76 @@ export default function FeasibilityCheck() {
         <Text style={styles.headerTitle}>Feasibility Check</Text>
       </View>
 
-      <KeyboardAvoidingView
-        style={{ flex: 1 }}
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-      >
-        <ScrollView style={styles.content}>
-          <View style={styles.infoBox}>
-            <MaterialCommunityIcons name="information" size={24} color={colors.primary} />
-            <Text style={styles.infoText}>
-              Fill in the details below to check the feasibility of rainwater harvesting for your property.
-            </Text>
+      <ScrollView style={styles.content}>
+        <View style={styles.titleSection}>
+          <View style={styles.icon}>
+            <MaterialCommunityIcons name="water-check" size={40} color={colors.primary} />
           </View>
+          <Text style={styles.title}>Rainwater Harvesting Feasibility</Text>
+          <Text style={styles.subtitle}>
+            Understanding the viability of rainwater harvesting for your property
+          </Text>
+        </View>
 
-          {/* Location */}
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Location</Text>
-            <View style={styles.inputRow}>
-              <View style={styles.inputContainer}>
-                <Text style={styles.label}>Latitude</Text>
-                <TextInput
-                  style={styles.input}
-                  value={formData.latitude}
-                  onChangeText={(text) => setFormData({...formData, latitude: text})}
-                  keyboardType="decimal-pad"
-                  placeholder="12.34"
-                  placeholderTextColor={colors.textSecondary}
-                />
-              </View>
-              <View style={styles.inputContainer}>
-                <Text style={styles.label}>Longitude</Text>
-                <TextInput
-                  style={styles.input}
-                  value={formData.longitude}
-                  onChangeText={(text) => setFormData({...formData, longitude: text})}
-                  keyboardType="decimal-pad"
-                  placeholder="77.56"
-                  placeholderTextColor={colors.textSecondary}
-                />
-              </View>
-            </View>
-          </View>
+        <View style={styles.infoCard}>
+          <Text style={styles.cardTitle}>
+            <MaterialCommunityIcons name="information-outline" size={20} color={colors.primary} /> {' '}
+            What is Feasibility?
+          </Text>
+          <Text style={styles.cardText}>
+            Feasibility determines whether rainwater harvesting is practical and beneficial for your specific location and property type. It considers factors like rainfall, roof area, soil type, and water requirements.
+          </Text>
+        </View>
 
-          {/* Property Details */}
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Property Details</Text>
-            <View style={styles.inputContainer}>
-              <Text style={styles.label}>Roof Area (m²) <Text style={styles.required}>*</Text></Text>
-              <TextInput
-                style={styles.input}
-                value={formData.roof_area}
-                onChangeText={(text) => setFormData({...formData, roof_area: text})}
-                keyboardType="number-pad"
-                placeholder="120"
-                placeholderTextColor={colors.textSecondary}
-              />
-            </View>
+        <View style={styles.infoCard}>
+          <Text style={styles.cardTitle}>
+            <MaterialCommunityIcons name="chart-line" size={20} color={colors.primary} /> {' '}
+            Key Factors
+          </Text>
+          <Text style={styles.bulletPoint}>• Annual rainfall in your region</Text>
+          <Text style={styles.bulletPoint}>• Available roof catchment area</Text>
+          <Text style={styles.bulletPoint}>• Soil infiltration capacity</Text>
+          <Text style={styles.bulletPoint}>• Household water demand</Text>
+          <Text style={styles.bulletPoint}>• Available space for storage</Text>
+        </View>
 
-            <View style={styles.inputContainer}>
-              <Text style={styles.label}>Open Space (m²)</Text>
-              <TextInput
-                style={styles.input}
-                value={formData.open_space}
-                onChangeText={(text) => setFormData({...formData, open_space: text})}
-                keyboardType="number-pad"
-                placeholder="80"
-                placeholderTextColor={colors.textSecondary}
-              />
-            </View>
+        <View style={styles.infoCard}>
+          <Text style={styles.cardTitle}>
+            <MaterialCommunityIcons name="check-decagram" size={20} color={colors.primary} /> {' '}
+            Benefits
+          </Text>
+          <Text style={styles.bulletPoint}>• Reduces water bills by 30-50%</Text>
+          <Text style={styles.bulletPoint}>• Sustainable water source</Text>
+          <Text style={styles.bulletPoint}>• Recharges groundwater table</Text>
+          <Text style={styles.bulletPoint}>• Reduces flood risk during monsoons</Text>
+          <Text style={styles.bulletPoint}>• Eco-friendly solution</Text>
+        </View>
 
-            <View style={styles.inputContainer}>
-              <Text style={styles.label}>Roof Type</Text>
-              <Picker
-                selectedValue={formData.roof_type}
-                onValueChange={(value) => setFormData({...formData, roof_type: value})}
-                style={styles.picker}
-              >
-                <Picker.Item label="Concrete" value="concrete" />
-                <Picker.Item label="Tile" value="tile" />
-                <Picker.Item label="Sheet" value="sheet" />
-              </Picker>
-            </View>
-          </View>
+        <View style={styles.infoCard}>
+          <Text style={styles.cardTitle}>
+            <MaterialCommunityIcons name="hand-coin" size={20} color={colors.primary} /> {' '}
+            Typical Costs
+          </Text>
+          <Text style={styles.bulletPoint}>• Small system (2000L): ₹30,000 - ₹50,000</Text>
+          <Text style={styles.bulletPoint}>• Medium system (5000L): ₹80,000 - ₹1,20,000</Text>
+          <Text style={styles.bulletPoint}>• Large system (10000L): ₹1,50,000 - ₹2,50,000</Text>
+          <Text style={[styles.cardText, { marginTop: 12 }]}>
+            ROI typically achieved in 3-5 years through water savings.
+          </Text>
+        </View>
 
-          {/* Rainfall Data */}
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Rainfall Data</Text>
-            <View style={styles.inputContainer}>
-              <Text style={styles.label}>Annual Rainfall (mm) <Text style={styles.required}>*</Text></Text>
-              <TextInput
-                style={styles.input}
-                value={formData.annual_rainfall}
-                onChangeText={(text) => setFormData({...formData, annual_rainfall: text})}
-                keyboardType="number-pad"
-                placeholder="800"
-                placeholderTextColor={colors.textSecondary}
-              />
-            </View>
+        <View style={styles.infoCard}>
+          <Text style={styles.cardTitle}>
+            <MaterialCommunityIcons name="chat-question" size={20} color={colors.primary} /> {' '}
+            Need Help?
+          </Text>
+          <Text style={styles.cardText}>
+            Use our AI chatbot or book an appointment with our experts for personalized feasibility assessment and implementation guidance.
+          </Text>
+        </View>
 
-            <View style={styles.inputContainer}>
-              <Text style={styles.label}>Max Daily Rainfall (mm)</Text>
-              <TextInput
-                style={styles.input}
-                value={formData.max_daily_rainfall}
-                onChangeText={(text) => setFormData({...formData, max_daily_rainfall: text})}
-                keyboardType="number-pad"
-                placeholder="100"
-                placeholderTextColor={colors.textSecondary}
-              />
-            </View>
-          </View>
-
-          {/* Soil Composition */}
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Soil Composition (%)</Text>
-            <View style={styles.inputRow}>
-              <View style={styles.inputContainer}>
-                <Text style={styles.label}>Clay</Text>
-                <TextInput
-                  style={styles.input}
-                  value={formData.clay}
-                  onChangeText={(text) => setFormData({...formData, clay: text})}
-                  keyboardType="number-pad"
-                  placeholder="30"
-                  placeholderTextColor={colors.textSecondary}
-                />
-              </View>
-              <View style={styles.inputContainer}>
-                <Text style={styles.label}>Sand</Text>
-                <TextInput
-                  style={styles.input}
-                  value={formData.sand}
-                  onChangeText={(text) => setFormData({...formData, sand: text})}
-                  keyboardType="number-pad"
-                  placeholder="50"
-                  placeholderTextColor={colors.textSecondary}
-                />
-              </View>
-            </View>
-
-            <View style={styles.inputContainer}>
-              <Text style={styles.label}>Silt</Text>
-              <TextInput
-                style={styles.input}
-                value={formData.silt}
-                onChangeText={(text) => setFormData({...formData, silt: text})}
-                keyboardType="number-pad"
-                placeholder="20"
-                placeholderTextColor={colors.textSecondary}
-              />
-            </View>
-          </View>
-
-          {/* Additional Parameters */}
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Additional Parameters</Text>
-            <View style={styles.inputContainer}>
-              <Text style={styles.label}>Elevation (m)</Text>
-              <TextInput
-                style={styles.input}
-                value={formData.elevation}
-                onChangeText={(text) => setFormData({...formData, elevation: text})}
-                keyboardType="number-pad"
-                placeholder="500"
-                placeholderTextColor={colors.textSecondary}
-              />
-            </View>
-
-            <View style={styles.inputContainer}>
-              <Text style={styles.label}>Evaporation</Text>
-              <TextInput
-                style={styles.input}
-                value={formData.evaporation}
-                onChangeText={(text) => setFormData({...formData, evaporation: text})}
-                keyboardType="number-pad"
-                placeholder="5"
-                placeholderTextColor={colors.textSecondary}
-              />
-            </View>
-          </View>
-
-          <TouchableOpacity
-            style={styles.submitButton}
-            onPress={handleSubmit}
-            disabled={loading}
-          >
-            {loading ? (
-              <ActivityIndicator color="#FFFFFF" />
-            ) : (
-              <Text style={styles.submitButtonText}>Calculate Feasibility</Text>
-            )}
-          </TouchableOpacity>
-
-          {result && (
-            <View style={styles.resultContainer}>
-              <Text style={styles.resultTitle}>Feasibility Results</Text>
-              
-              <View style={styles.resultItem}>
-                <Text style={styles.resultLabel}>Annual Runoff</Text>
-                <Text style={styles.resultValue}>{result.annual_runoff.toLocaleString()} L</Text>
-              </View>
-
-              <View style={styles.resultItem}>
-                <Text style={styles.resultLabel}>Infiltration</Text>
-                <Text style={styles.resultValue}>{result.infiltration.toLocaleString()} L</Text>
-              </View>
-
-              <View style={styles.resultItem}>
-                <Text style={styles.resultLabel}>Recommended Structure</Text>
-                <Text style={styles.resultValue}>{result.recommended_structure}</Text>
-              </View>
-
-              <View style={[styles.feasibilityBadge, { backgroundColor: getFeasibilityColor(result.feasibility) }]}>
-                <Text style={styles.feasibilityText}>Feasibility: {result.feasibility}</Text>
-              </View>
-            </View>
-          )}
-
-          <View style={{ height: 40 }} />
-        </ScrollView>
-      </KeyboardAvoidingView>
+        <View style={{ height: 40 }} />
+      </ScrollView>
     </SafeAreaView>
   );
 }
