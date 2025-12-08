@@ -574,8 +574,8 @@ export default function FeasibilityCheck() {
               >
                 <Text style={styles.statusText}>
                   {aquiferResult.isFeasible 
-                    ? 'Feasible: Aquifer depth > 3m' 
-                    : 'Not Feasible: Aquifer depth ≤ 3m'}
+                    ? 'Feasible: Aquifer depth < 3m' 
+                    : 'Not Feasible: Aquifer depth ≥ 3m'}
                 </Text>
               </View>
 
