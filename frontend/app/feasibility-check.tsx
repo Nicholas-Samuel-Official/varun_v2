@@ -23,13 +23,19 @@ interface AquiferResult {
   isFeasible: boolean;
 }
 
+interface StructureResult {
+  [key: string]: any;
+}
+
 export default function FeasibilityCheck() {
   const router = useRouter();
   const { colors } = useTheme();
   const [loading, setLoading] = useState(false);
   const [aquiferLoading, setAquiferLoading] = useState(false);
+  const [structureLoading, setStructureLoading] = useState(false);
   const [result, setResult] = useState<FeasibilityResult | null>(null);
   const [aquiferResult, setAquiferResult] = useState<AquiferResult | null>(null);
+  const [structureResult, setStructureResult] = useState<StructureResult | null>(null);
   const [showAquiferCheck, setShowAquiferCheck] = useState(false);
   
   const [formData, setFormData] = useState({
