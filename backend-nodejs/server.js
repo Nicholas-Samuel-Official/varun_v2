@@ -44,6 +44,7 @@ app.use('/api/assessments', assessmentRoutes);
 app.use('/api/appointments', appointmentRoutes);
 app.use('/api/iot', iotRoutes);
 app.use('/api/weather', weatherRoutes);
+app.use('/api/chatbot', chatbotRoutes);
 
 // Health check
 app.get('/health', (req, res) => {
