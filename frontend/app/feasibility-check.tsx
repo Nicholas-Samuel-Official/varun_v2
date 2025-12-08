@@ -1,136 +1,13 @@
-import { View, Text, StyleSheet, ScrollView, TextInput, TouchableOpacity, Alert, KeyboardAvoidingView, Platform, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useState, useEffect } from 'react';
+import { TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useTheme } from '../contexts/ThemeContext';
-import { Picker } from '@react-native-picker/picker';
-import * as Location from 'expo-location';
-
-interface FeasibilityResult {
-  annual_runoff: number;
-  feasibility: string;
-  infiltration: number;
-  recommended_structure: string;
-}
 
 export default function FeasibilityCheck() {
   const router = useRouter();
   const { colors } = useTheme();
-  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<FeasibilityResult | null>(null);
-  
-  const [formData, setFormData] = useState({
-    latitude: '',
-    longitude: '',
-    roof_area: '',
-    open_space: '',
-    roof_type: 'concrete',
-    annual_rainfall: '',
-    max_daily_rainfall: '',
-    clay: '',
-    sand: '',
-    silt: '',
-    elevation: '',
-    evaporation: '',
-  });
-
-  useEffect(() => {
-    getCurrentLocation();
-  }, []);
-
-  const getCurrentLocation = async () => {
-    try {
-      const { status } = await Location.requestForegroundPermissionsAsync();
-      if (status === 'granted') {
-        const location = await Location.getCurrentPositionAsync({
-          accuracy: Location.Accuracy.High,
-        });
-        setFormData(prev => ({
-          ...prev,
-          latitude: location.coords.latitude.toFixed(6),
-          longitude: location.coords.longitude.toFixed(6),
-        }));
-      }
-    } catch (error) {
-      console.error('Error getting location:', error);
-    }
-  };
-
-  const calculateFeasibility = (roofArea: number, annualRainfall: number, roofType: string) => {
-    // Runoff coefficient based on roof type
-    const runoffCoefficients: { [key: string]: number } = {
-      'concrete': 0.9,
-      'tile': 0.85,
-      'sheet': 0.8,
-    };
-
-    const coefficient = runoffCoefficients[roofType] || 0.85;
-    
-    // Calculate annual runoff (in liters)
-    // Formula: Runoff = Roof Area (m²) × Annual Rainfall (mm) × Runoff Coefficient × 0.001
-    const annualRunoff = Math.round(roofArea * annualRainfall * coefficient);
-    
-    // Estimate infiltration (approximately 10-20% of runoff)
-    const infiltration = Math.round(annualRunoff * 0.15);
-    
-    // Determine feasibility based on runoff volume
-    let feasibility = 'Low';
-    if (annualRunoff > 100000) {
-      feasibility = 'High';
-    } else if (annualRunoff > 50000) {
-      feasibility = 'Medium';
-    }
-    
-    // Recommend structure based on runoff
-    let recommendedStructure = 'Rooftop Collection';
-    if (annualRunoff > 150000) {
-      recommendedStructure = 'Large Storage Tank + Recharge Pit';
-    } else if (annualRunoff > 75000) {
-      recommendedStructure = 'Medium Tank + Recharge Well';
-    } else {
-      recommendedStructure = 'Small Tank + Percolation Pit';
-    }
-    
-    return {
-      annual_runoff: annualRunoff,
-      feasibility,
-      infiltration,
-      recommended_structure: recommendedStructure,
-    };
-  };
-
-  const handleSubmit = async () => {
-    // Validate inputs
-    if (!formData.roof_area || !formData.annual_rainfall) {
-      Alert.alert('Error', 'Please fill in all required fields');
-      return;
-    }
-
-    setLoading(true);
-    try {
-      // Calculate locally without API
-      const roofArea = parseInt(formData.roof_area);
-      const annualRainfall = parseInt(formData.annual_rainfall);
-      
-      const calculatedResult = calculateFeasibility(roofArea, annualRainfall, formData.roof_type);
-      setResult(calculatedResult);
-    } catch (error) {
-      console.error('Calculation Error:', error);
-      Alert.alert('Error', 'Failed to calculate feasibility. Please try again.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const getFeasibilityColor = (feasibility: string) => {
-    switch (feasibility?.toLowerCase()) {
-      case 'high': return '#28a745';
-      case 'medium': return '#ffc107';
-      case 'low': return '#dc3545';
-      default: return colors.textSecondary;
-    }
-  };
 
   const styles = StyleSheet.create({
     container: {
