@@ -139,9 +139,9 @@ export default function FeasibilityCheck() {
       }
 
       if (nearestLocation) {
-        // Lower aquifer depth is better (closer to surface)
-        // depth < 3m = feasible (water is close), depth >= 3m = not feasible (water is deep)
-        const isFeasible = nearestLocation.aquiferDepth < 3;
+        // Deeper aquifer is better for rainwater harvesting
+        // depth >= 3m = feasible, depth < 3m = not feasible
+        const isFeasible = nearestLocation.aquiferDepth >= 3;
         setAquiferResult({
           nearestLocation: nearestLocation.village,
           aquiferDepth: nearestLocation.aquiferDepth,
