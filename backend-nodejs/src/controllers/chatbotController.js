@@ -1,5 +1,10 @@
-const axios = require('axios');
+const OpenAI = require('openai');
 const logger = require('../utils/logger');
+
+// Initialize OpenAI client with Emergent LLM key
+const openai = new OpenAI({
+  apiKey: process.env.EMERGENT_LLM_KEY || 'sk-emergent-e38419c1261D13b510',
+});
 
 const SYSTEM_PROMPT = `You are Varun AI Assistant, a helpful expert in rainwater harvesting and water conservation. You help users with:
 - Understanding rainwater harvesting systems
