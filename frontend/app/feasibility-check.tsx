@@ -151,9 +151,10 @@ export default function FeasibilityCheck() {
 
       const data = await response.json();
       console.log('API Response:', data);
+      console.log('Output field:', data.output);
       
-      // Check if output is "no"
-      if (data.output && data.output.toLowerCase() === 'no') {
+      // Check if output is "no" or "No"
+      if (data.output && (data.output.toLowerCase() === 'no' || data.output.toLowerCase().includes('no'))) {
         Alert.alert(
           'Not Eligible',
           'Your building is not eligible for the feasibility check',
@@ -169,9 +170,12 @@ export default function FeasibilityCheck() {
       
       setResult(data);
       
-      // If output is "yes", show aquifer check button
-      if (data.output && data.output.toLowerCase() === 'yes') {
+      // If output is "yes" or "Yes", show aquifer check button
+      if (data.output && (data.output.toLowerCase() === 'yes' || data.output.toLowerCase().includes('yes'))) {
+        console.log('Setting showAquiferCheck to true');
         setShowAquiferCheck(true);
+      } else {
+        console.log('Output is not yes, received:', data.output);
       }
     } catch (error) {
       console.error('API Error:', error);
