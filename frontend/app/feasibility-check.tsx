@@ -242,76 +242,130 @@ export default function FeasibilityCheck() {
         <Text style={styles.headerTitle}>Feasibility Check</Text>
       </View>
 
-      <ScrollView style={styles.content}>
-        <View style={styles.titleSection}>
-          <View style={styles.icon}>
-            <MaterialCommunityIcons name="water-check" size={40} color={colors.primary} />
+      <KeyboardAvoidingView
+        style={{ flex: 1 }}
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      >
+        <ScrollView style={styles.content}>
+          <View style={styles.formSection}>
+            <View style={styles.infoBox}>
+              <MaterialCommunityIcons name="information" size={24} color={colors.primary} />
+              <Text style={styles.infoText}>
+                Enter your property details to check rainwater harvesting feasibility
+              </Text>
+            </View>
+
+            <View style={styles.inputContainer}>
+              <Text style={styles.label}>
+                Annual Rainfall (mm) <Text style={styles.required}>*</Text>
+              </Text>
+              <TextInput
+                style={styles.input}
+                value={formData.rainfall}
+                onChangeText={(text) => setFormData({ ...formData, rainfall: text })}
+                keyboardType="number-pad"
+                placeholder="e.g., 800"
+                placeholderTextColor={colors.textSecondary}
+              />
+              <Text style={styles.inputHint}>Average annual rainfall in your area</Text>
+            </View>
+
+            <View style={styles.inputContainer}>
+              <Text style={styles.label}>
+                Roof Area (m²) <Text style={styles.required}>*</Text>
+              </Text>
+              <TextInput
+                style={styles.input}
+                value={formData.roofArea}
+                onChangeText={(text) => setFormData({ ...formData, roofArea: text })}
+                keyboardType="number-pad"
+                placeholder="e.g., 120"
+                placeholderTextColor={colors.textSecondary}
+              />
+              <Text style={styles.inputHint}>Total roof catchment area</Text>
+            </View>
+
+            <View style={styles.inputContainer}>
+              <Text style={styles.label}>
+                Open Space (m²) <Text style={styles.required}>*</Text>
+              </Text>
+              <TextInput
+                style={styles.input}
+                value={formData.openSpace}
+                onChangeText={(text) => setFormData({ ...formData, openSpace: text })}
+                keyboardType="number-pad"
+                placeholder="e.g., 80"
+                placeholderTextColor={colors.textSecondary}
+              />
+              <Text style={styles.inputHint}>Available open space for recharge</Text>
+            </View>
+
+            <TouchableOpacity
+              style={styles.submitButton}
+              onPress={handleSubmit}
+              disabled={loading}
+            >
+              {loading ? (
+                <ActivityIndicator size="small" color="#FFFFFF" />
+              ) : (
+                <Text style={styles.submitButtonText}>Check Feasibility</Text>
+              )}
+            </TouchableOpacity>
           </View>
-          <Text style={styles.title}>Rainwater Harvesting Feasibility</Text>
-          <Text style={styles.subtitle}>
-            Understanding the viability of rainwater harvesting for your property
-          </Text>
-        </View>
 
-        <View style={styles.infoCard}>
-          <Text style={styles.cardTitle}>
-            <MaterialCommunityIcons name="information-outline" size={20} color={colors.primary} /> {' '}
-            What is Feasibility?
-          </Text>
-          <Text style={styles.cardText}>
-            Feasibility determines whether rainwater harvesting is practical and beneficial for your specific location and property type. It considers factors like rainfall, roof area, soil type, and water requirements.
-          </Text>
-        </View>
+          {result && (
+            <View style={styles.resultContainer}>
+              <View style={styles.resultHeader}>
+                <View style={styles.resultIcon}>
+                  <MaterialCommunityIcons 
+                    name="check-circle" 
+                    size={32} 
+                    color={colors.primary} 
+                  />
+                </View>
+                <Text style={styles.resultTitle}>Feasibility Results</Text>
+              </View>
 
-        <View style={styles.infoCard}>
-          <Text style={styles.cardTitle}>
-            <MaterialCommunityIcons name="chart-line" size={20} color={colors.primary} /> {' '}
-            Key Factors
-          </Text>
-          <Text style={styles.bulletPoint}>• Annual rainfall in your region</Text>
-          <Text style={styles.bulletPoint}>• Available roof catchment area</Text>
-          <Text style={styles.bulletPoint}>• Soil infiltration capacity</Text>
-          <Text style={styles.bulletPoint}>• Household water demand</Text>
-          <Text style={styles.bulletPoint}>• Available space for storage</Text>
-        </View>
+              {Object.entries(result).map(([key, value], index) => {
+                if (key === 'feasibility_status') {
+                  return null; // We'll show this separately
+                }
+                
+                const formattedKey = key
+                  .split('_')
+                  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                  .join(' ');
 
-        <View style={styles.infoCard}>
-          <Text style={styles.cardTitle}>
-            <MaterialCommunityIcons name="check-decagram" size={20} color={colors.primary} /> {' '}
-            Benefits
-          </Text>
-          <Text style={styles.bulletPoint}>• Reduces water bills by 30-50%</Text>
-          <Text style={styles.bulletPoint}>• Sustainable water source</Text>
-          <Text style={styles.bulletPoint}>• Recharges groundwater table</Text>
-          <Text style={styles.bulletPoint}>• Reduces flood risk during monsoons</Text>
-          <Text style={styles.bulletPoint}>• Eco-friendly solution</Text>
-        </View>
+                const formattedValue = typeof value === 'number' 
+                  ? value.toLocaleString()
+                  : String(value);
 
-        <View style={styles.infoCard}>
-          <Text style={styles.cardTitle}>
-            <MaterialCommunityIcons name="hand-coin" size={20} color={colors.primary} /> {' '}
-            Typical Costs
-          </Text>
-          <Text style={styles.bulletPoint}>• Small system (2000L): ₹30,000 - ₹50,000</Text>
-          <Text style={styles.bulletPoint}>• Medium system (5000L): ₹80,000 - ₹1,20,000</Text>
-          <Text style={styles.bulletPoint}>• Large system (10000L): ₹1,50,000 - ₹2,50,000</Text>
-          <Text style={[styles.cardText, { marginTop: 12 }]}>
-            ROI typically achieved in 3-5 years through water savings.
-          </Text>
-        </View>
+                return (
+                  <View key={key} style={styles.resultItem}>
+                    <Text style={styles.resultLabel}>{formattedKey}</Text>
+                    <Text style={styles.resultValue}>{formattedValue}</Text>
+                  </View>
+                );
+              })}
 
-        <View style={styles.infoCard}>
-          <Text style={styles.cardTitle}>
-            <MaterialCommunityIcons name="chat-question" size={20} color={colors.primary} /> {' '}
-            Need Help?
-          </Text>
-          <Text style={styles.cardText}>
-            Use our AI chatbot or book an appointment with our experts for personalized feasibility assessment and implementation guidance.
-          </Text>
-        </View>
+              {result.feasibility_status && (
+                <View 
+                  style={[
+                    styles.statusBadge, 
+                    { backgroundColor: getFeasibilityColor(result.feasibility_status) }
+                  ]}
+                >
+                  <Text style={styles.statusText}>
+                    Status: {result.feasibility_status}
+                  </Text>
+                </View>
+              )}
+            </View>
+          )}
 
-        <View style={{ height: 40 }} />
-      </ScrollView>
+          <View style={{ height: 40 }} />
+        </ScrollView>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 }
