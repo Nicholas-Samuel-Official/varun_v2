@@ -92,11 +92,16 @@ export const AIChatbot = () => {
         }),
       });
 
+      console.log('API Response Status:', response.status);
+
       if (!response.ok) {
-        throw new Error('Failed to get response from AI');
+        const errorData = await response.json().catch(() => ({}));
+        console.error('API Error:', errorData);
+        throw new Error(`API returned ${response.status}: ${JSON.stringify(errorData)}`);
       }
 
       const data = await response.json();
+      console.log('API Response:', data);
       const botResponse = data.choices[0]?.message?.content || 'Sorry, I couldn\'t process that.';
 
       const botMessage: Message = {
