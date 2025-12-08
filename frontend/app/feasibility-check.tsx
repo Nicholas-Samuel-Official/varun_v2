@@ -451,37 +451,32 @@ export default function FeasibilityCheck() {
                 <Text style={styles.resultTitle}>Feasibility Results</Text>
               </View>
 
-              {Object.entries(result).map(([key, value], index) => {
-                if (key === 'feasibility_status' || key === 'output') {
-                  return null; // We'll show these separately
-                }
-                
-                const formattedKey = key
-                  .split('_')
-                  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-                  .join(' ');
-
-                const formattedValue = typeof value === 'number' 
-                  ? value.toLocaleString()
-                  : String(value);
-
-                return (
-                  <View key={key} style={styles.resultItem}>
-                    <Text style={styles.resultLabel}>{formattedKey}</Text>
-                    <Text style={styles.resultValue}>{formattedValue}</Text>
+              {result.input && (
+                <>
+                  <View style={styles.resultItem}>
+                    <Text style={styles.resultLabel}>Rainfall</Text>
+                    <Text style={styles.resultValue}>{result.input.rainfall} mm</Text>
                   </View>
-                );
-              })}
+                  <View style={styles.resultItem}>
+                    <Text style={styles.resultLabel}>Roof Area</Text>
+                    <Text style={styles.resultValue}>{result.input.roof_area} m²</Text>
+                  </View>
+                  <View style={styles.resultItem}>
+                    <Text style={styles.resultLabel}>Open Space</Text>
+                    <Text style={styles.resultValue}>{result.input.open_space} m²</Text>
+                  </View>
+                </>
+              )}
 
-              {result.feasibility_status && (
+              {result.feasibility_prediction && (
                 <View 
                   style={[
                     styles.statusBadge, 
-                    { backgroundColor: getFeasibilityColor(result.feasibility_status) }
+                    { backgroundColor: getFeasibilityColor(result.feasibility_prediction) }
                   ]}
                 >
                   <Text style={styles.statusText}>
-                    Status: {result.feasibility_status}
+                    Prediction: {result.feasibility_prediction}
                   </Text>
                 </View>
               )}
