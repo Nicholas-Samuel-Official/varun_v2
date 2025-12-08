@@ -53,8 +53,8 @@ export default function RootLayout() {
                 <Stack.Screen name="settings" />
                 <Stack.Screen name="edit-profile" />
               </Stack>
-              {/* Mobile chatbot - only shows on iOS/Android */}
-              <MobileChatbot />
+              {/* AI Chatbot - works on all platforms */}
+              <AIChatbot />
             </FontSizeProvider>
           </LanguageProvider>
         </ThemeProvider>
