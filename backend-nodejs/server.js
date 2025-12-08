@@ -14,6 +14,7 @@ const assessmentRoutes = require('./src/routes/assessmentRoutes');
 const appointmentRoutes = require('./src/routes/appointmentRoutes');
 const iotRoutes = require('./src/routes/iotRoutes');
 const weatherRoutes = require('./src/routes/weatherRoutes');
+const chatbotRoutes = require('./src/routes/chatbotRoutes');
 
 // Initialize express app
 const app = express();
