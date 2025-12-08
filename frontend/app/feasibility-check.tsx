@@ -1,13 +1,29 @@
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TextInput, TouchableOpacity, Alert, ActivityIndicator, KeyboardAvoidingView, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { TouchableOpacity } from 'react-native';
+import { useState } from 'react';
 import { useRouter } from 'expo-router';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useTheme } from '../contexts/ThemeContext';
 
+interface FeasibilityResult {
+  feasibility_score?: number;
+  feasibility_status?: string;
+  predicted_runoff?: number;
+  recommended_capacity?: number;
+  [key: string]: any;
+}
+
 export default function FeasibilityCheck() {
   const router = useRouter();
   const { colors } = useTheme();
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<FeasibilityResult | null>(null);
+  
+  const [formData, setFormData] = useState({
+    rainfall: '',
+    roofArea: '',
+    openSpace: '',
+  });
 
   const styles = StyleSheet.create({
     container: {
