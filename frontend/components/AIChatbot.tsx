@@ -70,39 +70,36 @@ export const AIChatbot = () => {
     setLoading(true);
 
     try {
-      // Call OpenAI API using Emergent LLM key
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      // Build conversation history for backend
+      const conversationHistory = messages.slice(-6).map((msg) => ({
+        role: msg.sender === 'user' ? 'user' : 'assistant',
+        content: msg.text,
+      }));
+
+      // Call backend chatbot API
+      const backendUrl = process.env.EXPO_PUBLIC_BACKEND_URL || '';
+      const response = await fetch(`${backendUrl}/api/chatbot`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer sk-emergent-e38419c1261D13b510',
         },
         body: JSON.stringify({
-          model: 'gpt-4o-mini',
-          messages: [
-            { role: 'system', content: SYSTEM_PROMPT },
-            ...messages.slice(-6).map((msg) => ({
-              role: msg.sender === 'user' ? 'user' : 'assistant',
-              content: msg.text,
-            })),
-            { role: 'user', content: userMessage.text },
-          ],
-          max_tokens: 500,
-          temperature: 0.7,
+          message: userMessage.text,
+          conversationHistory,
         }),
       });
 
-      console.log('API Response Status:', response.status);
+      console.log('Backend API Response Status:', response.status);
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
-        console.error('API Error:', errorData);
-        throw new Error(`API returned ${response.status}: ${JSON.stringify(errorData)}`);
+        console.error('Backend API Error:', errorData);
+        throw new Error(`Backend API returned ${response.status}: ${JSON.stringify(errorData)}`);
       }
 
       const data = await response.json();
-      console.log('API Response:', data);
-      const botResponse = data.choices[0]?.message?.content || 'Sorry, I couldn\'t process that.';
+      console.log('Backend API Response:', data);
+      const botResponse = data.response || 'Sorry, I couldn\'t process that.';
 
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
