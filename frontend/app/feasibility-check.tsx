@@ -37,6 +37,89 @@ export default function FeasibilityCheck() {
     openSpace: '',
   });
 
+  const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number) => {
+    const R = 6371; // Earth's radius in km
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a = 
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+      Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c;
+  };
+
+  const handleAquiferCheck = async () => {
+    setAquiferLoading(true);
+    try {
+      // Get user's location
+      const { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        Alert.alert('Permission Denied', 'Location permission is required for aquifer validation.');
+        setAquiferLoading(false);
+        return;
+      }
+
+      const location = await Location.getCurrentPositionAsync({
+        accuracy: Location.Accuracy.High,
+      });
+
+      const userLat = location.coords.latitude;
+      const userLon = location.coords.longitude;
+
+      // Load and parse CSV data
+      const csvUrl = 'https://customer-assets.emergentagent.com/job_varun-dashboard/artifacts/5u9g2wqe_clean_aquifer_dataset%20%281%29.csv';
+      const csvResponse = await fetch(csvUrl);
+      const csvText = await csvResponse.text();
+      
+      const lines = csvText.split('\n').slice(1); // Skip header
+      let nearestLocation = null;
+      let minDistance = Infinity;
+
+      for (const line of lines) {
+        if (!line.trim()) continue;
+        const parts = line.split(',');
+        if (parts.length < 9) continue;
+
+        const lat = parseFloat(parts[5]);
+        const lon = parseFloat(parts[6]);
+        const aquiferDepth = parseFloat(parts[8]);
+
+        if (isNaN(lat) || isNaN(lon) || isNaN(aquiferDepth)) continue;
+
+        const distance = calculateDistance(userLat, userLon, lat, lon);
+
+        if (distance < minDistance) {
+          minDistance = distance;
+          nearestLocation = {
+            village: parts[4],
+            aquiferDepth,
+            distance,
+            latitude: lat,
+            longitude: lon,
+          };
+        }
+      }
+
+      if (nearestLocation) {
+        const isFeasible = nearestLocation.aquiferDepth < 3;
+        setAquiferResult({
+          nearestLocation: nearestLocation.village,
+          aquiferDepth: nearestLocation.aquiferDepth,
+          distance: nearestLocation.distance,
+          isFeasible,
+        });
+      } else {
+        Alert.alert('Error', 'Could not find nearby aquifer data.');
+      }
+    } catch (error) {
+      console.error('Aquifer Check Error:', error);
+      Alert.alert('Error', 'Failed to validate aquifer. Please try again.');
+    } finally {
+      setAquiferLoading(false);
+    }
+  };
+
   const handleSubmit = async () => {
     // Validate inputs
     if (!formData.rainfall || !formData.roofArea || !formData.openSpace) {
@@ -45,6 +128,10 @@ export default function FeasibilityCheck() {
     }
 
     setLoading(true);
+    setResult(null);
+    setAquiferResult(null);
+    setShowAquiferCheck(false);
+    
     try {
       const { rainfall, roofArea, openSpace } = formData;
       const apiUrl = `https://server-jr.onrender.com/predict_feasibility_get?rainfall=${rainfall}&roof_area=${roofArea}&open_space=${openSpace}`;
@@ -64,7 +151,28 @@ export default function FeasibilityCheck() {
 
       const data = await response.json();
       console.log('API Response:', data);
+      
+      // Check if output is "no"
+      if (data.output && data.output.toLowerCase() === 'no') {
+        Alert.alert(
+          'Not Eligible',
+          'Your building is not eligible for the feasibility check',
+          [
+            {
+              text: 'OK',
+              onPress: () => router.back(),
+            },
+          ]
+        );
+        return;
+      }
+      
       setResult(data);
+      
+      // If output is "yes", show aquifer check button
+      if (data.output && data.output.toLowerCase() === 'yes') {
+        setShowAquiferCheck(true);
+      }
     } catch (error) {
       console.error('API Error:', error);
       Alert.alert('Error', 'Failed to calculate feasibility. Please check your inputs and try again.');
