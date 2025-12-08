@@ -74,24 +74,14 @@ const chat = async (req, res, next) => {
         { role: 'user', content: message },
       ];
 
-      const response = await axios.post(
-        'https://api.openai.com/v1/chat/completions',
-        {
-          model: 'gpt-4o-mini',
-          messages,
-          max_tokens: 500,
-          temperature: 0.7,
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer sk-emergent-e38419c1261D13b510',
-          },
-          timeout: 10000,
-        }
-      );
+      const response = await openai.chat.completions.create({
+        model: 'gpt-4o-mini',
+        messages,
+        max_tokens: 500,
+        temperature: 0.7,
+      });
 
-      const aiResponse = response.data.choices[0]?.message?.content;
+      const aiResponse = response.choices[0]?.message?.content;
 
       if (aiResponse) {
         return res.status(200).json({
