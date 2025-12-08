@@ -25,6 +25,54 @@ export default function FeasibilityCheck() {
     openSpace: '',
   });
 
+  const handleSubmit = async () => {
+    // Validate inputs
+    if (!formData.rainfall || !formData.roofArea || !formData.openSpace) {
+      Alert.alert('Error', 'Please fill in all required fields');
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const { rainfall, roofArea, openSpace } = formData;
+      const apiUrl = `https://server-jr.onrender.com/predict_feasibility_get?rainfall=${rainfall}&roof_area=${roofArea}&open_space=${openSpace}`;
+      
+      console.log('Calling API:', apiUrl);
+      
+      const response = await fetch(apiUrl, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`API returned ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log('API Response:', data);
+      setResult(data);
+    } catch (error) {
+      console.error('API Error:', error);
+      Alert.alert('Error', 'Failed to calculate feasibility. Please check your inputs and try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getFeasibilityColor = (status: string) => {
+    const lowerStatus = status?.toLowerCase() || '';
+    if (lowerStatus.includes('high') || lowerStatus.includes('excellent') || lowerStatus.includes('good')) {
+      return '#28a745';
+    } else if (lowerStatus.includes('medium') || lowerStatus.includes('moderate')) {
+      return '#ffc107';
+    } else if (lowerStatus.includes('low') || lowerStatus.includes('poor')) {
+      return '#dc3545';
+    }
+    return colors.textSecondary;
+  };
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
