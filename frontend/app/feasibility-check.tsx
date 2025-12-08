@@ -577,6 +577,60 @@ export default function FeasibilityCheck() {
                     : 'Not Feasible: Aquifer depth < 3m'}
                 </Text>
               </View>
+
+              {aquiferResult.isFeasible && !structureResult && (
+                <TouchableOpacity
+                  style={[styles.submitButton, { marginTop: 20, marginHorizontal: 0 }]}
+                  onPress={handleStructureRecommendation}
+                  disabled={structureLoading}
+                >
+                  {structureLoading ? (
+                    <ActivityIndicator size="small" color="#FFFFFF" />
+                  ) : (
+                    <Text style={styles.submitButtonText}>Structure Recommendation</Text>
+                  )}
+                </TouchableOpacity>
+              )}
+            </View>
+          )}
+
+          {structureResult && (
+            <View style={styles.resultContainer}>
+              <View style={styles.resultHeader}>
+                <View style={styles.resultIcon}>
+                  <MaterialCommunityIcons 
+                    name="home-city" 
+                    size={32} 
+                    color={colors.primary} 
+                  />
+                </View>
+                <Text style={styles.resultTitle}>Structure Recommendation</Text>
+              </View>
+
+              {Object.entries(structureResult).map(([key, value], index) => {
+                const formattedKey = key
+                  .split('_')
+                  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                  .join(' ');
+
+                let formattedValue: string;
+                if (typeof value === 'object' && value !== null) {
+                  formattedValue = JSON.stringify(value, null, 2);
+                } else if (typeof value === 'number') {
+                  formattedValue = value.toLocaleString();
+                } else {
+                  formattedValue = String(value);
+                }
+
+                return (
+                  <View key={key} style={styles.resultItem}>
+                    <Text style={styles.resultLabel}>{formattedKey}</Text>
+                    <Text style={[styles.resultValue, { flex: 1, textAlign: 'right' }]}>
+                      {formattedValue}
+                    </Text>
+                  </View>
+                );
+              })}
             </View>
           )}
 
