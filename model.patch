@@ -1,266 +1,293 @@
-diff --git a/frontend/app/auth/login.tsx b/frontend/app/auth/login.tsx
-index 47cdeb7..332ed29 100644
---- a/frontend/app/auth/login.tsx
-+++ b/frontend/app/auth/login.tsx
-@@ -1,4 +1,4 @@
--import { View, Text, StyleSheet, TouchableOpacity, TextInput, KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
-+import { View, Text, StyleSheet, TouchableOpacity, TextInput, KeyboardAvoidingView, Platform, ScrollView, Alert } from 'react-native';
- import { SafeAreaView } from 'react-native-safe-area-context';
- import { MaterialCommunityIcons } from '@expo/vector-icons';
- import { useRouter } from 'expo-router';
-@@ -6,35 +6,31 @@ import { useState } from 'react';
- import AsyncStorage from '@react-native-async-storage/async-storage';
- import { useTheme } from '../../contexts/ThemeContext';
- import { useLanguage } from '../../contexts/LanguageContext';
-+import authService from '../../services/authService';
+diff --git a/frontend/components/AIChatbot.tsx b/frontend/components/AIChatbot.tsx
+index 67c6e900b..061936e5f 100644
+--- a/frontend/components/AIChatbot.tsx
++++ b/frontend/components/AIChatbot.tsx
+@@ -92,11 +92,16 @@ export const AIChatbot = () => {
+         }),
+       });
  
- export default function Login() {
-   const router = useRouter();
-   const { colors } = useTheme();
-   const { t } = useLanguage();
--  const [email, setEmail] = useState('');
-+  const [emailOrPhone, setEmailOrPhone] = useState('');
-   const [password, setPassword] = useState('');
-   const [showPassword, setShowPassword] = useState(false);
-   const [loading, setLoading] = useState(false);
- 
-   const handleLogin = async () => {
--    if (!email || !password) {
--      alert('Please enter email and password');
-+    if (!emailOrPhone || !password) {
-+      Alert.alert('Error', 'Please fill in all fields');
-       return;
-     }
- 
-     setLoading(true);
--    try {
--      await AsyncStorage.setItem('isLoggedIn', 'true');
--      await AsyncStorage.setItem('userEmail', email);
--      
--      setTimeout(() => {
--        router.replace('/dashboard');
--      }, 500);
--    } catch (error) {
--      console.error('Login error:', error);
--      alert('Login failed. Please try again.');
--    } finally {
--      setLoading(false);
-+    const result = await authService.login(emailOrPhone, password);
-+    setLoading(false);
++      console.log('API Response Status:', response.status);
 +
-+    if (result.success) {
-+      router.replace('/dashboard');
-+    } else {
-+      Alert.alert('Login Failed', result.message || 'Invalid credentials');
-     }
-   };
+       if (!response.ok) {
+-        throw new Error('Failed to get response from AI');
++        const errorData = await response.json().catch(() => ({}));
++        console.error('API Error:', errorData);
++        throw new Error(`API returned ${response.status}: ${JSON.stringify(errorData)}`);
+       }
  
-@@ -172,15 +168,15 @@ export default function Login() {
-           </View>
+       const data = await response.json();
++      console.log('API Response:', data);
+       const botResponse = data.choices[0]?.message?.content || 'Sorry, I couldn\'t process that.';
  
-           <View style={styles.form}>
--            <Text style={styles.label}>{t('email')}</Text>
-+            <Text style={styles.label}>Email or Phone</Text>
-             <View style={styles.inputContainer}>
-               <TextInput
-                 style={styles.input}
--                placeholder="Enter your email"
-+                placeholder="Enter your email or phone"
-                 placeholderTextColor={colors.textSecondary}
--                value={email}
--                onChangeText={setEmail}
--                keyboardType="email-address"
-+                value={emailOrPhone}
-+                onChangeText={setEmailOrPhone}
-+                keyboardType="default"
-                 autoCapitalize="none"
-               />
-             </View>
-diff --git a/frontend/app/auth/signup.tsx b/frontend/app/auth/signup.tsx
-index f9162d5..f2fa6f7 100644
---- a/frontend/app/auth/signup.tsx
-+++ b/frontend/app/auth/signup.tsx
-@@ -1,4 +1,4 @@
--import { View, Text, StyleSheet, TouchableOpacity, TextInput, KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
-+import { View, Text, StyleSheet, TouchableOpacity, TextInput, KeyboardAvoidingView, Platform, ScrollView, Alert } from 'react-native';
- import { SafeAreaView } from 'react-native-safe-area-context';
- import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
- import { useRouter } from 'expo-router';
-@@ -6,6 +6,7 @@ import { useState } from 'react';
- import AsyncStorage from '@react-native-async-storage/async-storage';
- import { useTheme } from '../../contexts/ThemeContext';
- import { useLanguage } from '../../contexts/LanguageContext';
-+import authService from '../../services/authService';
- 
- export default function Signup() {
-   const router = useRouter();
-@@ -22,24 +23,20 @@ export default function Signup() {
- 
-   const handleSignup = async () => {
-     if (!formData.name || !formData.email || !formData.password) {
--      alert('Please fill all required fields');
-+      Alert.alert('Error', 'Please fill all required fields');
-       return;
-     }
- 
-     setLoading(true);
--    try {
--      await AsyncStorage.setItem('isLoggedIn', 'true');
--      await AsyncStorage.setItem('userName', formData.name);
--      await AsyncStorage.setItem('userEmail', formData.email);
-+    const result = await authService.signup(formData.name, formData.email, formData.phone, formData.password);
-+    setLoading(false);
- 
--      setTimeout(() => {
--        router.replace('/dashboard');
--      }, 500);
--    } catch (error) {
--      console.error('Signup error:', error);
--      alert('Signup failed. Please try again.');
--    } finally {
--      setLoading(false);
-+    if (result.success) {
-+      Alert.alert('Success', 'Account created successfully!', [
-+        { text: 'OK', onPress: () => router.replace('/dashboard') }
-+      ]);
-+    } else {
-+      Alert.alert('Signup Failed', result.message || 'Failed to create account');
-     }
-   };
- 
-diff --git a/frontend/app/index.tsx b/frontend/app/index.tsx
-index 57ebfe6..b32b3b9 100644
---- a/frontend/app/index.tsx
-+++ b/frontend/app/index.tsx
-@@ -1,29 +1,26 @@
--import { useEffect } from 'react';
-+import { useEffect, useCallback } from 'react';
- import { View, ActivityIndicator } from 'react-native';
- import { useRouter } from 'expo-router';
- import AsyncStorage from '@react-native-async-storage/async-storage';
- import { useTheme } from '../contexts/ThemeContext';
-+import authService from '../services/authService';
- 
- export default function Index() {
-   const router = useRouter();
-   const { colors } = useTheme();
- 
--  useEffect(() => {
--    checkOnboardingStatus();
--  }, []);
--
--  const checkOnboardingStatus = async () => {
-+  const checkOnboardingStatus = useCallback(async () => {
-     try {
-       const hasLaunched = await AsyncStorage.getItem('hasLaunched');
-       const termsAccepted = await AsyncStorage.getItem('termsAccepted');
--      const isLoggedIn = await AsyncStorage.getItem('isLoggedIn');
-+      const isAuthenticated = await authService.isAuthenticated();
- 
-       setTimeout(() => {
-         if (!hasLaunched) {
-           router.replace('/welcome');
-         } else if (!termsAccepted) {
-           router.replace('/terms');
--        } else if (isLoggedIn === 'true') {
-+        } else if (isAuthenticated) {
-           router.replace('/dashboard');
-         } else {
-           router.replace('/auth/login');
-@@ -33,7 +30,11 @@ export default function Index() {
-       console.error('Error checking onboarding status:', error);
-       router.replace('/welcome');
-     }
--  };
-+  }, [router]);
-+
-+  useEffect(() => {
-+    checkOnboardingStatus();
-+  }, [checkOnboardingStatus]);
- 
-   return (
-     <View style={{ flex: 1, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center' }}>
-diff --git a/frontend/components/SideMenu.tsx b/frontend/components/SideMenu.tsx
-index 9eac9e1..804cadc 100644
---- a/frontend/components/SideMenu.tsx
-+++ b/frontend/components/SideMenu.tsx
-@@ -1,9 +1,10 @@
--import { View, Text, StyleSheet, TouchableOpacity, Modal, Animated } from 'react-native';
-+import { View, Text, StyleSheet, TouchableOpacity, Modal, Animated, Alert } from 'react-native';
- import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
- import { useRouter } from 'expo-router';
- import { useTheme } from '../contexts/ThemeContext';
- import { useLanguage } from '../contexts/LanguageContext';
- import { useEffect, useRef } from 'react';
-+import authService from '../services/authService';
- 
- interface SideMenuProps {
-   visible: boolean;
-@@ -18,6 +19,7 @@ const menuItems = [
-   { id: 'profile', title: 'Profile', icon: 'account', route: '/edit-profile' },
-   { id: 'settings', title: 'Settings', icon: 'cog', route: '/settings' },
-   { id: 'about', title: 'About Us', icon: 'information', route: '/about-us' },
-+  { id: 'logout', title: 'Logout', icon: 'logout', route: null },
- ];
- 
- export function SideMenu({ visible, onClose }: SideMenuProps) {
-@@ -43,6 +45,24 @@ export function SideMenu({ visible, onClose }: SideMenuProps) {
-     }
-   }, [visible]);
- 
-+  const handleLogout = async () => {
-+    Alert.alert(
-+      'Logout',
-+      'Are you sure you want to logout?',
-+      [
-+        { text: 'Cancel', style: 'cancel' },
-+        {
-+          text: 'Logout',
-+          style: 'destructive',
-+          onPress: async () => {
-+            await authService.logout();
-+            router.replace('/auth/login');
-+          }
-+        }
-+      ]
-+    );
-+  };
-+
-   const handleMenuPress = (route: string | null, id: string) => {
-     onClose();
-     if (route) {
-@@ -50,6 +70,8 @@ export function SideMenu({ visible, onClose }: SideMenuProps) {
-     } else if (id === 'chatbot') {
-       // Chatbot will be triggered via global floating button
-       console.log('Open chatbot');
-+    } else if (id === 'logout') {
-+      setTimeout(() => handleLogout(), 300);
-     }
-   };
- 
+       const botMessage: Message = {
 diff --git a/model.patch b/model.patch
-index f39fa2d..73496af 100644
+index bba276d4b..e69de29bb 100644
 --- a/model.patch
 +++ b/model.patch
-@@ -1,21 +0,0 @@
--diff --git a/frontend/app/_layout.tsx b/frontend/app/_layout.tsx
--index 3869938..7cc305b 100644
----- a/frontend/app/_layout.tsx
--+++ b/frontend/app/_layout.tsx
--@@ -16,10 +16,15 @@ export default function RootLayout() {
--               <Stack screenOptions={{ headerShown: false }}>
--                 <Stack.Screen name="index" />
--                 <Stack.Screen name="welcome" />
--+                <Stack.Screen name="terms" />
--                 <Stack.Screen name="language" />
--                 <Stack.Screen name="auth/login" />
--                 <Stack.Screen name="auth/signup" />
---                <Stack.Screen name="(tabs)" />
--+                <Stack.Screen name="dashboard" />
--+                <Stack.Screen name="quick-actions" />
--+                <Stack.Screen name="book-appointment" />
--+                <Stack.Screen name="iot-sensor" />
--+                <Stack.Screen name="about-us" />
--                 <Stack.Screen name="settings" />
--                 <Stack.Screen name="edit-profile" />
--               </Stack>
+@@ -1,266 +0,0 @@
+-diff --git a/frontend/app/auth/login.tsx b/frontend/app/auth/login.tsx
+-index 47cdeb7..332ed29 100644
+---- a/frontend/app/auth/login.tsx
+-+++ b/frontend/app/auth/login.tsx
+-@@ -1,4 +1,4 @@
+--import { View, Text, StyleSheet, TouchableOpacity, TextInput, KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
+-+import { View, Text, StyleSheet, TouchableOpacity, TextInput, KeyboardAvoidingView, Platform, ScrollView, Alert } from 'react-native';
+- import { SafeAreaView } from 'react-native-safe-area-context';
+- import { MaterialCommunityIcons } from '@expo/vector-icons';
+- import { useRouter } from 'expo-router';
+-@@ -6,35 +6,31 @@ import { useState } from 'react';
+- import AsyncStorage from '@react-native-async-storage/async-storage';
+- import { useTheme } from '../../contexts/ThemeContext';
+- import { useLanguage } from '../../contexts/LanguageContext';
+-+import authService from '../../services/authService';
+- 
+- export default function Login() {
+-   const router = useRouter();
+-   const { colors } = useTheme();
+-   const { t } = useLanguage();
+--  const [email, setEmail] = useState('');
+-+  const [emailOrPhone, setEmailOrPhone] = useState('');
+-   const [password, setPassword] = useState('');
+-   const [showPassword, setShowPassword] = useState(false);
+-   const [loading, setLoading] = useState(false);
+- 
+-   const handleLogin = async () => {
+--    if (!email || !password) {
+--      alert('Please enter email and password');
+-+    if (!emailOrPhone || !password) {
+-+      Alert.alert('Error', 'Please fill in all fields');
+-       return;
+-     }
+- 
+-     setLoading(true);
+--    try {
+--      await AsyncStorage.setItem('isLoggedIn', 'true');
+--      await AsyncStorage.setItem('userEmail', email);
+--      
+--      setTimeout(() => {
+--        router.replace('/dashboard');
+--      }, 500);
+--    } catch (error) {
+--      console.error('Login error:', error);
+--      alert('Login failed. Please try again.');
+--    } finally {
+--      setLoading(false);
+-+    const result = await authService.login(emailOrPhone, password);
+-+    setLoading(false);
+-+
+-+    if (result.success) {
+-+      router.replace('/dashboard');
+-+    } else {
+-+      Alert.alert('Login Failed', result.message || 'Invalid credentials');
+-     }
+-   };
+- 
+-@@ -172,15 +168,15 @@ export default function Login() {
+-           </View>
+- 
+-           <View style={styles.form}>
+--            <Text style={styles.label}>{t('email')}</Text>
+-+            <Text style={styles.label}>Email or Phone</Text>
+-             <View style={styles.inputContainer}>
+-               <TextInput
+-                 style={styles.input}
+--                placeholder="Enter your email"
+-+                placeholder="Enter your email or phone"
+-                 placeholderTextColor={colors.textSecondary}
+--                value={email}
+--                onChangeText={setEmail}
+--                keyboardType="email-address"
+-+                value={emailOrPhone}
+-+                onChangeText={setEmailOrPhone}
+-+                keyboardType="default"
+-                 autoCapitalize="none"
+-               />
+-             </View>
+-diff --git a/frontend/app/auth/signup.tsx b/frontend/app/auth/signup.tsx
+-index f9162d5..f2fa6f7 100644
+---- a/frontend/app/auth/signup.tsx
+-+++ b/frontend/app/auth/signup.tsx
+-@@ -1,4 +1,4 @@
+--import { View, Text, StyleSheet, TouchableOpacity, TextInput, KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
+-+import { View, Text, StyleSheet, TouchableOpacity, TextInput, KeyboardAvoidingView, Platform, ScrollView, Alert } from 'react-native';
+- import { SafeAreaView } from 'react-native-safe-area-context';
+- import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
+- import { useRouter } from 'expo-router';
+-@@ -6,6 +6,7 @@ import { useState } from 'react';
+- import AsyncStorage from '@react-native-async-storage/async-storage';
+- import { useTheme } from '../../contexts/ThemeContext';
+- import { useLanguage } from '../../contexts/LanguageContext';
+-+import authService from '../../services/authService';
+- 
+- export default function Signup() {
+-   const router = useRouter();
+-@@ -22,24 +23,20 @@ export default function Signup() {
+- 
+-   const handleSignup = async () => {
+-     if (!formData.name || !formData.email || !formData.password) {
+--      alert('Please fill all required fields');
+-+      Alert.alert('Error', 'Please fill all required fields');
+-       return;
+-     }
+- 
+-     setLoading(true);
+--    try {
+--      await AsyncStorage.setItem('isLoggedIn', 'true');
+--      await AsyncStorage.setItem('userName', formData.name);
+--      await AsyncStorage.setItem('userEmail', formData.email);
+-+    const result = await authService.signup(formData.name, formData.email, formData.phone, formData.password);
+-+    setLoading(false);
+- 
+--      setTimeout(() => {
+--        router.replace('/dashboard');
+--      }, 500);
+--    } catch (error) {
+--      console.error('Signup error:', error);
+--      alert('Signup failed. Please try again.');
+--    } finally {
+--      setLoading(false);
+-+    if (result.success) {
+-+      Alert.alert('Success', 'Account created successfully!', [
+-+        { text: 'OK', onPress: () => router.replace('/dashboard') }
+-+      ]);
+-+    } else {
+-+      Alert.alert('Signup Failed', result.message || 'Failed to create account');
+-     }
+-   };
+- 
+-diff --git a/frontend/app/index.tsx b/frontend/app/index.tsx
+-index 57ebfe6..b32b3b9 100644
+---- a/frontend/app/index.tsx
+-+++ b/frontend/app/index.tsx
+-@@ -1,29 +1,26 @@
+--import { useEffect } from 'react';
+-+import { useEffect, useCallback } from 'react';
+- import { View, ActivityIndicator } from 'react-native';
+- import { useRouter } from 'expo-router';
+- import AsyncStorage from '@react-native-async-storage/async-storage';
+- import { useTheme } from '../contexts/ThemeContext';
+-+import authService from '../services/authService';
+- 
+- export default function Index() {
+-   const router = useRouter();
+-   const { colors } = useTheme();
+- 
+--  useEffect(() => {
+--    checkOnboardingStatus();
+--  }, []);
+--
+--  const checkOnboardingStatus = async () => {
+-+  const checkOnboardingStatus = useCallback(async () => {
+-     try {
+-       const hasLaunched = await AsyncStorage.getItem('hasLaunched');
+-       const termsAccepted = await AsyncStorage.getItem('termsAccepted');
+--      const isLoggedIn = await AsyncStorage.getItem('isLoggedIn');
+-+      const isAuthenticated = await authService.isAuthenticated();
+- 
+-       setTimeout(() => {
+-         if (!hasLaunched) {
+-           router.replace('/welcome');
+-         } else if (!termsAccepted) {
+-           router.replace('/terms');
+--        } else if (isLoggedIn === 'true') {
+-+        } else if (isAuthenticated) {
+-           router.replace('/dashboard');
+-         } else {
+-           router.replace('/auth/login');
+-@@ -33,7 +30,11 @@ export default function Index() {
+-       console.error('Error checking onboarding status:', error);
+-       router.replace('/welcome');
+-     }
+--  };
+-+  }, [router]);
+-+
+-+  useEffect(() => {
+-+    checkOnboardingStatus();
+-+  }, [checkOnboardingStatus]);
+- 
+-   return (
+-     <View style={{ flex: 1, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center' }}>
+-diff --git a/frontend/components/SideMenu.tsx b/frontend/components/SideMenu.tsx
+-index 9eac9e1..804cadc 100644
+---- a/frontend/components/SideMenu.tsx
+-+++ b/frontend/components/SideMenu.tsx
+-@@ -1,9 +1,10 @@
+--import { View, Text, StyleSheet, TouchableOpacity, Modal, Animated } from 'react-native';
+-+import { View, Text, StyleSheet, TouchableOpacity, Modal, Animated, Alert } from 'react-native';
+- import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
+- import { useRouter } from 'expo-router';
+- import { useTheme } from '../contexts/ThemeContext';
+- import { useLanguage } from '../contexts/LanguageContext';
+- import { useEffect, useRef } from 'react';
+-+import authService from '../services/authService';
+- 
+- interface SideMenuProps {
+-   visible: boolean;
+-@@ -18,6 +19,7 @@ const menuItems = [
+-   { id: 'profile', title: 'Profile', icon: 'account', route: '/edit-profile' },
+-   { id: 'settings', title: 'Settings', icon: 'cog', route: '/settings' },
+-   { id: 'about', title: 'About Us', icon: 'information', route: '/about-us' },
+-+  { id: 'logout', title: 'Logout', icon: 'logout', route: null },
+- ];
+- 
+- export function SideMenu({ visible, onClose }: SideMenuProps) {
+-@@ -43,6 +45,24 @@ export function SideMenu({ visible, onClose }: SideMenuProps) {
+-     }
+-   }, [visible]);
+- 
+-+  const handleLogout = async () => {
+-+    Alert.alert(
+-+      'Logout',
+-+      'Are you sure you want to logout?',
+-+      [
+-+        { text: 'Cancel', style: 'cancel' },
+-+        {
+-+          text: 'Logout',
+-+          style: 'destructive',
+-+          onPress: async () => {
+-+            await authService.logout();
+-+            router.replace('/auth/login');
+-+          }
+-+        }
+-+      ]
+-+    );
+-+  };
+-+
+-   const handleMenuPress = (route: string | null, id: string) => {
+-     onClose();
+-     if (route) {
+-@@ -50,6 +70,8 @@ export function SideMenu({ visible, onClose }: SideMenuProps) {
+-     } else if (id === 'chatbot') {
+-       // Chatbot will be triggered via global floating button
+-       console.log('Open chatbot');
+-+    } else if (id === 'logout') {
+-+      setTimeout(() => handleLogout(), 300);
+-     }
+-   };
+- 
+-diff --git a/model.patch b/model.patch
+-index f39fa2d..73496af 100644
+---- a/model.patch
+-+++ b/model.patch
+-@@ -1,21 +0,0 @@
+--diff --git a/frontend/app/_layout.tsx b/frontend/app/_layout.tsx
+--index 3869938..7cc305b 100644
+----- a/frontend/app/_layout.tsx
+--+++ b/frontend/app/_layout.tsx
+--@@ -16,10 +16,15 @@ export default function RootLayout() {
+--               <Stack screenOptions={{ headerShown: false }}>
+--                 <Stack.Screen name="index" />
+--                 <Stack.Screen name="welcome" />
+--+                <Stack.Screen name="terms" />
+--                 <Stack.Screen name="language" />
+--                 <Stack.Screen name="auth/login" />
+--                 <Stack.Screen name="auth/signup" />
+---                <Stack.Screen name="(tabs)" />
+--+                <Stack.Screen name="dashboard" />
+--+                <Stack.Screen name="quick-actions" />
+--+                <Stack.Screen name="book-appointment" />
+--+                <Stack.Screen name="iot-sensor" />
+--+                <Stack.Screen name="about-us" />
+--                 <Stack.Screen name="settings" />
+--                 <Stack.Screen name="edit-profile" />
+--               </Stack>
