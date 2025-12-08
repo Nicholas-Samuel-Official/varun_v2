@@ -4,7 +4,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ThemeProvider } from '../contexts/ThemeContext';
 import { LanguageProvider } from '../contexts/LanguageContext';
 import { FontSizeProvider } from '../contexts/FontSizeContext';
-import { MobileChatbot } from '../components/MobileChatbot';
+import { AIChatbot } from '../components/AIChatbot';
 import { useEffect } from 'react';
 import { Platform } from 'react-native';
 
