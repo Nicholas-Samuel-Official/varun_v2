@@ -56,6 +56,36 @@ export default function FeasibilityCheck() {
     return R * c;
   };
 
+  const handleStructureRecommendation = async () => {
+    setStructureLoading(true);
+    try {
+      const { rainfall, roofArea, openSpace } = formData;
+      const apiUrl = `https://server-jr.onrender.com/predict_structure_get?annual_rainfall=${rainfall}&roof_area=${roofArea}&open_space=${openSpace}`;
+      
+      console.log('Calling Structure API:', apiUrl);
+      
+      const response = await fetch(apiUrl, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`API returned ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log('Structure API Response:', data);
+      setStructureResult(data);
+    } catch (error) {
+      console.error('Structure API Error:', error);
+      Alert.alert('Error', 'Failed to get structure recommendation. Please try again.');
+    } finally {
+      setStructureLoading(false);
+    }
+  };
+
   const handleAquiferCheck = async () => {
     setAquiferLoading(true);
     try {
