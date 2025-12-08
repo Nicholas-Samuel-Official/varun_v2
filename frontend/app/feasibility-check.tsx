@@ -103,7 +103,8 @@ export default function FeasibilityCheck() {
       }
 
       if (nearestLocation) {
-        const isFeasible = nearestLocation.aquiferDepth < 3;
+        // If aquifer depth is less than 3m, it's NOT feasible
+        const isFeasible = nearestLocation.aquiferDepth >= 3;
         setAquiferResult({
           nearestLocation: nearestLocation.village,
           aquiferDepth: nearestLocation.aquiferDepth,
