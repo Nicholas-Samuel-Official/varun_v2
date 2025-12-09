@@ -182,33 +182,41 @@ export default function FeasibilityCheck() {
   };
 
   const handleStructureRecommendation = async () => {
-    setStructureLoading(true);
-    try {
-      const { rainfall, roofArea, openSpace } = formData;
-      const apiUrl = `https://server-jr.onrender.com/predict_structure_get?annual_rainfall=${rainfall}&roof_area=${roofArea}&open_space=${openSpace}`;
-      
-      console.log('Calling Structure API:', apiUrl);
-      
-      const response = await fetch(apiUrl, {
-        method: 'GET',
-        headers: {
-          'Accept': 'application/json',
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error(`API returned ${response.status}`);
-      }
-
-      const data = await response.json();
-      console.log('Structure API Response:', data);
-      setStructureResult(data);
-    } catch (error) {
-      console.error('Structure API Error:', error);
-      Alert.alert('Error', 'Failed to get structure recommendation. Please try again.');
-    } finally {
-      setStructureLoading(false);
+    if (!aquiferResult) {
+      Alert.alert('Error', 'Aquifer validation required first.');
+      return;
     }
+
+    setStructureLoading(true);
+    
+    // Calculate structure based on aquifer depth
+    const depth = aquiferResult.aquiferDepth;
+    let structureType = '';
+    let description = '';
+    
+    if (depth >= 3 && depth <= 10) {
+      structureType = 'Recharge Pit';
+      description = 'A recharge pit is suitable for shallow to moderate groundwater depths (3-10m). This structure allows surface runoff to percolate into the ground, replenishing the aquifer effectively.';
+    } else if (depth > 10) {
+      structureType = 'Recharge Shaft';
+      description = 'A recharge shaft is recommended for deeper groundwater levels (>10m). This vertical structure penetrates deeper layers, directly recharging the aquifer with filtered rainwater.';
+    } else {
+      structureType = 'Not Recommended';
+      description = 'For very shallow groundwater (<3m), artificial recharge structures are not recommended due to risk of waterlogging and contamination.';
+    }
+
+    const calculatedStructure = {
+      structure_type: structureType,
+      aquifer_depth: depth,
+      description: description,
+    };
+
+    setStructureResult(calculatedStructure);
+    
+    // Also fetch recharge potential immediately after structure
+    await handleRechargePotential();
+    
+    setStructureLoading(false);
   };
 
   const handleAquiferCheck = async () => {
