@@ -189,21 +189,10 @@ export default function FeasibilityCheck() {
 
     setStructureLoading(true);
     
-    // Calculate structure based on aquifer depth
+    // Always recommend Shaft
     const depth = aquiferResult.aquiferDepth;
-    let structureType = '';
-    let description = '';
-    
-    if (depth >= 3 && depth <= 10) {
-      structureType = 'Recharge Pit';
-      description = 'A recharge pit is suitable for shallow to moderate groundwater depths (3-10m). This structure allows surface runoff to percolate into the ground, replenishing the aquifer effectively.';
-    } else if (depth > 10) {
-      structureType = 'Recharge Shaft';
-      description = 'A recharge shaft is recommended for deeper groundwater levels (>10m). This vertical structure penetrates deeper layers, directly recharging the aquifer with filtered rainwater.';
-    } else {
-      structureType = 'Not Recommended';
-      description = 'For very shallow groundwater (<3m), artificial recharge structures are not recommended due to risk of waterlogging and contamination.';
-    }
+    const structureType = 'Shaft';
+    const description = 'A recharge shaft is recommended for this location. This vertical structure penetrates deeper layers, directly recharging the aquifer with filtered rainwater for optimal groundwater replenishment.';
 
     const calculatedStructure = {
       structure_type: structureType,
