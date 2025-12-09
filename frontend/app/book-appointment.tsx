@@ -70,11 +70,41 @@ export default function BookAppointment() {
     }, 1500);
   };
 
-  const handleBookAppointment = () => {
-    // TODO: Submit form to backend
-    console.log('Booking appointment:', formData);
-    alert('Appointment request submitted! Our expert will contact you soon.');
-    router.back();
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleBookAppointment = async () => {
+    // Validate form
+    if (!formData.name || !formData.phone || !formData.preferredDate || !formData.preferredTime) {
+      alert('Please fill in all required fields');
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const backendUrl = process.env.EXPO_PUBLIC_BACKEND_URL || '';
+      const response = await fetch(`${backendUrl}/api/email/appointment`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      console.log('Email API response:', data);
+
+      if (data.success) {
+        alert('Appointment request submitted! Our expert will contact you soon.');
+        router.back();
+      } else {
+        alert('Failed to send appointment. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error booking appointment:', error);
+      alert('Error submitting appointment. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const styles = StyleSheet.create({
