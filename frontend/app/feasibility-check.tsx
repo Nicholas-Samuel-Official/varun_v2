@@ -779,6 +779,91 @@ export default function FeasibilityCheck() {
                   </View>
                 );
               })}
+
+              {!rechargeResult && (
+                <TouchableOpacity
+                  style={[styles.submitButton, { marginTop: 20, marginHorizontal: 0 }]}
+                  onPress={handleRechargePotential}
+                  disabled={rechargeLoading}
+                >
+                  {rechargeLoading ? (
+                    <ActivityIndicator size="small" color="#FFFFFF" />
+                  ) : (
+                    <Text style={styles.submitButtonText}>Check Recharge Potential</Text>
+                  )}
+                </TouchableOpacity>
+              )}
+            </View>
+          )}
+
+          {rechargeResult && (
+            <View style={styles.resultContainer}>
+              <View style={styles.resultHeader}>
+                <View style={[
+                  styles.resultIcon,
+                  { 
+                    backgroundColor: rechargeResult.recharge_potential === 'Very High' || rechargeResult.recharge_potential === 'High' ? '#28a74520' :
+                                   rechargeResult.recharge_potential === 'Medium' ? '#ffc10720' :
+                                   '#dc354520'
+                  }
+                ]}>
+                  <MaterialCommunityIcons 
+                    name="water-plus" 
+                    size={32} 
+                    color={
+                      rechargeResult.recharge_potential === 'Very High' || rechargeResult.recharge_potential === 'High' ? '#28a745' :
+                      rechargeResult.recharge_potential === 'Medium' ? '#ffc107' :
+                      '#dc3545'
+                    } 
+                  />
+                </View>
+                <Text style={styles.resultTitle}>Recharge Potential Analysis</Text>
+              </View>
+
+              <View style={styles.resultItem}>
+                <Text style={styles.resultLabel}>Groundwater Level</Text>
+                <Text style={styles.resultValue}>{rechargeResult.groundwater_level_m_bgl} m bgl</Text>
+              </View>
+
+              <View style={styles.resultItem}>
+                <Text style={styles.resultLabel}>Aquifer Type</Text>
+                <Text style={styles.resultValue}>{rechargeResult.aquifer}</Text>
+              </View>
+
+              <View style={styles.resultItem}>
+                <Text style={styles.resultLabel}>Soil Permeability</Text>
+                <Text style={styles.resultValue}>{rechargeResult.soil_permeability_class}</Text>
+              </View>
+
+              <View style={styles.resultItem}>
+                <Text style={styles.resultLabel}>Nearest Data Point</Text>
+                <Text style={styles.resultValue}>{rechargeResult.distance_km} km away</Text>
+              </View>
+
+              <View 
+                style={[
+                  styles.statusBadge, 
+                  { 
+                    backgroundColor: rechargeResult.recharge_potential === 'Very High' || rechargeResult.recharge_potential === 'High' ? '#28a745' :
+                                   rechargeResult.recharge_potential === 'Medium' ? '#ffc107' :
+                                   '#dc3545',
+                    marginTop: 20
+                  }
+                ]}
+              >
+                <Text style={styles.statusText}>
+                  Recharge Potential: {rechargeResult.recharge_potential}
+                </Text>
+              </View>
+
+              <View style={{ marginTop: 20, padding: 15, backgroundColor: colors.card + '80', borderRadius: 12 }}>
+                <Text style={{ fontSize: 14, fontWeight: '600', color: colors.text, marginBottom: 8 }}>
+                  {rechargeResult.short_reason}
+                </Text>
+                <Text style={{ fontSize: 13, color: colors.textSecondary, lineHeight: 20 }}>
+                  {rechargeResult.details}
+                </Text>
+              </View>
             </View>
           )}
 
