@@ -497,18 +497,28 @@ export default function FeasibilityCheck() {
             </View>
 
             <View style={styles.inputContainer}>
-              <Text style={styles.label}>
-                Annual Rainfall (mm) <Text style={styles.required}>*</Text>
-              </Text>
+              <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <Text style={styles.label}>
+                  Annual Rainfall (mm) <Text style={styles.required}>*</Text>
+                </Text>
+                {rainfallLoading && (
+                  <ActivityIndicator size="small" color={colors.primary} />
+                )}
+              </View>
               <TextInput
                 style={styles.input}
                 value={formData.rainfall}
                 onChangeText={(text) => setFormData({ ...formData, rainfall: text })}
                 keyboardType="number-pad"
-                placeholder="e.g., 800"
+                placeholder={rainfallLoading ? "Fetching rainfall data..." : "e.g., 800"}
                 placeholderTextColor={colors.textSecondary}
+                editable={!rainfallLoading}
               />
-              <Text style={styles.inputHint}>Average annual rainfall in your area</Text>
+              <Text style={styles.inputHint}>
+                {rainfallLoading 
+                  ? "Auto-fetching based on your location..." 
+                  : "Automatically fetched from climate data"}
+              </Text>
             </View>
 
             <View style={styles.inputContainer}>
