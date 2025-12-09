@@ -1,14 +1,42 @@
 const nodemailer = require('nodemailer');
 const logger = require('../utils/logger');
 
-// Create reusable transporter using Gmail SMTP
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER || 'your-email@gmail.com',
-    pass: process.env.EMAIL_PASSWORD || 'your-app-password',
-  },
-});
+// Create transporter - will be initialized on first use
+let transporter = null;
+
+// Initialize transporter with Gmail or fallback to test account
+const getTransporter = async () => {
+  if (transporter) return transporter;
+
+  // Check if Gmail credentials are provided
+  if (process.env.EMAIL_USER && process.env.EMAIL_PASSWORD && 
+      process.env.EMAIL_USER !== 'your-email@gmail.com') {
+    logger.info('Using Gmail SMTP for emails');
+    transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD,
+      },
+    });
+  } else {
+    // Use Ethereal test account for development
+    logger.info('Creating test email account...');
+    const testAccount = await nodemailer.createTestAccount();
+    transporter = nodemailer.createTransport({
+      host: 'smtp.ethereal.email',
+      port: 587,
+      secure: false,
+      auth: {
+        user: testAccount.user,
+        pass: testAccount.pass,
+      },
+    });
+    logger.info(`Test email account created: ${testAccount.user}`);
+  }
+
+  return transporter;
+};
 
 // Send appointment notification to expert
 const sendAppointmentNotification = async (req, res) => {
