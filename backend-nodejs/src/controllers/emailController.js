@@ -112,15 +112,25 @@ const sendAppointmentNotification = async (req, res) => {
       `,
     };
 
+    // Get transporter (Gmail or test account)
+    const emailTransporter = await getTransporter();
+    
     // Send email
-    const info = await transporter.sendMail(mailOptions);
+    const info = await emailTransporter.sendMail(mailOptions);
     
     logger.info(`Appointment notification sent: ${info.messageId}`);
+    
+    // Get preview URL for test emails
+    const previewUrl = nodemailer.getTestMessageUrl(info);
+    if (previewUrl) {
+      logger.info(`Preview email at: ${previewUrl}`);
+    }
     
     return res.status(200).json({
       success: true,
       message: 'Appointment notification sent to expert',
       messageId: info.messageId,
+      previewUrl: previewUrl || null,
     });
 
   } catch (error) {
