@@ -327,8 +327,13 @@ export default function BookAppointment() {
         <KeyboardAvoidingView
           style={styles.content}
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+          keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 20}
         >
-          <ScrollView style={styles.formContainer}>
+          <ScrollView 
+            style={styles.formContainer}
+            keyboardShouldPersistTaps="handled"
+            showsVerticalScrollIndicator={false}
+          >
             <View style={styles.infoBox}>
               <MaterialCommunityIcons name="information" size={24} color={colors.primary} />
               <Text style={styles.infoText}>
