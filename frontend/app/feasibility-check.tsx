@@ -48,26 +48,33 @@ export default function FeasibilityCheck() {
 
   // Fetch user location and rainfall on component mount
   useEffect(() => {
+    console.log('Feasibility Check: Component mounted, fetching rainfall...');
     fetchUserLocationAndRainfall();
   }, []);
 
   const fetchUserLocationAndRainfall = async () => {
+    console.log('Starting rainfall fetch...');
     setRainfallLoading(true);
     try {
       // Get user's location
+      console.log('Requesting location permission...');
       const { status } = await Location.requestForegroundPermissionsAsync();
+      console.log('Location permission status:', status);
+      
       if (status !== 'granted') {
-        Alert.alert('Permission Denied', 'Location permission is required to fetch rainfall data.');
+        console.log('Permission denied');
         setRainfallLoading(false);
         return;
       }
 
+      console.log('Getting current position...');
       const location = await Location.getCurrentPositionAsync({
-        accuracy: Location.Accuracy.High,
+        accuracy: Location.Accuracy.Balanced,
       });
 
       const latitude = location.coords.latitude;
       const longitude = location.coords.longitude;
+      console.log('Got location:', latitude, longitude);
       setUserLocation({ latitude, longitude });
 
       // Fetch annual rainfall from Open-Meteo Climate API
@@ -78,12 +85,14 @@ export default function FeasibilityCheck() {
       console.log('Fetching rainfall from:', apiUrl);
       
       const response = await fetch(apiUrl);
+      console.log('Climate API response status:', response.status);
+      
       if (!response.ok) {
         throw new Error('Failed to fetch rainfall data');
       }
 
       const data = await response.json();
-      console.log('Climate API Response:', data);
+      console.log('Climate API Response received, has data:', !!data.daily);
 
       // Calculate total annual rainfall
       if (data.daily && data.daily.precipitation_sum) {
@@ -101,17 +110,13 @@ export default function FeasibilityCheck() {
           rainfall: roundedRainfall.toString(),
         }));
 
-        Alert.alert(
-          'Rainfall Data Loaded',
-          `Annual rainfall for your location (${lastYear}): ${roundedRainfall} mm`,
-          [{ text: 'OK' }]
-        );
+        console.log('Rainfall field updated with:', roundedRainfall);
       }
     } catch (error) {
       console.error('Error fetching rainfall:', error);
-      Alert.alert('Error', 'Could not fetch rainfall data. Please enter manually.');
     } finally {
       setRainfallLoading(false);
+      console.log('Rainfall fetch complete');
     }
   };
 
