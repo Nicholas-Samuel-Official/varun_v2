@@ -48,6 +48,7 @@ app.use('/api/iot', iotRoutes);
 app.use('/api/weather', weatherRoutes);
 app.use('/api/chatbot', chatbotRoutes);
 app.use('/api/email', emailRoutes);
+app.use('/api/recharge', rechargeRoutes);
 
 // Health check
 app.get('/health', (req, res) => {
