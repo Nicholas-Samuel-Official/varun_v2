@@ -745,7 +745,7 @@ export default function FeasibilityCheck() {
             </View>
           )}
 
-          {structureResult && (
+          {structureResult && rechargeResult && (
             <View style={styles.resultContainer}>
               <View style={styles.resultHeader}>
                 <View style={styles.resultIcon}>
@@ -755,122 +755,87 @@ export default function FeasibilityCheck() {
                     color={colors.primary} 
                   />
                 </View>
-                <Text style={styles.resultTitle}>Structure Recommendation</Text>
+                <Text style={styles.resultTitle}>Complete Analysis Report</Text>
               </View>
 
-              {Object.entries(structureResult).map(([key, value], index) => {
-                // Skip input field - only show output
-                if (key === 'input') {
-                  return null;
-                }
-
-                const formattedKey = key
-                  .split('_')
-                  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-                  .join(' ');
-
-                let formattedValue: string;
-                if (typeof value === 'object' && value !== null) {
-                  formattedValue = JSON.stringify(value, null, 2);
-                } else if (typeof value === 'number') {
-                  formattedValue = value.toLocaleString();
-                } else {
-                  formattedValue = String(value);
-                }
-
-                return (
-                  <View key={key} style={styles.resultItem}>
-                    <Text style={styles.resultLabel}>{formattedKey}</Text>
-                    <Text style={[styles.resultValue, { flex: 1, textAlign: 'right' }]}>
-                      {formattedValue}
-                    </Text>
-                  </View>
-                );
-              })}
-
-              {!rechargeResult && (
-                <TouchableOpacity
-                  style={[styles.submitButton, { marginTop: 20, marginHorizontal: 0 }]}
-                  onPress={handleRechargePotential}
-                  disabled={rechargeLoading}
-                >
-                  {rechargeLoading ? (
-                    <ActivityIndicator size="small" color="#FFFFFF" />
-                  ) : (
-                    <Text style={styles.submitButtonText}>Check Recharge Potential</Text>
-                  )}
-                </TouchableOpacity>
-              )}
-            </View>
-          )}
-
-          {rechargeResult && (
-            <View style={styles.resultContainer}>
-              <View style={styles.resultHeader}>
-                <View style={[
-                  styles.resultIcon,
-                  { 
-                    backgroundColor: rechargeResult.recharge_potential === 'Very High' || rechargeResult.recharge_potential === 'High' ? '#28a74520' :
-                                   rechargeResult.recharge_potential === 'Medium' ? '#ffc10720' :
-                                   '#dc354520'
-                  }
-                ]}>
-                  <MaterialCommunityIcons 
-                    name="water-plus" 
-                    size={32} 
-                    color={
-                      rechargeResult.recharge_potential === 'Very High' || rechargeResult.recharge_potential === 'High' ? '#28a745' :
-                      rechargeResult.recharge_potential === 'Medium' ? '#ffc107' :
-                      '#dc3545'
-                    } 
-                  />
+              {/* Structure Recommendation Section */}
+              <View style={{ marginBottom: 20 }}>
+                <Text style={{ fontSize: 17, fontWeight: '700', color: colors.primary, marginBottom: 12 }}>
+                  Recommended Structure
+                </Text>
+                
+                <View style={styles.resultItem}>
+                  <Text style={styles.resultLabel}>Structure Type</Text>
+                  <Text style={[styles.resultValue, { fontWeight: '700' }]}>
+                    {structureResult.structure_type}
+                  </Text>
                 </View>
-                <Text style={styles.resultTitle}>Recharge Potential Analysis</Text>
+
+                <View style={styles.resultItem}>
+                  <Text style={styles.resultLabel}>Based on Depth</Text>
+                  <Text style={styles.resultValue}>{structureResult.aquifer_depth} m</Text>
+                </View>
+
+                <View style={{ marginTop: 12, padding: 12, backgroundColor: colors.primary + '10', borderRadius: 8 }}>
+                  <Text style={{ fontSize: 13, color: colors.text, lineHeight: 20 }}>
+                    {structureResult.description}
+                  </Text>
+                </View>
               </View>
 
-              <View style={styles.resultItem}>
-                <Text style={styles.resultLabel}>Groundwater Level</Text>
-                <Text style={styles.resultValue}>{rechargeResult.groundwater_level_m_bgl} m bgl</Text>
-              </View>
+              {/* Divider */}
+              <View style={{ height: 1, backgroundColor: colors.border, marginVertical: 20 }} />
 
-              <View style={styles.resultItem}>
-                <Text style={styles.resultLabel}>Aquifer Type</Text>
-                <Text style={styles.resultValue}>{rechargeResult.aquifer}</Text>
-              </View>
-
-              <View style={styles.resultItem}>
-                <Text style={styles.resultLabel}>Soil Permeability</Text>
-                <Text style={styles.resultValue}>{rechargeResult.soil_permeability_class}</Text>
-              </View>
-
-              <View style={styles.resultItem}>
-                <Text style={styles.resultLabel}>Nearest Data Point</Text>
-                <Text style={styles.resultValue}>{rechargeResult.distance_km} km away</Text>
-              </View>
-
-              <View 
-                style={[
-                  styles.statusBadge, 
-                  { 
-                    backgroundColor: rechargeResult.recharge_potential === 'Very High' || rechargeResult.recharge_potential === 'High' ? '#28a745' :
-                                   rechargeResult.recharge_potential === 'Medium' ? '#ffc107' :
-                                   '#dc3545',
-                    marginTop: 20
-                  }
-                ]}
-              >
-                <Text style={styles.statusText}>
-                  Recharge Potential: {rechargeResult.recharge_potential}
+              {/* Recharge Potential Section */}
+              <View>
+                <Text style={{ fontSize: 17, fontWeight: '700', color: colors.primary, marginBottom: 12 }}>
+                  Recharge Potential Analysis
                 </Text>
-              </View>
 
-              <View style={{ marginTop: 20, padding: 15, backgroundColor: colors.card + '80', borderRadius: 12 }}>
-                <Text style={{ fontSize: 14, fontWeight: '600', color: colors.text, marginBottom: 8 }}>
-                  {rechargeResult.short_reason}
-                </Text>
-                <Text style={{ fontSize: 13, color: colors.textSecondary, lineHeight: 20 }}>
-                  {rechargeResult.details}
-                </Text>
+                <View style={styles.resultItem}>
+                  <Text style={styles.resultLabel}>Groundwater Level</Text>
+                  <Text style={styles.resultValue}>{rechargeResult.groundwater_level_m_bgl} m bgl</Text>
+                </View>
+
+                <View style={styles.resultItem}>
+                  <Text style={styles.resultLabel}>Aquifer Type</Text>
+                  <Text style={styles.resultValue}>{rechargeResult.aquifer}</Text>
+                </View>
+
+                <View style={styles.resultItem}>
+                  <Text style={styles.resultLabel}>Soil Permeability</Text>
+                  <Text style={styles.resultValue}>{rechargeResult.soil_permeability_class}</Text>
+                </View>
+
+                <View style={styles.resultItem}>
+                  <Text style={styles.resultLabel}>Data Point Distance</Text>
+                  <Text style={styles.resultValue}>{rechargeResult.distance_km} km</Text>
+                </View>
+
+                <View 
+                  style={[
+                    styles.statusBadge, 
+                    { 
+                      backgroundColor: rechargeResult.recharge_potential === 'Very High' || rechargeResult.recharge_potential === 'High' ? '#28a745' :
+                                     rechargeResult.recharge_potential === 'Medium' ? '#ffc107' :
+                                     '#dc3545',
+                      marginTop: 15
+                    }
+                  ]}
+                >
+                  <Text style={styles.statusText}>
+                    Recharge Potential: {rechargeResult.recharge_potential}
+                  </Text>
+                </View>
+
+                <View style={{ marginTop: 15, padding: 15, backgroundColor: colors.card + '80', borderRadius: 12 }}>
+                  <Text style={{ fontSize: 14, fontWeight: '600', color: colors.text, marginBottom: 8 }}>
+                    {rechargeResult.short_reason}
+                  </Text>
+                  <Text style={{ fontSize: 13, color: colors.textSecondary, lineHeight: 20 }}>
+                    {rechargeResult.details}
+                  </Text>
+                </View>
               </View>
             </View>
           )}
