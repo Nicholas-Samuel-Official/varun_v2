@@ -27,16 +27,30 @@ interface StructureResult {
   [key: string]: any;
 }
 
+interface RechargeResult {
+  latitude: number;
+  longitude: number;
+  groundwater_level_m_bgl: number;
+  aquifer: string;
+  soil_permeability_class: string;
+  recharge_potential: string;
+  short_reason: string;
+  details: string;
+  distance_km: number;
+}
+
 export default function FeasibilityCheck() {
   const router = useRouter();
   const { colors } = useTheme();
   const [loading, setLoading] = useState(false);
   const [aquiferLoading, setAquiferLoading] = useState(false);
   const [structureLoading, setStructureLoading] = useState(false);
+  const [rechargeLoading, setRechargeLoading] = useState(false);
   const [rainfallLoading, setRainfallLoading] = useState(false);
   const [result, setResult] = useState<FeasibilityResult | null>(null);
   const [aquiferResult, setAquiferResult] = useState<AquiferResult | null>(null);
   const [structureResult, setStructureResult] = useState<StructureResult | null>(null);
+  const [rechargeResult, setRechargeResult] = useState<RechargeResult | null>(null);
   const [showAquiferCheck, setShowAquiferCheck] = useState(false);
   const [userLocation, setUserLocation] = useState<{ latitude: number; longitude: number } | null>(null);
   
