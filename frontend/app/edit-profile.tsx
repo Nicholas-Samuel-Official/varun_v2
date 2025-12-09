@@ -155,7 +155,11 @@ export default function EditProfile() {
         </TouchableOpacity>
       </View>
 
-      <ScrollView style={styles.content}>
+      <ScrollView 
+        style={styles.content}
+        keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}
+      >
         <View style={styles.avatarSection}>
           <View style={styles.avatar}>
             <MaterialCommunityIcons name="account" size={48} color={colors.primary} />
