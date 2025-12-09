@@ -146,6 +146,41 @@ export default function FeasibilityCheck() {
     return R * c;
   };
 
+  const handleRechargePotential = async () => {
+    if (!userLocation) {
+      Alert.alert('Error', 'Location not available. Please enable location services.');
+      return;
+    }
+
+    setRechargeLoading(true);
+    try {
+      const backendUrl = process.env.EXPO_PUBLIC_BACKEND_URL || '';
+      const apiUrl = `${backendUrl}/api/recharge?latitude=${userLocation.latitude}&longitude=${userLocation.longitude}`;
+      
+      console.log('Calling Recharge API:', apiUrl);
+      
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        throw new Error(`API returned ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log('Recharge API Response:', result);
+      
+      if (result.success && result.data) {
+        setRechargeResult(result.data);
+      } else {
+        Alert.alert('Error', 'Failed to calculate recharge potential.');
+      }
+    } catch (error) {
+      console.error('Recharge API Error:', error);
+      Alert.alert('Error', 'Failed to calculate recharge potential. Please try again.');
+    } finally {
+      setRechargeLoading(false);
+    }
+  };
+
   const handleStructureRecommendation = async () => {
     setStructureLoading(true);
     try {
