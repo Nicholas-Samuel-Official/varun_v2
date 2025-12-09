@@ -390,7 +390,6 @@ export default function Dashboard() {
                   <Text style={styles.locationText}>Weather Now</Text>
                 </View>
                 <Text style={styles.mainTemp}>{Math.round(dashboardData.temperature)}°</Text>
-                <Text style={styles.weatherDesc}>{dashboardData.weather}</Text>
               </View>
 
               <View style={styles.weatherDetails}>
