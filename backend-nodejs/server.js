@@ -16,6 +16,7 @@ const iotRoutes = require('./src/routes/iotRoutes');
 const weatherRoutes = require('./src/routes/weatherRoutes');
 const chatbotRoutes = require('./src/routes/chatbotRoutes');
 const emailRoutes = require('./src/routes/emailRoutes');
+const rechargeRoutes = require('./src/routes/rechargeRoutes');
 
 // Initialize express app
 const app = express();
