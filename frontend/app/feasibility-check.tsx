@@ -409,7 +409,11 @@ export default function FeasibilityCheck() {
         style={{ flex: 1 }}
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       >
-        <ScrollView style={styles.content}>
+        <ScrollView 
+          style={styles.content}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+        >
           <View style={styles.formSection}>
             <View style={styles.infoBox}>
               <MaterialCommunityIcons name="information" size={24} color={colors.primary} />
