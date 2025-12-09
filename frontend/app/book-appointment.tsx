@@ -449,8 +449,14 @@ export default function BookAppointment() {
               />
             </View>
 
-            <TouchableOpacity style={styles.submitButton} onPress={handleBookAppointment}>
-              <Text style={styles.submitButtonText}>Book Appointment</Text>
+            <TouchableOpacity 
+              style={[styles.submitButton, submitting && { opacity: 0.5 }]} 
+              onPress={handleBookAppointment}
+              disabled={submitting}
+            >
+              <Text style={styles.submitButtonText}>
+                {submitting ? 'Submitting...' : 'Book Appointment'}
+              </Text>
             </TouchableOpacity>
           </ScrollView>
         </KeyboardAvoidingView>
