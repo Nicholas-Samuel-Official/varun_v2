@@ -1,42 +1,48 @@
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, KeyboardAvoidingView, Platform, ScrollView, Alert } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, ScrollView, Alert, KeyboardAvoidingView, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
 import { useState } from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useRouter } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../../contexts/ThemeContext';
-import { useLanguage } from '../../contexts/LanguageContext';
 import authService from '../../services/authService';
 
 export default function Signup() {
   const router = useRouter();
   const { colors } = useTheme();
-  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
     password: '',
+    confirmPassword: '',
   });
-  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleSignup = async () => {
     if (!formData.name || !formData.email || !formData.password) {
-      Alert.alert('Error', 'Please fill all required fields');
+      Alert.alert('Error', 'Please fill in all fields');
+      return;
+    }
+
+    if (formData.password !== formData.confirmPassword) {
+      Alert.alert('Error', 'Passwords do not match');
+      return;
+    }
+
+    if (formData.password.length < 6) {
+      Alert.alert('Error', 'Password must be at least 6 characters');
       return;
     }
 
     setLoading(true);
-    const result = await authService.signup(formData.name, formData.email, formData.phone, formData.password);
+    const result = await authService.signup(formData.name, formData.email, formData.password);
     setLoading(false);
 
     if (result.success) {
-      Alert.alert('Success', 'Account created successfully!', [
-        { text: 'OK', onPress: () => router.replace('/dashboard') }
+      Alert.alert('Success', 'Account created successfully! Please login.', [
+        { text: 'OK', onPress: () => router.replace('/auth/login') }
       ]);
     } else {
-      Alert.alert('Signup Failed', result.message || 'Failed to create account');
+      Alert.alert('Error', result.message || 'Signup failed');
     }
   };
 
@@ -51,38 +57,36 @@ export default function Signup() {
     scrollContent: {
       flexGrow: 1,
       paddingHorizontal: 24,
+      paddingBottom: 40,
     },
-    backButton: {
-      width: 40,
-      height: 40,
-      justifyContent: 'center',
-      marginTop: 8,
-    },
-    header: {
-      marginTop: 24,
-      marginBottom: 40,
+    logoSection: {
+      alignItems: 'center',
+      paddingVertical: 40,
     },
     logo: {
-      width: 60,
-      height: 60,
-      borderRadius: 8,
+      width: 80,
+      height: 80,
+      borderRadius: 20,
       backgroundColor: colors.primary,
       alignItems: 'center',
       justifyContent: 'center',
-      marginBottom: 24,
+      marginBottom: 16,
     },
     title: {
-      fontSize: 32,
+      fontSize: 28,
       fontWeight: '700',
       color: colors.text,
       marginBottom: 8,
     },
     subtitle: {
-      fontSize: 16,
+      fontSize: 15,
       color: colors.textSecondary,
     },
     form: {
-      flex: 1,
+      marginTop: 8,
+    },
+    inputContainer: {
+      marginBottom: 20,
     },
     label: {
       fontSize: 14,
@@ -90,51 +94,43 @@ export default function Signup() {
       color: colors.text,
       marginBottom: 8,
     },
-    inputContainer: {
-      flexDirection: 'row',
-      alignItems: 'center',
+    input: {
+      backgroundColor: colors.card,
       borderWidth: 1,
       borderColor: colors.border,
-      borderRadius: 8,
+      borderRadius: 12,
       paddingHorizontal: 16,
       paddingVertical: 14,
-      marginBottom: 16,
-      backgroundColor: colors.card,
-    },
-    input: {
-      flex: 1,
       fontSize: 16,
       color: colors.text,
     },
-    signupButton: {
+    button: {
       backgroundColor: colors.primary,
       paddingVertical: 16,
-      borderRadius: 8,
+      borderRadius: 12,
       alignItems: 'center',
       marginTop: 8,
-      marginBottom: 24,
     },
-    buttonDisabled: {
-      opacity: 0.6,
-    },
-    signupButtonText: {
+    buttonText: {
       fontSize: 16,
       fontWeight: '700',
       color: '#FFFFFF',
     },
-    loginContainer: {
+    buttonDisabled: {
+      opacity: 0.5,
+    },
+    footer: {
       flexDirection: 'row',
       justifyContent: 'center',
-      marginTop: 16,
-      marginBottom: 32,
+      marginTop: 24,
     },
-    loginText: {
+    footerText: {
       fontSize: 14,
       color: colors.textSecondary,
     },
-    loginLink: {
+    footerLink: {
       fontSize: 14,
-      fontWeight: '700',
+      fontWeight: '600',
       color: colors.primary,
       marginLeft: 4,
     },
@@ -143,41 +139,39 @@ export default function Signup() {
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
       <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'padding'}
         style={styles.keyboardView}
-        keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 20}
+        keyboardVerticalOffset={0}
       >
         <ScrollView 
           contentContainerStyle={styles.scrollContent}
           keyboardShouldPersistTaps="handled"
           showsVerticalScrollIndicator={false}
+          bounces={false}
         >
-          <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
-            <Ionicons name="arrow-back" size={24} color={colors.text} />
-          </TouchableOpacity>
-
-          <View style={styles.header}>
+          <View style={styles.logoSection}>
             <View style={styles.logo}>
-              <MaterialCommunityIcons name="water" size={32} color="#FFFFFF" />
+              <Ionicons name="water" size={40} color="#FFFFFF" />
             </View>
-            <Text style={styles.title}>{t('signup')}</Text>
-            <Text style={styles.subtitle}>Create your account</Text>
+            <Text style={styles.title}>Create Account</Text>
+            <Text style={styles.subtitle}>Join Varun today</Text>
           </View>
 
           <View style={styles.form}>
-            <Text style={styles.label}>Full Name *</Text>
             <View style={styles.inputContainer}>
+              <Text style={styles.label}>Full Name</Text>
               <TextInput
                 style={styles.input}
-                placeholder="Enter your name"
+                placeholder="Enter your full name"
                 placeholderTextColor={colors.textSecondary}
                 value={formData.name}
                 onChangeText={(text) => setFormData({ ...formData, name: text })}
+                autoCapitalize="words"
               />
             </View>
 
-            <Text style={styles.label}>{t('email')} *</Text>
             <View style={styles.inputContainer}>
+              <Text style={styles.label}>Email</Text>
               <TextInput
                 style={styles.input}
                 placeholder="Enter your email"
@@ -189,51 +183,44 @@ export default function Signup() {
               />
             </View>
 
-            <Text style={styles.label}>Phone (Optional)</Text>
             <View style={styles.inputContainer}>
+              <Text style={styles.label}>Password</Text>
               <TextInput
                 style={styles.input}
-                placeholder="Enter your phone"
-                placeholderTextColor={colors.textSecondary}
-                value={formData.phone}
-                onChangeText={(text) => setFormData({ ...formData, phone: text })}
-                keyboardType="phone-pad"
-              />
-            </View>
-
-            <Text style={styles.label}>{t('password')} *</Text>
-            <View style={styles.inputContainer}>
-              <TextInput
-                style={styles.input}
-                placeholder="Enter your password"
+                placeholder="Create a password"
                 placeholderTextColor={colors.textSecondary}
                 value={formData.password}
                 onChangeText={(text) => setFormData({ ...formData, password: text })}
-                secureTextEntry={!showPassword}
+                secureTextEntry
               />
-              <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-                <MaterialCommunityIcons
-                  name={showPassword ? 'eye-off' : 'eye'}
-                  size={20}
-                  color={colors.textSecondary}
-                />
-              </TouchableOpacity>
+            </View>
+
+            <View style={styles.inputContainer}>
+              <Text style={styles.label}>Confirm Password</Text>
+              <TextInput
+                style={styles.input}
+                placeholder="Confirm your password"
+                placeholderTextColor={colors.textSecondary}
+                value={formData.confirmPassword}
+                onChangeText={(text) => setFormData({ ...formData, confirmPassword: text })}
+                secureTextEntry
+              />
             </View>
 
             <TouchableOpacity
-              style={[styles.signupButton, loading && styles.buttonDisabled]}
+              style={[styles.button, loading && styles.buttonDisabled]}
               onPress={handleSignup}
               disabled={loading}
             >
-              <Text style={styles.signupButtonText}>
-                {loading ? 'Creating Account...' : t('signup')}
+              <Text style={styles.buttonText}>
+                {loading ? 'Creating Account...' : 'Sign Up'}
               </Text>
             </TouchableOpacity>
 
-            <View style={styles.loginContainer}>
-              <Text style={styles.loginText}>{t('alreadyHaveAccount')}</Text>
-              <TouchableOpacity onPress={() => router.back()}>
-                <Text style={styles.loginLink}>{t('login')}</Text>
+            <View style={styles.footer}>
+              <Text style={styles.footerText}>Already have an account?</Text>
+              <TouchableOpacity onPress={() => router.replace('/auth/login')}>
+                <Text style={styles.footerLink}>Login</Text>
               </TouchableOpacity>
             </View>
           </View>
