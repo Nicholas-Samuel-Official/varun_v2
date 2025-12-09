@@ -33,16 +33,87 @@ export default function FeasibilityCheck() {
   const [loading, setLoading] = useState(false);
   const [aquiferLoading, setAquiferLoading] = useState(false);
   const [structureLoading, setStructureLoading] = useState(false);
+  const [rainfallLoading, setRainfallLoading] = useState(false);
   const [result, setResult] = useState<FeasibilityResult | null>(null);
   const [aquiferResult, setAquiferResult] = useState<AquiferResult | null>(null);
   const [structureResult, setStructureResult] = useState<StructureResult | null>(null);
   const [showAquiferCheck, setShowAquiferCheck] = useState(false);
+  const [userLocation, setUserLocation] = useState<{ latitude: number; longitude: number } | null>(null);
   
   const [formData, setFormData] = useState({
     rainfall: '',
     roofArea: '',
     openSpace: '',
   });
+
+  // Fetch user location and rainfall on component mount
+  useEffect(() => {
+    fetchUserLocationAndRainfall();
+  }, []);
+
+  const fetchUserLocationAndRainfall = async () => {
+    setRainfallLoading(true);
+    try {
+      // Get user's location
+      const { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        Alert.alert('Permission Denied', 'Location permission is required to fetch rainfall data.');
+        setRainfallLoading(false);
+        return;
+      }
+
+      const location = await Location.getCurrentPositionAsync({
+        accuracy: Location.Accuracy.High,
+      });
+
+      const latitude = location.coords.latitude;
+      const longitude = location.coords.longitude;
+      setUserLocation({ latitude, longitude });
+
+      // Fetch annual rainfall from Open-Meteo Climate API
+      const currentYear = new Date().getFullYear();
+      const lastYear = currentYear - 1; // Use last year's complete data
+      const apiUrl = `https://climate-api.open-meteo.com/v1/climate?latitude=${latitude}&longitude=${longitude}&start_date=${lastYear}-01-01&end_date=${lastYear}-12-31&daily=precipitation_sum&timezone=auto`;
+      
+      console.log('Fetching rainfall from:', apiUrl);
+      
+      const response = await fetch(apiUrl);
+      if (!response.ok) {
+        throw new Error('Failed to fetch rainfall data');
+      }
+
+      const data = await response.json();
+      console.log('Climate API Response:', data);
+
+      // Calculate total annual rainfall
+      if (data.daily && data.daily.precipitation_sum) {
+        const totalRainfall = data.daily.precipitation_sum.reduce(
+          (sum: number, value: number | null) => sum + (value || 0), 
+          0
+        );
+        const roundedRainfall = Math.round(totalRainfall);
+        
+        console.log('Calculated annual rainfall:', roundedRainfall, 'mm');
+        
+        // Auto-populate the rainfall field
+        setFormData(prev => ({
+          ...prev,
+          rainfall: roundedRainfall.toString(),
+        }));
+
+        Alert.alert(
+          'Rainfall Data Loaded',
+          `Annual rainfall for your location (${lastYear}): ${roundedRainfall} mm`,
+          [{ text: 'OK' }]
+        );
+      }
+    } catch (error) {
+      console.error('Error fetching rainfall:', error);
+      Alert.alert('Error', 'Could not fetch rainfall data. Please enter manually.');
+    } finally {
+      setRainfallLoading(false);
+    }
+  };
 
   const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number) => {
     const R = 6371; // Earth's radius in km
