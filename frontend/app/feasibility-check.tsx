@@ -61,11 +61,13 @@ export default function FeasibilityCheck() {
     openSpace: '',
   });
 
-  // Fetch user location and rainfall on component mount
-  useEffect(() => {
-    console.log('Feasibility Check: Component mounted, fetching rainfall...');
-    fetchUserLocationAndRainfall();
-  }, []);
+  // Fetch user location and rainfall when page comes into focus
+  useFocusEffect(
+    useCallback(() => {
+      console.log('Feasibility Check: Page focused, fetching rainfall...');
+      fetchUserLocationAndRainfall();
+    }, [])
+  );
 
   const fetchUserLocationAndRainfall = async () => {
     console.log('Starting rainfall fetch...');
