@@ -157,8 +157,10 @@ export default function EditProfile() {
 
       <ScrollView 
         style={styles.content}
+        contentContainerStyle={{ flexGrow: 1, paddingBottom: 40 }}
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
+        bounces={false}
       >
         <View style={styles.avatarSection}>
           <View style={styles.avatar}>
